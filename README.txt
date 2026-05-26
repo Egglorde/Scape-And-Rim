@@ -20,3 +20,12 @@ Current parasite additions
 Current unimplemented parasites
 > Adapted longarms
 > Light Carrier
+
+=== Installation guide ===
+
+The current method of distribution of this mod (github exclusively) is incondusive to ease of install, so I'll provide a simple guide here
+
+1. Download Source.zip from the latest release
+2. Find the "Mods" folder in your Rimworld installation (If you're using steam, right click on rimworld and go to Manage>Browse Local Files, the "Mods" folder should be in the one opened by steam)
+3. Unpack the Source.zip folder into the Mods folder
+4. That's it (Enjoy!)
