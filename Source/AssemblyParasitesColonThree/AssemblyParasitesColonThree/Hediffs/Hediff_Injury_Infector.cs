@@ -19,15 +19,12 @@ namespace AssemblyParasitesColonThree.Hediffs
             {
                 if (pawn.health.ShouldBeDead())
                 {
-                    Log.Message("Resurrection Req");
                     pawn.health.Notify_Resurrected();
                     if (pawn.health.ShouldBeDead())
                     {
-                        Log.Message("Failsafe");
                         return;
                     }
                 }
-                Log.Message("Should Infect");
                 if (dinfo?.Instigator != null && ParasiteUtils.FetchKillList(dinfo?.Instigator, out List<KillCredit> list))
                 {
                     list.Add(new KillCredit(pawn, 1));

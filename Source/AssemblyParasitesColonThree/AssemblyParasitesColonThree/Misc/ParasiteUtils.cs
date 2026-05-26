@@ -93,7 +93,7 @@ namespace AssemblyParasitesColonThree
             }
             if (coth.Severity <= 1)
             {
-                Log.Message("Severity was under 1");
+                Log.Warning("Attempted to use CompleteConversion() on a pawn without COTH, use Turn() instead");
                 List<Pawn> pawns = FillToTotalWeight(pawn.BodySize * coth.Severity, pawn.Map.GetComponent<MapComp_InfectionTracker>().phaseDef.incompleteGroupMakers);
                 for (int i = 0; i < pawns.Count; i++)
                 {

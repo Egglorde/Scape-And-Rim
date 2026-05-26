@@ -16,7 +16,6 @@ namespace AssemblyParasitesColonThree.Hediffs
         {
             if (pawn.Map != null)
             {
-                Log.Message("Points gained : 1");
                 pawn.Map.GetComponent<MapComp_InfectionTracker>().GainPoints(1);
                 if (ParasiteUtils.FetchKillList(pawn, out List<KillCredit> list))
                 {
