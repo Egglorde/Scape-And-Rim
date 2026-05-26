@@ -9,7 +9,7 @@
                 <onCamera>True</onCamera>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Incident/Incident_Node</clipPath>
+                        <clipPath>Incident/Incident_Node</clipPath>
                     </li>
                 </grains>
             </li>
@@ -25,7 +25,7 @@
                 <volumeRange>90~110</volumeRange>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Incident/Incident_Assim</clipPath>
+                        <clipPath>Incident/Incident_Assim</clipPath>
                     </li>
                 </grains>
             </li>

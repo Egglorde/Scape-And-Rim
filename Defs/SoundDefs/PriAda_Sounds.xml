@@ -11,7 +11,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/PriAdaStep</clipPath> 
+                        <clipPath>Parasite/PriAda/PriAdaStep</clipPath> 
                     </li>
                 </grains>
                 <pitchRange>0.85~1.15</pitchRange>
@@ -29,7 +29,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Reeker/PriReeker_Call</clipPath> 
+                        <clipPath>Parasite/PriAda/Reeker/PriReeker_Call</clipPath> 
                     </li>
                 </grains>
                 <volumeRange>45~60</volumeRange>      
@@ -45,7 +45,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Summoner/PriSummoner_Call</clipPath> 
+                        <clipPath>Parasite/PriAda/Summoner/PriSummoner_Call</clipPath> 
                     </li>
                 </grains>
                 <volumeRange>45~60</volumeRange>      
@@ -61,7 +61,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Longarms/PriLongarms_Call</clipPath> 
+                        <clipPath>Parasite/PriAda/Longarms/PriLongarms_Call</clipPath> 
                     </li>
                 </grains>
                 <volumeRange>45~60</volumeRange>      
@@ -77,7 +77,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Manducater/PriManducater_Call</clipPath> 
+                        <clipPath>Parasite/PriAda/Manducater/PriManducater_Call</clipPath> 
                     </li>
                 </grains>
                 <volumeRange>45~60</volumeRange>      
@@ -93,7 +93,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Yelloweye/PriYelloweye_Call</clipPath> 
+                        <clipPath>Parasite/PriAda/Yelloweye/PriYelloweye_Call</clipPath> 
                     </li>
                 </grains>
                 <volumeRange>45~60</volumeRange>      
@@ -109,7 +109,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Bolster/PriBolster_Call</clipPath> 
+                        <clipPath>Parasite/PriAda/Bolster/PriBolster_Call</clipPath> 
                     </li>
                 </grains>
                 <volumeRange>35~40</volumeRange>      
@@ -125,7 +125,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Reeker/PriReeker_Hurt</clipPath>
+                        <clipPath>Parasite/PriAda/Reeker/PriReeker_Hurt</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~45</volumeRange>
@@ -141,7 +141,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Summoner/PriSummoner_Hurt</clipPath>
+                        <clipPath>Parasite/PriAda/Summoner/PriSummoner_Hurt</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~45</volumeRange>
@@ -157,7 +157,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Longarms/PriLongarms_Hurt</clipPath>
+                        <clipPath>Parasite/PriAda/Longarms/PriLongarms_Hurt</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~45</volumeRange>
@@ -173,7 +173,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Manducater/PriManducater_Hurt</clipPath>
+                        <clipPath>Parasite/PriAda/Manducater/PriManducater_Hurt</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~45</volumeRange>
@@ -189,7 +189,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Yelloweye/PriYelloweye_Hurt</clipPath>
+                        <clipPath>Parasite/PriAda/Yelloweye/PriYelloweye_Hurt</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~45</volumeRange>
@@ -205,7 +205,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Bolster/PriBolster_Hurt</clipPath>
+                        <clipPath>Parasite/PriAda/Bolster/PriBolster_Hurt</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~45</volumeRange>
@@ -221,7 +221,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Reeker/PriReeker_Death</clipPath>
+                        <clipPath>Parasite/PriAda/Reeker/PriReeker_Death</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~60</volumeRange>
@@ -237,7 +237,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Summoner/PriSummoner_Death</clipPath>
+                        <clipPath>Parasite/PriAda/Summoner/PriSummoner_Death</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~60</volumeRange>
@@ -253,7 +253,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Longarms/PriLongarms_Death</clipPath>
+                        <clipPath>Parasite/PriAda/Longarms/PriLongarms_Death</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~60</volumeRange>
@@ -269,7 +269,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Manducater/PriManducater_Death</clipPath>
+                        <clipPath>Parasite/PriAda/Manducater/PriManducater_Death</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~60</volumeRange>
@@ -285,7 +285,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Yelloweye/PriYelloweye_Death</clipPath>
+                        <clipPath>Parasite/PriAda/Yelloweye/PriYelloweye_Death</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~60</volumeRange>
@@ -301,7 +301,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Bolster/PriBolster_Death</clipPath>
+                        <clipPath>Parasite/PriAda/Bolster/PriBolster_Death</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~60</volumeRange>
@@ -317,7 +317,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Summoner/PriSummoner_Special</clipPath> 
+                        <clipPath>Parasite/PriAda/Summoner/PriSummoner_Special</clipPath> 
                     </li>
                 </grains>
                 <volumeRange>60~70</volumeRange>      
@@ -333,7 +333,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Yelloweye/PriYelloweye_Special</clipPath> 
+                        <clipPath>Parasite/PriAda/Yelloweye/PriYelloweye_Special</clipPath> 
                     </li>
                 </grains>
                 <volumeRange>60~70</volumeRange>      
@@ -349,7 +349,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Parasite/PriAda/Yelloweye/PriYelloweye_Shooting</clipPath> 
+                        <clipPath>Parasite/PriAda/Yelloweye/PriYelloweye_Shooting</clipPath> 
                     </li>
                 </grains>
                 <volumeRange>60~70</volumeRange>      

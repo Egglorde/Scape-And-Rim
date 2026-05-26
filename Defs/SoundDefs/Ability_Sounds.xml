@@ -8,7 +8,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Attack/Seismic_Explosion</clipPath>
+                        <clipPath>Damage/Explosion/Seismic_Explosion</clipPath>
                     </li>
                 </grains>
                 <volumeRange>80~80</volumeRange>
@@ -24,7 +24,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Attack/Orb/Orb_Charge</clipPath>
+                        <clipPath>Ability/Orb/Orb_Charge</clipPath>
                     </li>
                 </grains>
                 <volumeRange>80~80</volumeRange>
@@ -40,7 +40,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Attack/Orb/Orb_Fire</clipPath>
+                        <clipPath>Ability/Orb/Orb_Fire</clipPath>
                     </li>
                 </grains>
                 <volumeRange>100~120</volumeRange>
@@ -57,7 +57,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Attack/Orb/Orb_Sustain</clipPath>
+                        <clipPath>Ability/Orb/Orb_Sustain</clipPath>
                     </li>
                 </grains>
                 <volumeRange>50~70</volumeRange>
@@ -73,7 +73,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Neutral/Rupter_Cloud</clipPath>
+                        <clipPath>Ability/Rupter_Cloud</clipPath>
                     </li>
                 </grains>
                 <volumeRange>20~20</volumeRange>

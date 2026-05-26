@@ -10,7 +10,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Impact/Impact_Nexus_Noise</clipPath>
+                        <clipPath>Damage/Impact/Impact_Nexus_Noise</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~45</volumeRange>
@@ -18,8 +18,8 @@
             </li>
         </subSounds>
     </SoundDef>
-    <!-- Other and Other such -->
 
+    <!-- Other and Other such -->
     <SoundDef>
         <defName>ScramSRP_AssimSound</defName>
         <context>MapOnly</context>   
@@ -28,27 +28,10 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Neutral/Infect</clipPath> 
+                        <clipPath>Misc/Infect</clipPath> 
                     </li>
                 </grains>
                 <volumeRange>60~70</volumeRange>
-            </li>
-        </subSounds>
-    </SoundDef>
-
-    <SoundDef>
-        <defName>ScramSRP_ResurrectScreech</defName>  
-        <context>MapOnly</context>   
-        <maxSimultaneous>10</maxSimultaneous>  
-        <subSounds>
-            <li>
-                <grains>
-                    <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Attack/Summoner_Screech</clipPath>
-                    </li>
-                </grains>
-                <volumeRange>40~60</volumeRange>
-                <pitchRange>0.8940217~1.084783</pitchRange>
             </li>
         </subSounds>
     </SoundDef>
@@ -59,11 +42,8 @@
         <subSounds>
             <li>
                 <grains>
-                    <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Impact/Carrier_Hurt_1</clipPath>
-                    </li>
-                    <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Impact/Carrier_Hurt_2</clipPath>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Parasite/Inborn/Carrier_Light/Carrier_Hurt</clipPath>
                     </li>
                 </grains>
                 <volumeRange>20~20</volumeRange>
@@ -79,7 +59,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Neutral/Carrier_Death</clipPath>
+                        <clipPath>Parasite/Inborn/Carrier_Light/Carrier_Death</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~45</volumeRange>
@@ -94,11 +74,8 @@
         <subSounds>
             <li>
                 <grains>
-                    <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Neutral/Carrier_Call_1</clipPath>
-                    </li>
-                    <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Neutral/Carrier_Call_2</clipPath>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Parasite/Inborn/Carrier_Light/Carrier_Call</clipPath>
                     </li>
                 </grains>
                 <volumeRange>20~20</volumeRange>
@@ -113,14 +90,8 @@
         <subSounds>
             <li>
                 <grains>
-                    <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Impact/Impact_Inborn_1</clipPath>
-                    </li>
-                    <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Impact/Impact_Inborn_2</clipPath>
-                    </li>
-                    <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Impact/Impact_Inborn_3</clipPath>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Parasite/Inborn/Rupter/Rupter_Hurt</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~45</volumeRange>
@@ -135,14 +106,8 @@
         <subSounds>
             <li>
                 <grains>
-                    <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Neutral/Rupter_Call_1</clipPath>
-                    </li>
-                    <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Neutral/Rupter_Call_2</clipPath>
-                    </li>
-                    <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Neutral/Rupter_Call_3</clipPath>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Parasite/Inborn/Rupter/Rupter_Call</clipPath>
                     </li>
                 </grains>
                 <volumeRange>20~20</volumeRange>
@@ -158,7 +123,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Neutral/Rupter_Death</clipPath>
+                        <clipPath>Parasite/Inborn/Rupter/Rupter_Death</clipPath>
                     </li>
                 </grains>
                 <volumeRange>20~20</volumeRange>
@@ -174,7 +139,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Impact/Sim_Hurt</clipPath>
+                        <clipPath>Parasite/Sim/Sim_Hurt</clipPath>
                     </li>
                 </grains>
                 <volumeRange>20~20</volumeRange>
@@ -190,7 +155,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Neutral/Sim_Death</clipPath>
+                        <clipPath>Parasite/Sim/Sim_Death</clipPath>
                     </li>
                 </grains>
                 <volumeRange>20~20</volumeRange>
@@ -206,7 +171,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Folder">
-                        <clipPath>EggsBeckonMod/Attack/FleshSounds</clipPath>
+                        <clipPath>Item/FleshSounds</clipPath>
                     </li>
                 </grains>
                 <volumeRange>20~20</volumeRange>
@@ -222,7 +187,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Folder">
-                        <clipPath>EggsBeckonMod/Adaptation/Adapted</clipPath>
+                        <clipPath>Adaptation/Adapted</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~50</volumeRange>
@@ -238,7 +203,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Folder">
-                        <clipPath>EggsBeckonMod/Adaptation/Adapting</clipPath>
+                        <clipPath>Adaptation/Adapting</clipPath>
                     </li>
                 </grains>
                 <volumeRange>40~50</volumeRange>
@@ -254,7 +219,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Neutral/Sim_Call</clipPath>
+                        <clipPath>Parasite/Sim/Sim_Call</clipPath>
                     </li>
                 </grains>
                 <volumeRange>20~20</volumeRange>
@@ -270,7 +235,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Attack/Fleshy_Explosion</clipPath>
+                        <clipPath>Damage/Explosion/Fleshy_Explosion</clipPath>
                     </li>
                 </grains>
                 <volumeRange>50~70</volumeRange>
@@ -279,21 +244,21 @@
         </subSounds>
     </SoundDef>
     <SoundDef>
-    <defName>Beckon_Bell</defName>
-    <context>MapOnly</context>
-    <subSounds>
-      <li>
-        <grains>
-          <li Class="AudioGrain_Clip">
-            <clipPath>EggsBeckonMod/Neutral/Beckon_Bell</clipPath>
+        <defName>Beckon_Bell</defName>
+        <context>MapOnly</context>
+        <subSounds>
+          <li>
+            <grains>
+              <li Class="AudioGrain_Clip">
+                <clipPath>Misc/Beckon_Bell</clipPath>
+              </li>
+            </grains>
+            <volumeRange>50~70</volumeRange>
+            <pitchRange>0.9311764~1.137647</pitchRange>
+            <sustainLoop>False</sustainLoop>
           </li>
-        </grains>
-        <volumeRange>50~70</volumeRange>
-        <pitchRange>0.9311764~1.137647</pitchRange>
-        <sustainLoop>False</sustainLoop>
-      </li>
-    </subSounds>
-  </SoundDef>
+        </subSounds>
+    </SoundDef>
     <SoundDef>
         <defName>ScramSRP_Phase3Old</defName>  
         <context>MapOnly</context>   
@@ -303,7 +268,7 @@
                 <onCamera>True</onCamera>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Incident/Incident_Phase3_Old</clipPath>
+                        <clipPath>Incident/Incident_Phase3_Old</clipPath>
                     </li>
                 </grains>
             </li>

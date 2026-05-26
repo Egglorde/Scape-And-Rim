@@ -40,7 +40,7 @@
                 <onCamera>True</onCamera>
                 <grains>
                     <li Class="AudioGrain_Clip">
-                        <clipPath>EggsBeckonMod/Incident/Incident_Phase2</clipPath>
+                        <clipPath>Incident/Phases/Incident_Phase2</clipPath>
                     </li>
                 </grains>
             </li>
