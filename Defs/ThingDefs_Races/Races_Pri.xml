@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Basic primitive parasite body type -->
+    <ThingDef ParentName="BaseParasite" Name="BasePrimitive" Abstract="True">
+        <race>
+            <leatherDef>Leather_Patch</leatherDef>
+            <specificMeatDef>ScramSRP_InfectedFlesh</specificMeatDef>
+        </race>
+        <statBases>
+            <MoveSpeed>4</MoveSpeed>
+            <ArmorRating_Heat>0</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.222</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.461</ArmorRating_Sharp>
+            <ComfyTemperatureMin>-80</ComfyTemperatureMin>
+            <ComfyTemperatureMax>60</ComfyTemperatureMax>
+            <LeatherAmount>20</LeatherAmount>
+            <PsychicSensitivity>1.5</PsychicSensitivity>
+            <ToxicResistance>0.5</ToxicResistance>
+        </statBases>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_EvolverParasite_Kills">
+                <evolutionTarget>ScramSRP_Beckon2</evolutionTarget>
+                <ReqKills>10</ReqKills>
+            </li>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_DeathExplosionRemain">
+                <remaintier>Primitive</remaintier>
+            </li>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_Adaptation">
+                <learnChance>0.7</learnChance>
+                <failChance>0.7</failChance>
+                <reductionPerPoint>0.05</reductionPerPoint>
+                <reductionCap>12</reductionCap>
+                <maxLearnedDamageSources>5</maxLearnedDamageSources>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="BasePrimitive" Name="BasePrimitiveLarge" Abstract="True">
+        <statBases>
+            <LeatherAmount>40</LeatherAmount>
+        </statBases>
+        <race>
+            <soundMoving>ScramSRP_PriAdaMoving</soundMoving>
+        </race>
+    </ThingDef>
+
+    <ThingDef ParentName="BasePrimitive" Name="BasePrimitiveMedium" Abstract="True">
+        <statBases>
+            <LeatherAmount>30</LeatherAmount>
+        </statBases>
+    </ThingDef>
+
+    <PawnKindDef ParentName="BaseParasiteKind" Name="ScramSRP_BasePrimitiveParasiteKind" Abstract="True">
+        <abilities>
+            <li>ScramSRP_OrbAbilityBase</li>
+        </abilities>
+    </PawnKindDef>
+
+
+    <!-- Arachnidas -->
+    <ThingDef ParentName="BasePrimitiveMedium">
+        <defName>ScramSRP_Pri_Arachnida</defName>
+        <label>primitive arachnida</label>
+        <description>Assembled from the merging of several assimilated bodies into a larger form. Primitive parasites are the first large parasites to appear during infestation.\n\nAn arachnoid assemblage of the deceased. Though its abdomen is weak, it can create silk as tough as steel, used to latch onto and drag hapless victims into its claws. Precursor to greater forms.</description>
+        <race>
+            <baseHealthScale>1.75</baseHealthScale>
+            <body>ScramSRP_PrimitiveReekerBody</body>
+            <renderTree>ScramSRP_ArachnidaRenderTree</renderTree>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                    <soundWounded>ScramSRP_PriLongarmsHurt</soundWounded>
+                    <soundDeath>ScramSRP_PriLongarmsDeath</soundDeath>
+                    <soundCall>ScramSRP_PriLongarmsCall</soundCall>
+                </li>
+            </lifeStageAges>
+        </race>
+        <statBases>
+            <MoveSpeed>10</MoveSpeed>
+            <ArmorRating_Heat>0.053</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.117</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.267</ArmorRating_Sharp>
+        </statBases>
+        <tools>
+            <li>
+                <label>maw</label>
+                <capacities>
+                    <li>ScramSRP_DirectConvertCapBite</li>
+                </capacities>
+                <power>30</power>
+                <cooldownTime>3</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.6</chanceFactor>
+            </li>
+            <li>
+                <label>body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.13</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>BodyAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_OrbUser">
+                <enemyHediffs>
+                    <li>ScramSRP_Hunger</li>
+                    <li>ScramSRP_Blindness</li>
+                </enemyHediffs>
+                <Potency>0.45</Potency>
+            </li>
+        </comps>
+    </ThingDef>
+    <PawnKindDef ParentName="ScramSRP_BasePrimitiveParasiteKind">
+        <defName>ScramSRP_Pri_ArachnidaKind</defName>
+        <label>primitive arachnida</label>
+        <race>ScramSRP_Pri_Arachnida</race>
+        <combatPower>350</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/PriAda/Pri_Arachnida/Pri_Arachnida</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>2.8</drawSize>
+                    <shadowData>
+                        <volume>(0.5, 0.8, 0.5)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <abilities>
+            <li>ScramSRP_WebAttack</li>
+        </abilities>
+    </PawnKindDef>
+
+
+    <!-- Reekers -->
+    <ThingDef ParentName="BasePrimitiveLarge">
+        <defName>ScramSRP_Pri_Reeker</defName>
+        <label>primitive reeker</label>
+        <description>Assembled from the merging of several assimilated bodies into a larger form. Primitive parasites are the first large parasites to appear during infestation.\n\nA set of bodies cobbled together in a horse-like form. The musculature within its back legs is wound taught like a spring, allowing it to throw itself towards enemies at impossible speed. It stinks.</description>
+        <race>
+            <baseHealthScale>2</baseHealthScale>
+            <body>ScramSRP_PrimitiveReekerBody</body>
+            <renderTree>ScramSRP_ReekerRenderTree</renderTree>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                    <soundWounded>ScramSRP_PriReekerHurt</soundWounded>
+                    <soundDeath>ScramSRP_PriReekerDeath</soundDeath>
+                    <soundCall>ScramSRP_PriReekerCall</soundCall>
+                </li>
+            </lifeStageAges>
+        </race>
+        <statBases>
+            <MoveSpeed>10</MoveSpeed>
+            <ArmorRating_Heat>0.15</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.375</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+        </statBases>
+        <tools>
+            <li>
+                <label>maw</label>
+                <capacities>
+                    <li>ScramSRP_DirectConvertCapBite</li>
+                </capacities>
+                <power>30</power>
+                <cooldownTime>3</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <chanceFactor>0.6</chanceFactor>
+            </li>
+            <li>
+                <label>body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.13</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>BodyAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+            <li>
+                <label>front right leg</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.5</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>front left leg</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.5</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>right claw</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>21.5</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>left claw</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>21.5</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_OrbUser">
+                <enemyHediffs>
+                    <li>ScramSRP_Hunger</li>
+                    <li>ScramSRP_Nausea</li>
+                </enemyHediffs>
+                <Potency>0.45</Potency>
+            </li>
+        </comps>
+    </ThingDef>
+    <PawnKindDef ParentName="ScramSRP_BasePrimitiveParasiteKind">
+        <defName>ScramSRP_Pri_ReekerKind</defName>
+        <label>primitive reeker</label>
+        <race>ScramSRP_Pri_Reeker</race>
+        <combatPower>350</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/PriAda/Pri_Reeker/Pri_Reeker</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>2.8</drawSize>
+                    <shadowData>
+                        <volume>(0.5, 0.8, 0.5)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <abilities>
+            <li>ScramSRP_Charge</li>
+        </abilities>
+    </PawnKindDef>
+
+
+    <!-- Longarms -->
+    <ThingDef ParentName="BasePrimitiveLarge">
+        <defName>ScramSRP_Pri_LongArms</defName>
+        <label>primitive longarms</label>
+        <description>Assembled from the merging of several assimilated bodies into a larger form. Primitive parasites are the first large parasites to appear during infestation.\n\nA thin set of remains assembled into a tall humanoid figure. Its titular arms allow it to rend apart flesh with startling efficiency. Primitive Longarms make use of seismic frequencies to cause massive explosions at range and in melee combat.</description>
+        <race>
+            <baseHealthScale>2.25</baseHealthScale>
+            <body>ScramSRP_PrimitiveLongarmsBody</body>
+            <renderTree>ScramSRP_LongarmsArms</renderTree>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                    <soundWounded>ScramSRP_PriLongarmsHurt</soundWounded>
+                    <soundDeath>ScramSRP_PriLongarmsDeath</soundDeath>
+                    <soundCall>ScramSRP_PriLongarmsCall</soundCall>
+                </li>
+            </lifeStageAges>
+        </race>
+        <statBases>
+            <MoveSpeed>9.1</MoveSpeed>
+            <ArmorRating_Heat>0.113</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.281</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.563</ArmorRating_Sharp>
+        </statBases>
+        <tools>
+            <li>
+                <label>left club</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>22.5</power>
+                <cooldownTime>2</cooldownTime>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>right club</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>22.5</power>
+                <cooldownTime>2</cooldownTime>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>maw</label>
+                <capacities>
+                    <li>ScramSRP_DirectConvertCapBite</li>
+                </capacities>
+                <power>36.67</power>
+                <cooldownTime>3</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.6</chanceFactor>
+            </li>
+            <li>
+                <label>body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.13</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>BodyAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProperties_ExplodeOnMeleeAttack">
+                <damage>ScramSRP_Seismic_Explosion</damage>
+                <radius>1.6</radius>
+            </li>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_OrbUser">
+                <enemyHediffs>
+                    <li>ScramSRP_Hunger</li>
+                    <li>ScramSRP_Slowness</li>
+                </enemyHediffs>
+                <Potency>0.45</Potency>
+            </li>
+        </comps>
+    </ThingDef>
+    <PawnKindDef ParentName="ScramSRP_BasePrimitiveParasiteKind">
+        <defName>ScramSRP_Pri_LongArmsKind</defName>
+        <label>primitive longarms</label>
+        <race>ScramSRP_Pri_LongArms</race>
+        <combatPower>350</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/PriAda/Pri_Longarms/Pri_Longarms</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>2.8</drawSize>
+                    <shadowData>
+                        <volume>(0.5, 0.8, 0.5)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <abilities>
+            <li>ScramSRP_Wave</li>
+        </abilities>
+    </PawnKindDef>
+
+
+    <!-- Manducaters -->
+    <ThingDef ParentName="BasePrimitiveMedium">
+        <defName>ScramSRP_Pri_Manducater</defName>
+        <label>primitive manducater</label>
+        <description>Assembled from the merging of several assimilated bodies into a larger form. Primitive parasites are the first large parasites to appear during infestation.\n\nA bizarre dog-like mass of flesh. Within its body exists a powerful core, allowing it to render itself psychically invisible. This invisibility allows it to stalk its prey and rapidly appear to tear into their flesh with its razor-sharp teeth. Its grinding jaws never cease.</description>
+        <race>
+            <baseHealthScale>1.5</baseHealthScale>
+            <body>ScramSRP_PrimitiveManducaterBody</body>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                    <soundWounded>ScramSRP_PriManducaterHurt</soundWounded>
+                    <soundDeath>ScramSRP_PriManducaterDeath</soundDeath>
+                    <soundCall>ScramSRP_PriManducaterCall</soundCall>
+                </li>
+            </lifeStageAges>
+        </race>
+        <statBases>
+            <MoveSpeed>11.75</MoveSpeed>
+            <ArmorRating_Heat>0.053</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.133</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.267</ArmorRating_Sharp>
+        </statBases>
+        <tools>
+            <li>
+                <label>body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.13</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>BodyAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+            <li>
+                <label>maw</label>
+                <capacities>
+                    <li>ScramSRP_DirectConvertCapBite</li>
+                </capacities>
+                <power>30</power>
+                <cooldownTime>3</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <chanceFactor>0.6</chanceFactor>
+            </li>
+        </tools>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_OrbUser">
+                <enemyHediffs>
+                    <li>ScramSRP_Hunger</li>
+                </enemyHediffs>
+                <selfHediffs>
+                    <li>ScramSRP_Invisible</li>
+                </selfHediffs>
+                <Potency>0.45</Potency>
+            </li>
+        </comps>
+    </ThingDef>
+    <PawnKindDef ParentName="ScramSRP_BasePrimitiveParasiteKind">
+        <defName>ScramSRP_Pri_ManducaterKind</defName>
+        <label>primitive manducater</label>
+        <race>ScramSRP_Pri_Manducater</race>
+        <canOpenAnyDoor>true</canOpenAnyDoor>
+        <combatPower>350</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/PriAda/Pri_Manducater/Pri_Manducater</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>2.5</drawSize>
+                    <shadowData>
+                        <volume>(1.9, 0.5, 1.3)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <startingHediffs>
+            <li>
+                <def>ScramSRP_Invisible</def>
+            </li>
+        </startingHediffs>
+    </PawnKindDef>
+
+
+    <!-- YellowEyes -->
+    <ThingDef ParentName="BasePrimitive">
+        <defName>ScramSRP_Pri_Yelloweye</defName>
+        <label>primitive yelloweye</label>
+        <description>Assembled from the merging of several assimilated bodies into a larger form. Primitive parasites are the first large parasites to appear during infestation.\n\nA hovering disembodied torso of unidentifiable origin. From its central organ, it is capable of firing corrosive shots. Its caustic bile is anathema to armor.</description>
+        <statBases>
+            <MoveSpeed>3.8</MoveSpeed>
+            <MaxFlightTime>30</MaxFlightTime>
+            <ArmorRating_Heat>0.047</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.117</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.233</ArmorRating_Sharp>
+        </statBases>
+        <race>
+            <baseHealthScale>1.5</baseHealthScale>
+            <body>ScramSRP_PrimitiveYelloweyeBody</body>
+            <thinkTreeMain>ScramSRP_YelloweyeParasite</thinkTreeMain>
+            <thinkTreeConstant>ParasiteConstant</thinkTreeConstant>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                    <soundWounded>ScramSRP_PriYelloweyeHurt</soundWounded>
+                    <soundDeath>ScramSRP_PriYelloweyeDeath</soundDeath>
+                    <soundCall>ScramSRP_PriYelloweyeCall</soundCall>
+                </li>
+            </lifeStageAges>
+        </race>
+        <tools>
+            <li>
+                <label>body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.13</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>BodyAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+    </ThingDef>
+    <PawnKindDef ParentName="BaseParasiteKind">
+        <defName>ScramSRP_Pri_YelloweyeKind</defName>
+        <label>primitive yelloweye</label>
+        <race>ScramSRP_Pri_Yelloweye</race>
+        <combatPower>250</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/PriAda/Pri_Yelloweye/Pri_Yelloweye</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>2.5</drawSize>
+                    <shadowData>
+                        <volume>(0.2, 0.5, 0.4)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <abilities>
+            <li>ScramSRP_AcidProj</li>
+            <li>ScramSRP_Nade</li>
+        </abilities>
+    </PawnKindDef>
+
+
+    <!-- Summoner -->
+    <ThingDef ParentName="BasePrimitiveLarge">
+        <defName>ScramSRP_Pri_Summoner</defName>
+        <label>primitive summoner</label>
+        <description>Assembled from the merging of several assimilated bodies into a larger form. Primitive parasites are the first large parasites to appear during infestation.\n\nA slouched figure sown out of still-living dead. Within its body exists a powerful core, allowing it to summon lesser minions. Re-sews what was slain out of leftovers.</description>
+        <race>
+            <baseHealthScale>2</baseHealthScale>
+            <body>ScramSRP_PrimitiveSummonerBody</body>
+            <thinkTreeMain>ScramSRP_SummonerParasite</thinkTreeMain>
+            <thinkTreeConstant>ParasiteConstant</thinkTreeConstant>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                    <soundWounded>ScramSRP_PriSummonerHurt</soundWounded>
+                    <soundDeath>ScramSRP_PriSummonerDeath</soundDeath>
+                    <soundCall>ScramSRP_PriSummonerCall</soundCall>
+                </li>
+            </lifeStageAges>
+        </race>        
+        <statBases>
+            <ArmorRating_Heat>0.05</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.125</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+        </statBases>
+        <tools>
+            <li>
+                <label>body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.13</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>BodyAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+            <li>
+                <label>front right leg</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.5</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>front left leg</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.5</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>maw</label>
+                <capacities>
+                    <li>ScramSRP_DirectConvertCapBite</li>
+                </capacities>
+                <power>30</power>
+                <cooldownTime>3</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.6</chanceFactor>
+            </li>
+        </tools>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_Summoner">
+                <maxpoints>4</maxpoints>
+                <pawnsperwave>2</pawnsperwave>
+                <soundDef>ScramSRP_PriSummonerCallSpecial</soundDef>
+                <spawnablepawns>
+                    <li>
+                        <weight>10</weight>
+                        <kind>Rupter</kind>
+                        <points>1</points>
+                    </li>
+                </spawnablepawns>
+            </li>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_OrbUser">
+                <enemyHediffs>
+                    <li>ScramSRP_Hunger</li>
+                </enemyHediffs>
+                <allyHediffs>
+                    <li>ScramSRP_Speed</li>
+                </allyHediffs>
+                <Potency>0.45</Potency>
+            </li>
+        </comps>
+    </ThingDef>
+    <PawnKindDef ParentName="ScramSRP_BasePrimitiveParasiteKind">
+        <defName>ScramSRP_Pri_SummonerKind</defName>
+        <label>primitive summoner</label>
+        <race>ScramSRP_Pri_Summoner</race>
+        <combatPower>350</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/PriAda/Pri_Summoner/Pri_Summoner</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>2.8</drawSize>
+                    <shadowData>
+                        <volume>(1.9, 0.5, 1.3)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+
+    <!-- Bolsters -->
+    <ThingDef ParentName="BasePrimitiveMedium">
+        <defName>ScramSRP_Pri_Bolster</defName>
+        <label>primitive bolster</label>
+        <description>Assembled from the merging of several assimilated bodies into a larger form. Primitive parasites are the first large parasites to appear during infestation.\n\nA towering mass of conjoined bodies atop legs barely able to hold it up. Their mass allows them to absorb hits that other primitive parasites cannot. Primitive Bolsters make use of their antennae to broadcast psychic signals to their allies, allowing them to accelerate their healing. Primitive, yet resilient.</description>
+        <race>
+            <baseHealthScale>3.5</baseHealthScale>
+            <body>ScramSRP_PrimitiveBolsterBody</body>
+            <renderTree>ScramSRP_BolsterRenderTree</renderTree>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                    <soundWounded>ScramSRP_PriBolsterHurt</soundWounded>
+                    <soundDeath>ScramSRP_PriBolsterDeath</soundDeath>
+                    <soundCall>ScramSRP_PriBolsterCall</soundCall>
+                </li>
+            </lifeStageAges>
+        </race>
+        <statBases>
+            <MoveSpeed>2.22</MoveSpeed>
+            <ArmorRating_Heat>0.175</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.438</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.875</ArmorRating_Sharp>
+        </statBases>
+        <tools>
+            <li>
+                <label>body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>BodyAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+            <li>
+                <label>left arm</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>7.5</power>
+                <cooldownTime>1</cooldownTime>
+                <linkedBodyPartsGroup>ScramSRP_LeftArm</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>right arm</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>7.5</power>
+                <cooldownTime>1</cooldownTime>
+                <linkedBodyPartsGroup>ScramSRP_RightArm</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>front right leg</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>front left leg</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_HealerParasite">
+                <maxRegen>0.55</maxRegen>
+                <regenSevGain>0.01</regenSevGain>
+                <interval>10</interval>
+                <effecterDef>ScramSRP_BiomassShareEffecter</effecterDef>
+            </li>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_OrbUser">
+                <enemyHediffs>
+                    <li>ScramSRP_Hunger</li>
+                </enemyHediffs>
+                <allyHediffs>
+                    <li>ScramSRP_Speed</li>
+                </allyHediffs>
+                <Potency>0.45</Potency>
+            </li>
+        </comps>
+    </ThingDef>
+    <PawnKindDef ParentName="ScramSRP_BasePrimitiveParasiteKind">
+        <defName>ScramSRP_Pri_BolsterKind</defName>
+        <label>primitive bolster</label>
+        <race>ScramSRP_Pri_Bolster</race>
+        <combatPower>350</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/PriAda/Pri_Bolster/Pri_Bolster</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>2.8</drawSize>
+                    <shadowData>
+                        <volume>(0.5, 0.8, 0.5)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+</Defs>

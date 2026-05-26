@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThinkTreeDef>
+      <defName>ParasiteSim</defName>
+      <thinkRoot Class="ThinkNode_Priority">
+        <subNodes>
+          <!-- Despawned -->
+          <li Class="ThinkNode_Subtree">
+            <treeDef>Despawned</treeDef>
+          </li>
+          <!-- Downed -->
+          <li Class="ThinkNode_Subtree">
+            <treeDef>Downed</treeDef>
+          </li>
+
+          <!-- React to close melee threat -->
+          <li Class="JobGiver_ReactToCloseMeleeThreat">
+            <maxDistance>2.9</maxDistance>
+          </li>
+
+          <!-- Lord directives -->
+          <li Class="ThinkNode_Subtree">
+            <treeDef>LordDuty</treeDef>
+          </li>
+
+          <!-- Search for mergeable parasites -->
+          <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_SearchForMergeable"/>
+
+          <!-- Convert the downed pawns -->
+          <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_ConvertDownedPawn">
+              <range>30</range>
+          </li>
+
+          <!-- Consume any dead corpses -->
+          <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_ConsumeCorpse">
+            <range>30</range>
+          </li>
+
+          <!-- Regular fight -->
+          <li Class="JobGiver_AIFightEnemies">
+            <targetAcquireRadius>65</targetAcquireRadius>
+            <targetKeepRadius>72</targetKeepRadius>
+            <allowTurrets>true</allowTurrets>
+            <ignoreNonCombatants>false</ignoreNonCombatants>
+            <humanlikesOnly>false</humanlikesOnly>
+          </li>
+
+          <li Class="ThinkNode_Tagger">
+            <tagToGive>Idle</tagToGive>
+            <subNodes>
+              <li Class="JobGiver_WanderAnywhere">
+                <maxDanger>Deadly</maxDanger>
+                <ticksBetweenWandersRange>180~720</ticksBetweenWandersRange>
+                <wanderRadius>6</wanderRadius>
+                <canBashDoors>true</canBashDoors>
+                <expireOnNearbyEnemy>true</expireOnNearbyEnemy>
+              </li>
+            </subNodes>
+          </li>
+        </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+</Defs>

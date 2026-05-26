@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Abstract for Ruptoid Parasites-->
+    <ThingDef ParentName="BaseParasite" Name="BaseRuptoid" Abstract="True">
+        <statBases>
+            <MoveSpeed>6</MoveSpeed>
+        </statBases>
+        <race>
+            <body>RuptoidBody</body>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                    <soundWounded>Hurt_Inborn</soundWounded>
+                    <soundDeath>Death_Inborn</soundDeath>
+                    <soundCall>Call_Inborn</soundCall>
+                </li>
+            </lifeStageAges>
+            <baseHealthScale>0.5</baseHealthScale>
+        </race>
+        <tools>
+            <li>
+                <label>infector tendril</label>
+                <capacities>
+                    <li>ScramSRP_DirectConvertCapStab</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2</cooldownTime>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                <linkedBodyPartsGroup>InfectorAttackTool</linkedBodyPartsGroup>
+                <hediff>ScramSRP_HediffCOTHDef</hediff>
+                <chanceFactor>1.00</chanceFactor>
+            </li>
+            <li>
+                <label>body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>BodyAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+    </ThingDef>
+    <ThingDef ParentName="BaseRuptoid">
+        <defName>Rupter</defName>
+        <label>rupter</label>
+        <description>Rupters are infestation propagators and swarm units, attacking at close to moderate range and guaranteed to inflict the Call of the Hive.</description>
+        <race>
+            <thinkTreeMain>ParasiteAmbusher</thinkTreeMain>
+        </race>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_EvolverParasite_Kills">
+                <evolutionTarget>ScramSRP_Mangler</evolutionTarget>
+                <ReqKills>30</ReqKills>
+            </li>
+        </comps>
+    </ThingDef>
+    <ThingDef ParentName="BaseRuptoid">
+        <defName>ScramSRP_ManglerRace</defName>
+        <label>mangler</label>
+        <description>Manglers are highly mobile, swarming melee combatants, attacking at close to moderate range and guaranteed to inflict the Call of the Hive.</description>
+        <statBases>
+            <MeleeDodgeChance>0.8</MeleeDodgeChance>
+            <MeleeCooldownFactor>0.25</MeleeCooldownFactor>
+        </statBases>
+        <race>
+            <thinkTreeMain>ParasiteLeaper</thinkTreeMain>
+            <renderTree>ScramSRP_ManglerTendrils</renderTree>
+            <baseHealthScale>0.85</baseHealthScale>
+        </race>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_Adaptation">
+                <learnChance>0.95</learnChance>
+                <failChance>0.3</failChance>
+                <reductionPerPoint>0.125</reductionPerPoint>
+                <reductionCap>8</reductionCap>
+                <maxLearnedDamageSources>12</maxLearnedDamageSources>
+            </li>
+        </comps>
+    </ThingDef>
+    <ThingDef ParentName="BaseParasite">
+        <defName>ScramSRP_BuglinRace</defName>
+        <label>buglin</label>
+        <statBases>
+            <MoveSpeed>2</MoveSpeed>
+        </statBases>
+        <race>
+            <thinkTreeMain>Buglin</thinkTreeMain>
+            <baseHealthScale>0.2</baseHealthScale>
+            <body>BuglinBody</body>
+            <lifeStageAges>
+                <li>
+                    <def>InbornYoung</def>
+                    <minAge>0</minAge>
+                    <soundWounded>Hurt_Inborn</soundWounded>
+                    <soundDeath>Death_Inborn</soundDeath>
+                    <soundCall>Call_Inborn</soundCall>
+                </li>
+                <li>
+                    <def>InbornYoung</def>
+                    <minAge>4.16E-3</minAge>
+                    <soundWounded>Hurt_Inborn</soundWounded>
+                    <soundDeath>Death_Inborn</soundDeath>
+                    <soundCall>Call_Inborn</soundCall>
+                </li>
+            </lifeStageAges>
+        </race>
+        <tools>
+            <li>
+                <label>body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>BodyAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProperties_EvolverParasite_Timer">
+                <evolutionTarget>Rupter</evolutionTarget>
+                <ReqTimeTicks>13500</ReqTimeTicks>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <PawnKindDef ParentName="BaseParasiteKind">
+        <defName>ScramSRP_Buglin</defName>
+        <label>buglin</label>
+        <race>ScramSRP_BuglinRace</race>
+        <combatPower>10</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/Inborn/Buglin/Buglin</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>0.5</drawSize>
+                    <shadowData>
+                        <volume>(0.4, 0.8, 0.4)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/Inborn/Buglin/Buglin</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.0</drawSize>
+                    <shadowData>
+                        <volume>(0.4, 0.8, 0.4)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="BaseParasiteKind">
+        <defName>Rupter</defName>
+        <label>rupter</label>
+        <race>Rupter</race>
+        <combatPower>50</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/Inborn/Rupter/Rupter</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <color>(84,73,69)</color>
+                    <drawSize>2.2</drawSize>
+                    <shadowData>
+                        <volume>(0.4, 0.8, 0.4)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+    <abilities>
+        <li>ScramSRP_AttackLeapParasite</li>
+        <li>ScramSRP_InfectAnimal</li>
+    </abilities>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseParasiteKind">
+        <defName>ScramSRP_Mangler</defName>
+        <label>mangler</label>
+        <race>ScramSRP_ManglerRace</race>
+        <combatPower>50</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/Inborn/Mangler/Mangler</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>2.2</drawSize>
+                    <shadowData>
+                        <volume>(0.4, 0.8, 0.4)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+    <abilities>
+        <li>ScramSRP_AttackLeapParasite</li>
+    </abilities>
+  </PawnKindDef>
+
+    <ThingDef ParentName="BaseParasite" Name="BaseCarrierGround" Abstract="True">
+        <statBases>
+            <MoveSpeed>5.3</MoveSpeed>
+        </statBases>
+        <hiddenWhileUndiscovered>true</hiddenWhileUndiscovered>
+        <race>
+            <bloodDef>ScramSRP_Filth_ResidueInfested</bloodDef>
+            <body>CarrierGroundBody</body>
+            <corpseHiddenWhileUndiscovered>true</corpseHiddenWhileUndiscovered>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                    <soundWounded>Hurt_Carrier</soundWounded>
+                    <soundDeath>Death_Carrier</soundDeath>
+                    <soundCall>Call_Carrier</soundCall>
+                </li>
+            </lifeStageAges>
+        </race>
+        <tools>
+            <li>
+                <label>left leg</label>
+                <labelNoLocation>leg</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.0</power>
+                <cooldownTime>4</cooldownTime>
+                <linkedBodyPartsGroup>LeftLeg</linkedBodyPartsGroup>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            </li>
+            <li>
+                <label>right leg</label>
+                <labelNoLocation>leg</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.0</power>
+                <cooldownTime>4</cooldownTime>
+                <linkedBodyPartsGroup>RightLeg</linkedBodyPartsGroup>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseCarrierGround">
+        <defName>ScramSRP_Carrier_Light_Race</defName>
+        <label>light carrier</label>
+        <description>Light Carriers are Small Infestation Propagators that hold other infectors.</description>
+        <race>
+            <baseBodySize>1.2</baseBodySize>
+            <deathAction Class="AssemblyParasitesColonThree.DeathActionProperties_PopIntoParas">
+                <workerClass>AssemblyParasitesColonThree.DeathActionWorker_PopIntoParas</workerClass>
+                <carrierpawnkindoptions>
+                    <li>Rupter</li>
+                </carrierpawnkindoptions>
+                <popRange>3</popRange>
+                <dividePawnCount>5</dividePawnCount>
+            </deathAction>
+        </race>
+    </ThingDef>
+
+    <PawnKindDef ParentName="BaseParasiteKind">
+        <defName>ScramSRP_Carrier_Light</defName>
+        <label>light carrier</label>
+        <race>ScramSRP_Carrier_Light_Race</race>
+        <combatPower>250</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/Inborn/Light_Carrier/Light_Carrier</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <color>(84,73,69)</color>
+                    <drawSize>3</drawSize>
+                    <shadowData>
+                        <volume>(0.4, 0.8, 0.4)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+    </lifeStages>
+  </PawnKindDef>
+
+    
+</Defs>

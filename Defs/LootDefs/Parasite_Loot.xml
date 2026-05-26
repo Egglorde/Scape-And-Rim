@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="OrganicProductBase">
+        <defName>ScramSRP_DiseasedHeart</defName>
+        <label>diseased heart</label>
+        <description>A grossly swollen heart harvested from an Assimilated Creature body. A Lure Component.</description>
+        <possessionCount>1</possessionCount>
+        <graphicData>
+            <texPath>Loot/AssimLoot_DiseasedHeart</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>20</MarketValue>
+            <MaxHitPoints>150</MaxHitPoints>
+            <Mass>1.8</Mass>
+            <Flammability>0.9</Flammability>
+            <DeteriorationRate>0.5</DeteriorationRate>
+        </statBases>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>25</stackLimit>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>30</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <thingCategories>
+            <li>ItemsMisc</li> 
+        </thingCategories>
+        <tradeTags>
+            <li>ExoticMisc</li>
+            <li>AnimalPart</li>
+        </tradeTags>
+        <thingSetMakerTags>
+            <li>AnimalPart</li>
+        </thingSetMakerTags>
+    </ThingDef>
+
+    <ThingDef ParentName="OrganicProductBase">
+        <defName>ScramSRP_InfectedFlesh</defName>
+        <label>infected flesh</label>
+        <description>A piece of flesh ripped off an Assimilated Creature. Can be manipulated in the Bio-Forge.</description>
+        <graphicData>
+            <texPath>Loot/AssimLoot_InfectedFlesh</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <ingestible>
+            <preferability>DesperateOnly</preferability>
+            <foodType>AnimalProduct</foodType>
+            <ingestEffect>EatMeat</ingestEffect>
+            <ingestSound>RawMeat_Eat</ingestSound>
+            <tasteThought>AteRawFood</tasteThought>
+        </ingestible>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <stackLimit>75</stackLimit>
+        <statBases>
+            <Mass>0.15</Mass>
+            <MaxHitPoints>20</MaxHitPoints>
+            <DeteriorationRate>2</DeteriorationRate>
+            <Flammability>0.7</Flammability>
+            <Nutrition>0.25</Nutrition>
+            <FoodPoisonChanceFixedHuman>1</FoodPoisonChanceFixedHuman>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>15</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+                <disableIfHatcher>true</disableIfHatcher>
+            </li>
+        </comps>
+        <thingCategories>
+            <li>MeatRaw</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ExoticMisc</li>
+            <li>AnimalPart</li>
+        </tradeTags>
+        <thingSetMakerTags>
+            <li>AnimalPart</li>
+        </thingSetMakerTags>
+    </ThingDef>
+</Defs>

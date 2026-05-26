@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnRenderTreeDef[defName="Animal"]/root/children/li</xpath>
+        <value>
+            <subworkerClasses>
+                <li>AssemblyParasitesColonThree.Misc.PawnRenderSubWorker_BodyInfected</li>
+            </subworkerClasses>
+        </value>
+    </Operation>
+    
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <!-- Pigs -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/PawnKindDef[defName="Pig"]</xpath>
+                <value>
+                    <li Class="AssemblyParasitesColonThree.InfectedFormDefModExtension">
+                        <infectedForm>ScramSRP_SimPigFormDef</infectedForm>
+                    </li>
+                </value>
+            </li>
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/PawnKindDef[defName="WildBoar"]</xpath>
+                <value>
+                    <li Class="AssemblyParasitesColonThree.InfectedFormDefModExtension">
+                        <infectedForm>ScramSRP_SimHogFormDef</infectedForm>
+                    </li>
+                </value>
+            </li>
+            <!-- Cow -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/PawnKindDef[defName="Cow"]</xpath>
+                <value>
+                    <li Class="AssemblyParasitesColonThree.InfectedFormDefModExtension">
+                        <infectedForm>ScramSRP_SimCowFormDef</infectedForm>
+                    </li>
+                </value>
+            </li>
+            <!-- Boomalopes -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/PawnKindDef[defName="Boomalope"]</xpath>
+                <value>
+                    <li Class="AssemblyParasitesColonThree.InfectedFormDefModExtension">
+                        <infectedForm>ScramSRP_SimAlopeFormDef</infectedForm>
+                    </li>
+                </value>
+            </li>
+            <!-- Bears -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/PawnKindDef[defName="Bear_Grizzly"]</xpath>
+                <value>
+                    <li Class="AssemblyParasitesColonThree.InfectedFormDefModExtension">
+                        <infectedForm>ScramSRP_SimBearFormDef</infectedForm>
+                    </li>
+                </value>
+            </li>
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/PawnKindDef[defName="Bear_Polar"]</xpath>
+                <value>
+                    <li Class="AssemblyParasitesColonThree.InfectedFormDefModExtension">
+                        <infectedForm>ScramSRP_SimBearFormDef</infectedForm>
+                    </li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

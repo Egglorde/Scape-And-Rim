@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  
+  <PawnRenderNodeTagDef>
+    <defName>BodyReplacer</defName>
+  </PawnRenderNodeTagDef>
+
+    <PawnRenderTreeDef>
+    <defName>BeckonBloom</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <tagDef>Body</tagDef>
+          <useRottenColor>true</useRottenColor>
+          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+          <children>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleA</debugLabel>
+              <texPath>Parasite/Nexus/Beckon/BeckonTendrilA</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>30~90</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.15, 0.01, 0.2)</offset>
+                  <rotationOffset>20</rotationOffset>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleB</debugLabel>
+              <texPath>Parasite/Nexus/Beckon/BeckonTendrilA</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>30~90</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(-0.07, 0.01, 0.12)</offset>
+                  <rotationOffset>60</rotationOffset>
+                  <flip>true</flip>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleC</debugLabel>
+              <texPath>Parasite/Nexus/Beckon/BeckonTendrilB</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>30~90</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.1, -0.01, 0.3)</offset>
+                  <rotationOffset>10</rotationOffset>
+                  <flip>true</flip>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleD</debugLabel>
+              <texPath>Parasite/Nexus/Beckon/BeckonTendrilB</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>30~90</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(-0.1, -0.01, 0.3)</offset>
+                  <rotationOffset>-30</rotationOffset>
+                </defaultData>
+              </drawData>
+            </li>
+            <li>
+              <debugLabel>Wounds</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>10</baseLayer>
+            </li>
+            <li>
+              <debugLabel>Firefoam</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>20</baseLayer>
+            </li>
+          </children>
+        </li>
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+  <PawnRenderTreeDef>
+    <defName>Beckon2Bloom</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <tagDef>Body</tagDef>
+          <useRottenColor>true</useRottenColor>
+          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+          <children>
+
+            <!-- 1st bloom -->
+
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleA</debugLabel>
+              <texPath>Parasite/Nexus/Beckon/BeckonTendrilC</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>30~90</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.24, 0.01, 0.5)</offset>
+                  <rotationOffset>20</rotationOffset>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleB</debugLabel>
+              <texPath>Parasite/Nexus/Beckon/BeckonTendrilC</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>30~90</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.12, 0.01, 0.5)</offset>
+                  <rotationOffset>60</rotationOffset>
+                  <flip>true</flip>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleC</debugLabel>
+              <texPath>Parasite/Nexus/Beckon/BeckonTendrilB</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>30~90</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.24, -0.01, 0.6)</offset>
+                  <rotationOffset>-10</rotationOffset>
+                  <flip>true</flip>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleD</debugLabel>
+              <texPath>Parasite/Nexus/Beckon/BeckonTendrilB</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>30~90</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.12, -0.01, 0.6)</offset>
+                  <rotationOffset>-50</rotationOffset>
+                </defaultData>
+              </drawData>
+            </li>
+          
+            <!-- 2nd bloom -->
+
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleE</debugLabel>
+              <texPath>Parasite/Nexus/Beckon/BeckonTendrilD</texPath>
+              <drawSize>1.6</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>30~90</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.13, 0.01, 1.15)</offset>
+                  <rotationOffset>20</rotationOffset>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleF</debugLabel>
+              <texPath>Parasite/Nexus/Beckon/BeckonTendrilD</texPath>
+              <drawSize>1.6</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>30~90</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(-0.07, 0.01, 1.15)</offset>
+                  <rotationOffset>10</rotationOffset>
+                  <flip>true</flip>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleG</debugLabel>
+              <texPath>Parasite/Nexus/Beckon/BeckonTendrilE</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>30~90</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(-0.1, -0.01, 1.15)</offset>
+                  <rotationOffset>10</rotationOffset>
+                  <flip>true</flip>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleH</debugLabel>
+              <texPath>Parasite/Nexus/Beckon/BeckonTendrilE</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>30~90</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.1, -0.01, 1.15)</offset>
+                  <rotationOffset>10</rotationOffset>
+                </defaultData>
+              </drawData>
+            </li>
+
+            <li>
+              <debugLabel>Wounds</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>10</baseLayer>
+            </li>
+            <li>
+              <debugLabel>Firefoam</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>20</baseLayer>
+            </li>
+          </children>
+        </li>
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+</Defs>

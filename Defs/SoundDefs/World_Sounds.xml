@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <SoundDef>
+        <defName>ScramSRP_NodeSound</defName>  
+        <context>Any</context>
+        <maxSimultaneous>10</maxSimultaneous>  
+        <subSounds>
+            <li>
+                <onCamera>True</onCamera>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>EggsBeckonMod/Incident/Incident_Node</clipPath>
+                    </li>
+                </grains>
+            </li>
+        </subSounds>
+    </SoundDef>
+    <SoundDef>
+        <defName>ScramSRP_AssimWorldSound</defName>  
+        <context>Any</context>
+        <maxSimultaneous>10</maxSimultaneous>  
+        <subSounds>
+            <li>
+                <onCamera>True</onCamera>
+                <volumeRange>90~110</volumeRange>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>EggsBeckonMod/Incident/Incident_Assim</clipPath>
+                    </li>
+                </grains>
+            </li>
+        </subSounds>
+    </SoundDef>
+</Defs>

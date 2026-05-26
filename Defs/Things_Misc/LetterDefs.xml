@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <LetterDef ParentName="NegativeEvent">
+        <defName>ScramSRP_NodeEvent</defName>
+        <color>(30, 30, 30)</color>
+        <flashColor>(0, 0, 0)</flashColor>
+        <letterClass>DeathLetter</letterClass>
+        <flashInterval>40</flashInterval>
+        <arriveSound>ScramSRP_NodeSound</arriveSound>
+    </LetterDef>
+    <LetterDef ParentName="NegativeEvent">
+        <defName>ScramSRP_AssimWorldEvent</defName>
+        <color>(200, 30, 30)</color>
+        <flashColor>(0, 0, 0)</flashColor>
+        <letterClass>DeathLetter</letterClass>
+        <flashInterval>40</flashInterval>
+        <arriveSound>ScramSRP_AssimWorldSound</arriveSound>
+    </LetterDef>
+</Defs>

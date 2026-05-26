@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThinkTreeDef>
+        <defName>ParasiteAmbusher</defName>
+        <thinkRoot Class="ThinkNode_Priority">
+        <subNodes>
+            <!-- Despawned -->
+            <li Class="ThinkNode_Subtree">
+                <treeDef>Despawned</treeDef>
+            </li>
+            
+            <!-- Downed -->
+            <li Class="ThinkNode_Subtree">
+                <treeDef>Downed</treeDef>
+            </li>
+
+            <!-- React to close melee threat -->
+            <li Class="JobGiver_ReactToCloseMeleeThreat">
+                <maxDistance>1.9</maxDistance>
+            </li>
+
+            <!-- Convert the downed pawns -->
+            <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_ConvertDownedPawn">
+                <range>19.9</range>
+            </li>
+            
+            <!-- Lord directives -->
+            <li Class="ThinkNode_Subtree">
+                <treeDef>LordDuty</treeDef>
+            </li>
+            <!-- Take unsuspecting creature's lunch money (STUPID arcanum says i gotta stop jumpin' people)-->
+
+            <!-- Regular fight (At phase 2+)-->
+            <li Class="AssemblyParasitesColonThree.ThinkNodes.ThinkNode_ConditionalPhase">
+                <MinPhase>2</MinPhase>
+                <subNodes> 
+                    <li Class="JobGiver_AIFightEnemies">
+                        <targetAcquireRadius>65</targetAcquireRadius>
+                        <targetKeepRadius>72</targetKeepRadius>
+                        <allowTurrets>true</allowTurrets>
+                        <ignoreNonCombatants>false</ignoreNonCombatants>
+                        <humanlikesOnly>false</humanlikesOnly>
+                    </li>
+                </subNodes>
+            </li>
+            
+            <!-- Flee and other stuff (At phase 1-)-->
+            <li Class="AssemblyParasitesColonThree.ThinkNodes.ThinkNode_ConditionalAntiPhase">
+                <MaxPhase>1</MaxPhase>
+                <subNodes> 
+                    <li Class="ThinkNode_ConditionalHasAbility">
+                        <ability>ScramSRP_InfectAnimal</ability>
+                        <subNodes>
+                            <li Class="AssemblyParasitesColonThree.WorkRelated.JobGiver_AICastAbilityMelee">
+                                <ability>ScramSRP_InfectAnimal</ability>
+                            </li>
+                        </subNodes>
+                    </li>   
+                    <li Class="JobGiver_FleeForDistance">
+                        <enemyDistToFleeRange>1.9~15.9</enemyDistToFleeRange>
+                        <fleeDistRange>13.5~20</fleeDistRange>
+                    </li>
+                </subNodes>
+            </li>
+
+            <li Class="ThinkNode_Tagger">
+                <tagToGive>Idle</tagToGive>
+                <subNodes>
+                    <li Class="JobGiver_WanderAnywhere">
+                        <maxDanger>Deadly</maxDanger>
+                        <ticksBetweenWandersRange>180~720</ticksBetweenWandersRange>
+                        <wanderRadius>6</wanderRadius>
+                        <canBashDoors>true</canBashDoors>
+                        <expireOnNearbyEnemy>true</expireOnNearbyEnemy>
+                    </li>
+                </subNodes>
+            </li>
+        </subNodes>
+        </thinkRoot>
+    </ThinkTreeDef>
+</Defs>

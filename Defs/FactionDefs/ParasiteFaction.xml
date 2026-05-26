@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <FactionDef ParentName="FactionBase">
+    <defName>ParasiteFaction</defName>
+    <label>parasite horde</label>
+    <fixedName>Parasitic hordes</fixedName>
+    <pawnSingular>parasite</pawnSingular>
+    <pawnsPlural>parasites</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 0)</li>
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <hidden>true</hidden>
+    <displayInFactionSelection>false</displayInFactionSelection>
+    <autoFlee>false</autoFlee>
+    <canUseAvoidGrid>false</canUseAvoidGrid>
+    <techLevel>Animal</techLevel>
+    <permanentEnemyToEveryoneExcept>
+      <li>Insect</li>
+    </permanentEnemyToEveryoneExcept>
+    <hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <allowedArrivalTemperatureRange>-100~100</allowedArrivalTemperatureRange>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>1000</configurationListOrderPriority>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(400,200)</li>
+        <li>(900,300)</li>
+        <li>(100000,10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>0.95</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.05</commonality>
+      </li>
+    </backstoryFilters>
+    <pawnGroupMakers Inherit="False">
+      <!-- Basic -->
+      <li>
+                <!-- All types-->
+            <kindDef>Combat</kindDef>
+            <commonality>500</commonality>
+            <options>
+                <Rupter>15</Rupter>
+                <ScramSRP_Carrier_Light>3</ScramSRP_Carrier_Light>
+                <ScramSRP_Pri_ArachnidaKind>3</ScramSRP_Pri_ArachnidaKind>
+                <ScramSRP_Pri_ReekerKind>3</ScramSRP_Pri_ReekerKind>
+                <ScramSRP_Pri_LongArmsKind>3</ScramSRP_Pri_LongArmsKind>
+                <ScramSRP_Pri_ManducaterKind>3</ScramSRP_Pri_ManducaterKind>
+                <ScramSRP_Pri_YelloweyeKind>3</ScramSRP_Pri_YelloweyeKind>
+                <ScramSRP_Pri_SummonerKind>3</ScramSRP_Pri_SummonerKind>
+                <ScramSRP_Pri_BolsterKind>3</ScramSRP_Pri_BolsterKind>
+            </options>
+        </li>
+      <!-- Inborn -->
+      <li>
+                <!-- Inborn only-->
+            <kindDef>Combat</kindDef>
+            <commonality>100</commonality>
+            <options>
+                <Rupter>15</Rupter>
+                <ScramSRP_Carrier_Light>3</ScramSRP_Carrier_Light>
+            </options>
+        </li>
+    </pawnGroupMakers>
+  </FactionDef>
+</Defs>

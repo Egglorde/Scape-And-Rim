@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AssemblyParasitesColonThree.InfectedFormTypeDef>
+        <defName>ScramSrp_Sim</defName> 
+        <label>assimilated</label>
+        <hediffClass>AssemblyParasitesColonThree.Hediff_Infected</hediffClass>
+        <description>This person has been assimilated into the parasite hive.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <headBasePawnKind>ScramSRP_SimHumanHead</headBasePawnKind>
+        <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+        <stages>
+            <li>
+                <painFactor>0</painFactor>
+                <statFactors>
+                    <PsychicSensitivity>0</PsychicSensitivity>
+                </statFactors>
+                <statOffsets>
+                    <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+                    <ComfyTemperatureMax>40</ComfyTemperatureMax>
+                </statOffsets>
+                <disablesNeeds>
+                    <li>Rest</li>
+                    <li>Food</li>
+                    <li>Mood</li>
+                </disablesNeeds>
+                <damageFactors>
+                  <Flame>4</Flame>
+                  <Burn>4</Burn>
+                </damageFactors>
+                <capMods>
+                    <li>
+                        <capacity>Talking</capacity>
+                        <setMax>0</setMax>
+                    </li>
+                </capMods>
+                <regeneration>100</regeneration>
+            </li>
+        </stages>
+        <formDefs>
+            <li>ScramSRP_SimBearFormDef</li>
+            <li>ScramSRP_SimCowFormDef</li>
+            <li>ScramSRP_SimAlopeFormDef</li>
+            <li>ScramSRP_SimPigFormDef</li>
+        </formDefs>
+        <forcedHeadTypes>
+            <li>Sim_Human</li>
+        </forcedHeadTypes>
+        <colorOverride>(255, 100, 100)</colorOverride>
+        <appareluser>True</appareluser>
+        <weaponuser>False</weaponuser>
+        <namePrefix>assimilated</namePrefix>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.HediffCompPropertiess.HediffCompProperties_KillTracker"/>
+        </comps>
+    </AssemblyParasitesColonThree.InfectedFormTypeDef>
+
+    <AssemblyParasitesColonThree.InfectedFormDef>
+        <defName>ScramSRP_SimBearFormDef</defName>
+        <newGraphicData>
+            <texPath>Parasite/Sim/Sim_Bear/Sim_Bear</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>1</drawSize>
+            <shadowData>
+                <volume>(0.6, 0.45, 0.45)</volume>
+                <offset>(0,0,-0.25)</offset>
+            </shadowData>
+        </newGraphicData>
+    </AssemblyParasitesColonThree.InfectedFormDef>
+
+    <AssemblyParasitesColonThree.InfectedFormDef>
+        <defName>ScramSRP_SimCowFormDef</defName>
+        <headPawnKind>ScramSRP_SimCowHead</headPawnKind>
+        <newGraphicData>
+            <texPath>Parasite/Sim/Sim_Cow/Sim_Cow</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>1</drawSize>
+            <color>(170,170,170)</color>
+            <shadowData>
+                <volume>(0.6, 0.45, 0.45)</volume>
+                <offset>(0,0,-0.25)</offset>
+            </shadowData>
+        </newGraphicData>
+    </AssemblyParasitesColonThree.InfectedFormDef>
+
+    <AssemblyParasitesColonThree.InfectedFormDef>
+        <defName>ScramSRP_SimPigFormDef</defName>
+        <newGraphicData>
+            <texPath>Parasite/Sim/Sim_Pig/Sim_Pig</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>1</drawSize>
+            <color>(167,145,128)</color>
+            <shaderType>CutoutSkin</shaderType>
+            <shadowData>
+                <volume>(0.5, 0.5, 0.5)</volume>
+                <offset>(0,0,-0.3)</offset>
+            </shadowData>
+        </newGraphicData>
+    </AssemblyParasitesColonThree.InfectedFormDef>
+
+    <AssemblyParasitesColonThree.InfectedFormDef>
+        <defName>ScramSRP_SimHogFormDef</defName>
+        <newGraphicData>
+            <texPath>Parasite/Sim/Sim_Pig/Sim_Pig</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>0.625</drawSize>
+            <color>(167,145,128)</color>
+            <shaderType>CutoutSkin</shaderType>
+            <shadowData>
+                <volume>(0.5, 0.5, 0.5)</volume>
+                <offset>(0,0,-0.3)</offset>
+            </shadowData>
+        </newGraphicData>
+    </AssemblyParasitesColonThree.InfectedFormDef>
+
+    <AssemblyParasitesColonThree.InfectedFormDef>
+        <defName>ScramSRP_SimAlopeFormDef</defName>
+        <headPawnKind>ScramSRP_SimAlopeHead</headPawnKind>
+        <newGraphicData>
+            <texPath>Parasite/Sim/Sim_Boomalope/Sim_Boomalope</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <color>(176,150,106)</color>
+            <drawSize>1</drawSize>
+            <shaderType>Cutout</shaderType>
+            <shadowData>
+                <volume>(0.8, 0.6, 0.6)</volume>
+                <offset>(0,0,-0.3)</offset>
+            </shadowData>
+        </newGraphicData>
+    </AssemblyParasitesColonThree.InfectedFormDef>
+
+    <PawnKindDef ParentName="BaseParasiteKind" Name="ScramSRP_BaseHeadKind" Abstract="True">
+        <mutant>ScramSRP_AssimilatedMutant</mutant>
+        <race>Rupter</race>
+        <combatPower>10</combatPower>
+        <startingHediffs>
+            <li>
+                <def>ScramSrp_Sim</def>
+            </li>
+        </startingHediffs>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ScramSRP_BaseHeadKind">
+        <defName>ScramSRP_SimAlopeHead</defName>
+        <label>walking cow head</label>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/Sim/Sim_Boomalope/Sim_Boomalope_Head</texPath>
+                    <color>(176,150,106)</color>
+                    <drawSize>2.2</drawSize>
+                    <shadowData>
+                        <volume>(0.8, 0.6, 0.6)</volume>
+                        <offset>(0,0,-0.3)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+  <PawnKindDef ParentName="ScramSRP_BaseHeadKind">
+        <defName>ScramSRP_SimCowHead</defName>
+        <label>walking cow head</label>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/Sim/Sim_Cow/Sim_Cow_Head</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>2.7</drawSize>
+                    <shadowData>
+                        <volume>(0.6, 0.45, 0.45)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                    <color>(170,170,170)</color>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="ScramSRP_BaseHeadKind">
+        <defName>ScramSRP_SimHumanHead</defName>
+        <label>walking human head</label>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Mutants/Heads/Sim_Human</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                    <drawSize>1.4</drawSize>
+                    <shadowData>
+                        <volume>(0.6, 0.45, 0.45)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+  </PawnKindDef>
+</Defs>

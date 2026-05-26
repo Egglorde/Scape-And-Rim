@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+  <!-- Orb -->
+  <AbilityDef>
+    <defName>ScramSRP_OrbAbilityBase</defName>
+    <label>orb</label>
+    <description>Create an orb that provides various effects.</description>
+    <jobDef>CastAbilityOnThing</jobDef>
+
+    <warmupMote>ScramSRP_Mote_Orb</warmupMote>
+    <cooldownTicksRange>2700</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+    <targetRequired>false</targetRequired>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <!--<warmupStartSound>CombatCommand_Warmup</warmupStartSound>-->
+
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <warmupStartSound>ScramSRP_Orb_Charge</warmupStartSound>
+    <warmupSound>ScramSRP_Orb_Sustain</warmupSound>
+    <statBases>
+      <Ability_Duration>1000</Ability_Duration>
+      <Ability_EffectRadius>4.9</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>4</warmupTime>
+      <range>0.9</range>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <soundCast>ScramSRP_Orb_Fire</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityEffect">
+        <compClass>AssemblyParasitesColonThree.Comps.AbilityComp_OrbComp</compClass>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef >
+    <defName>ScramSRP_AttackHopParasite</defName>
+    <label>attack hop</label>
+    <description>Leap onto a target.</description>
+    <cooldownTicksRange>300</cooldownTicksRange> <!-- ~abt 5 seconds -->
+    <jobDef>CastJump</jobDef>
+    <ai_IsOffensive>true</ai_IsOffensive>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>attack leap</label>
+      <range>2.9</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0</warmupTime>
+      <targetParams>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <AbilityDef Name="ScramSRP_ProjBaseParasite" Abstract="True">
+    <label>acid launch</label>
+    <description>Launch acid at a target.</description>
+    <cooldownTicksRange>30</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <defaultProjectile>ScramSRP_AcidGlob</defaultProjectile>
+      <verbClass>Verb_AbilityShoot</verbClass>
+      <range>12.9</range>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>ScramSRP_PriYelloweyeShoot</soundCast>
+      <ai_IsWeapon>false</ai_IsWeapon>
+    </verbProperties>
+  </AbilityDef>
+
+  <ThingDef>
+    <defName>ScramSRP_Giblet</defName>
+    <category>Projectile</category>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>AssemblyParasitesColonThree.Things.Projectiles.Projectile_Junk</thingClass>
+    <label>projectile</label>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <texPath>Loot/AssimLoot_InfectedFlesh</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <projectile>
+      <speed>6</speed>
+      <arcHeightFactor>1.4</arcHeightFactor>
+      <shadowSize>0.4</shadowSize>
+      <soundImpact>ScramSRP_MeatImpact</soundImpact>
+    </projectile>
+  </ThingDef>
+  
+  <AbilityDef ParentName="ScramSRP_ProjBaseParasite">
+    <defName>ScramSRP_AcidProj</defName>
+  </AbilityDef>
+  
+  <AbilityDef ParentName="ScramSRP_ProjBaseParasite">
+    <defName>ScramSRP_Nade</defName>
+    <cooldownTicksRange>500</cooldownTicksRange>
+    <verbProperties>
+      <defaultProjectile>ScramSRP_NadeProj</defaultProjectile>
+      <verbClass>Verb_AbilityShoot</verbClass>
+      <range>12.9</range>
+      <burstShotCount>1</burstShotCount>
+      <warmupTime>3</warmupTime>
+      <soundCast>ScramSRP_PriYelloweyeShoot</soundCast>
+      <ai_IsWeapon>false</ai_IsWeapon>
+    </verbProperties>
+  </AbilityDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ScramSRP_AcidGlob</defName>
+    <label>acid glob</label>
+    <graphicData>
+      <texPath>Projectile/Yelloweye_Acidglob</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.6</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>AcidBurn</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <stoppingPower>0.7</stoppingPower>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ScramSRP_NadeProj</defName>
+    <thingClass>Projectile_Explosive</thingClass>
+    <label>nade</label>
+    <graphicData>
+      <texPath>Projectile/Yelloweye_Acidglob</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.6</drawSize>
+    </graphicData>    
+    <projectile>
+      <explosionRadius>1.8</explosionRadius>
+      <damageDef>ScramSRP_NadeBurn</damageDef>
+      <damageAmountBase>2</damageAmountBase>
+      <preExplosionSpawnThingDef>ScramSRP_Filth_AcidPuddle</preExplosionSpawnThingDef>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <shadowSize>0.6</shadowSize>
+      <speed>50</speed>
+      <screenShakeFactor>0.5</screenShakeFactor>
+    </projectile>
+  </ThingDef>
+  
+  <AbilityDef>
+    <defName>ScramSRP_AttackLeapParasite</defName>
+    <label>attack leap</label>
+    <description>Leap onto a target.</description>
+    <cooldownTicksRange>3600</cooldownTicksRange> <!-- 1.44 hours -->
+    <jobDef>CastJump</jobDef>
+    <ai_IsOffensive>true</ai_IsOffensive>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>attack leap</label>
+      <range>9.9</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.1</warmupTime>
+      <targetParams>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ScramSRP_Wave</defName>
+    <label>waveslam</label>
+    <description>Slam the ground, launching a wave at the target.</description>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <range>12.9</range>
+      <defaultProjectile>ScramSRP_WaveAttack</defaultProjectile>
+      <verbClass>Verb_AbilityShoot</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>ScramSRP_Explosion_Seismic_Sound</soundCast>
+      <ai_IsWeapon>false</ai_IsWeapon>
+    </verbProperties>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ScramSRP_Charge</defName>
+    <label>charge</label>
+    <description>Charge at the target.</description>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <range>15.9</range>
+      <defaultProjectile>ScramSRP_ChargeAttack</defaultProjectile>
+      <verbClass>AssemblyParasitesColonThree.Misc.Verb_AbilityCharge</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>ScramSRP_Explosion_Seismic_Sound</soundCast>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ScramSRP_InfectAnimal</defName>
+    <label>infect creature</label>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <description>Create a cloud of infectious gas</description>
+    <cooldownTicksRange>60000</cooldownTicksRange><!-- 1 day -->
+    <aiCanUse>true</aiCanUse>
+    <ai_IsOffensive>false</ai_IsOffensive>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <warmupTime>1</warmupTime>   
+      <range>-1</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetAnimals>true</canTargetAnimals>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AssemblyParasitesColonThree.CompProps.AbilityCompProperties_ReleaseCOTHGas">
+        <density>4</density>
+        <sound>ScramSRP_Sound_CloudInborn</sound>
+        <clamorType>Ability</clamorType>
+        <clamorRadius>15</clamorRadius>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>ScramSRP_HediffCOTHDef</hediffDef>
+        <severity>0.5</severity>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ScramSRP_WaveAttack</defName>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Projectile/Seismic_Wave</texPath>
+      <drawSize>3</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ScramSRP_Seismic_Explosion</damageDef>
+      <!-- damage amount is the damage def default -->
+      <speed>30</speed>
+      <explosionRadius>2.9</explosionRadius>
+      <soundAmbient>Tunnel</soundAmbient>
+      <soundImpactAnticipate>Tunnel</soundImpactAnticipate>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ScramSRP_ChargeAttack</defName>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Projectile/Seismic_Wave</texPath>
+      <drawSize>3</drawSize>
+    </graphicData>
+    <thingClass>AssemblyParasitesColonThree.Things.Projectiles.Projectile_Charger</thingClass>
+    <projectile>
+      <damageDef>AcidBurn</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <stoppingPower>0.7</stoppingPower>
+      <speed>50</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- Arachnida and other webs -->
+  <AbilityDef ParentName="ScramSRP_ProjBaseParasite">
+    <defName>ScramSRP_WebAttack</defName>
+    <label>web launch</label>
+    <description>Launch webs at a target.</description>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <defaultProjectile>ScramSRP_WebAttackProj</defaultProjectile>
+      <verbClass>Verb_AbilityShoot</verbClass>
+      <range>24.9</range>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>ScramSRP_PriYelloweyeShoot</soundCast>
+      <ai_IsWeapon>false</ai_IsWeapon>
+    </verbProperties>
+  </AbilityDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ScramSRP_WebAttackProj</defName>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Projectile/Webbing_ball</texPath>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <thingClass>AssemblyParasitesColonThree.Things.Projectiles.Projectile_Kidnapper</thingClass>
+    <projectile>
+      <beamMoteDef>ScramSRP_WebbingMote</beamMoteDef>
+      <damageDef>AcidBurn</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <stoppingPower>0.7</stoppingPower>
+      <speed>50</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef Name="PawnFlyerBase" ParentName="EtherealThingBase">
+    <defName>ScramSRP_PawnBurrower</defName>
+    <label>burrowing</label>
+    <thingClass>PawnFlyer</thingClass>
+    <useHitPoints>false</useHitPoints>
+    <drawOffscreen>true</drawOffscreen>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Skyfaller</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <pawnFlyer>
+      <flightDurationMin>0.5</flightDurationMin>
+      <flightSpeed>12</flightSpeed>
+      <workerClass>PawnFlyerWorker</workerClass>
+      <heightFactor>0</heightFactor>
+      <progressCurve>
+        <points>
+          <li>(0, 0)</li>
+          <li>(0.1, 0.15)</li> <!-- Complete 15% of the journey in first 10% of time -->
+          <li>(1, 1)</li>
+        </points>
+      </progressCurve>
+    </pawnFlyer>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,10 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BeckonMod\Source\AssemblyParasitesColonThree\AssemblyParasitesColonThree\obj\Debug\AssemblyParasitesColonThree.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BeckonMod\Source\AssemblyParasitesColonThree\AssemblyParasitesColonThree\obj\Debug\AssemblyParasitesColonThree.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BeckonMod\Assemblies\AssemblyParasitesColonThree.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BeckonMod\Source\AssemblyParasitesColonThree\AssemblyParasitesColonThree\obj\Debug\AssemblyParasitesColonThree.dll
+C:\Users\John Paul W-\Desktop\BeckonMod\Assemblies\AssemblyParasitesColonThree.dll
+C:\Users\John Paul W-\Desktop\BeckonMod\Source\AssemblyParasitesColonThree\AssemblyParasitesColonThree\obj\Debug\AssemblyParasitesColonThree.csproj.AssemblyReference.cache
+C:\Users\John Paul W-\Desktop\BeckonMod\Source\AssemblyParasitesColonThree\AssemblyParasitesColonThree\obj\Debug\AssemblyParasitesColonThree.csproj.CoreCompileInputs.cache
+C:\Users\John Paul W-\Desktop\BeckonMod\Source\AssemblyParasitesColonThree\AssemblyParasitesColonThree\obj\Debug\AssemblyParasitesColonThree.dll
+C:\Program Files (x86)\Steam\steamapps\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BeckonMod\Assemblies\AssemblyParasitesColonThree.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BeckonMod\Source\AssemblyParasitesColonThree\AssemblyParasitesColonThree\obj\Debug\Assembly.E1EC37FE.Up2Date

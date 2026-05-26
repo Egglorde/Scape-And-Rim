@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <BodyDef>
+    <defName>RuptoidBody</defName>
+    <label>ruptoid</label>
+    <corePart>
+        <def>Body</def>
+        <height>Middle</height>
+        <depth>Outside</depth>
+        <groups>
+            <li>BodyAttackTool</li>
+        </groups>
+      <parts>
+        <!-- Sensory tendrils for a rupter, the 4 tertiary tendrils on each side-->
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.05</coverage>
+            <customLabel>left primary antenna</customLabel>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.05</coverage>
+            <customLabel>right primary antenna</customLabel>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.05</coverage>
+            <customLabel>left secondary antenna</customLabel>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.05</coverage>
+            <customLabel>right secondary antenna</customLabel>
+        </li>
+        <!-- Infector tendril, the large central tendril-->
+        <li>
+            <def>InfectorTendril</def>
+            <coverage>0.05</coverage>
+            <customLabel>infector tendril</customLabel>
+            <groups>
+                <li>InfectorAttackTool</li>
+            </groups>
+        </li>
+        <!-- Internal bits, assmued from whatever is available-->
+        <li>
+            <def>ParasiteBrain</def>
+            <coverage>0.03</coverage>
+            <customLabel>ganglia</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>ParasiteLiver</def>
+            <coverage>0.03</coverage>
+            <customLabel>viscera</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>ParasiteHeart</def>
+            <coverage>0.03</coverage>
+            <customLabel>hiveheart</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>InfectorSacLesser</def>
+            <coverage>0.10</coverage>
+            <customLabel>right infector sac</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>InfectorSacLesser</def>
+            <coverage>0.10</coverage>
+            <customLabel>left infector sac</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>InfectorSac</def>
+            <coverage>0.20</coverage>
+            <customLabel>large infector sac</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <!-- leggybits -->
+        <li>
+            <def>Leg</def>
+            <coverage>0.05</coverage>
+            <customLabel>left first leg</customLabel>
+            <height>Bottom</height>
+        </li>
+        <li>
+            <def>Leg</def>
+            <coverage>0.05</coverage>
+            <customLabel>left second leg</customLabel>
+            <height>Bottom</height>
+        </li>
+        <li>
+            <def>Leg</def>
+            <coverage>0.05</coverage>
+            <customLabel>left third leg</customLabel>
+            <height>Bottom</height>
+        </li>
+        <li>
+            <def>Leg</def>
+            <coverage>0.05</coverage>
+            <customLabel>right third leg</customLabel>
+            <height>Bottom</height>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  <BodyDef>
+    <defName>BuglinBody</defName>
+    <label>buglin</label>
+    <corePart>
+        <def>Body</def>
+        <height>Middle</height>
+        <depth>Outside</depth>
+        <groups>
+            <li>BodyAttackTool</li>
+        </groups>
+      <parts>
+        <!-- Sensory tendrils for a rupter, the 4 tertiary tendrils on each side-->
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.05</coverage>
+            <customLabel>prosterior sensors</customLabel>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.05</coverage>
+            <customLabel>middle sensors</customLabel>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.05</coverage>
+            <customLabel>frontal sensors</customLabel>
+        </li>
+        <!-- Internal bits, assmued from whatever is available-->
+        <li>
+            <def>ParasiteBrain</def>
+            <coverage>0.03</coverage>
+            <customLabel>ganglia</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>ParasiteLiver</def>
+            <coverage>0.03</coverage>
+            <customLabel>viscera</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>ParasiteHeart</def>
+            <coverage>0.03</coverage>
+            <customLabel>hiveheart</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>InfectorSac</def>
+            <coverage>0.20</coverage>
+            <customLabel>large infector sac</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <!-- leggybits -->
+        <li>
+            <def>Leg</def>
+            <coverage>0.15</coverage>
+            <customLabel>right legs</customLabel>
+            <height>Bottom</height>
+        </li>
+        <li>
+            <def>Leg</def>
+            <coverage>0.15</coverage>
+            <customLabel>left legs</customLabel>
+            <height>Bottom</height>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  <BodyDef>
+    <defName>CarrierGroundBody</defName>
+    <label>carrier</label>
+    <corePart>
+        <def>Body</def>
+        <height>Middle</height>
+        <depth>Outside</depth>
+      <parts>
+        <!-- Sensory tendrils for a rupter, the 4 tertiary tendrils on each side-->
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.05</coverage>
+            <customLabel>primary antenna</customLabel>
+            <height>Top</height>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.05</coverage>
+            <customLabel>secondary antenna</customLabel>
+            <height>Top</height>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.05</coverage>
+            <customLabel>tertiary antenna</customLabel>
+            <height>Top</height>
+        </li>
+        <li>
+            <def>ParasiteLiver</def>
+            <coverage>0.05</coverage>
+            <customLabel>viscera</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>ParasiteHeart</def>
+            <coverage>0.05</coverage>
+            <customLabel>hiveheart</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>ParasiteBrain</def>
+            <coverage>0.05</coverage>
+            <customLabel>ganglia</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>InfectorSac</def>
+            <coverage>0.20</coverage>
+            <customLabel>sac</customLabel>
+            <depth>Inside</depth>
+            <height>Top</height>
+        </li>
+        <!-- leggybits -->
+        <li>
+            <def>Leg</def>
+            <coverage>0.15</coverage>
+            <customLabel>left leg</customLabel>
+            <groups>
+                <li>LeftLeg</li>
+            </groups>
+            <height>Bottom</height>
+        </li>
+        <li>
+            <def>Leg</def>
+            <coverage>0.15</coverage>
+            <customLabel>right leg</customLabel>
+            <groups>
+                <li>RightLeg</li>
+            </groups>
+            <height>Bottom</height>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+</Defs>

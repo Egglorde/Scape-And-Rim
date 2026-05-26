@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <DamageDef ParentName="Bite">
+        <defName>COTHInfect</defName>
+        <label>infector</label>
+        <additionalHediffs>
+            <li>
+                <hediff>ScramSRP_HediffCOTHDef</hediff>
+                <severityPerDamageDealt>0.03</severityPerDamageDealt>
+                <inverseStatScaling>true</inverseStatScaling>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+        <applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
+        <impactSoundType>Toxic</impactSoundType>
+        <damageEffecter>Impact_Toxic</damageEffecter>
+    </DamageDef>
+
+    <DamageDef>
+        <defName>ScramSRP_Seismic_Explosion</defName>
+        <label>tremor</label>
+        <workerClass>AssemblyParasitesColonThree.DamageWorker_Siesmic</workerClass>
+        <externalViolence>true</externalViolence>
+        <isExplosive>true</isExplosive>
+        <deathMessage>{0} has been killed by a siesmic tremor.</deathMessage>
+        <hediff>Crush</hediff>
+        <hediffSolid>Crack</hediffSolid>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <impactSoundType>Blunt</impactSoundType>
+        <armorCategory>Blunt</armorCategory>
+        <minDamageToFragment>15</minDamageToFragment>
+        <defaultDamage>30</defaultDamage>
+        <defaultArmorPenetration>0.5</defaultArmorPenetration>
+        <buildingDamageFactorImpassable>10</buildingDamageFactorImpassable>
+        <buildingDamageFactorPassable>10</buildingDamageFactorPassable>
+        <plantDamageFactor>4</plantDamageFactor>
+        <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+        <explosionCellFleck>BlastDry</explosionCellFleck>
+        <explosionColorCenter>(0.38, 0.27, 0.17)</explosionColorCenter>
+        <explosionColorEdge>(0.31, 0.20, 0.10)</explosionColorEdge>
+        <soundExplosion>ScramSRP_Explosion_Seismic_Sound</soundExplosion>
+        <combatLogRules>Damage_Bomb</combatLogRules>
+    </DamageDef>
+
+    <ToolCapacityDef>
+        <defName>COTHInfect</defName>
+        <label>infector</label>
+    </ToolCapacityDef>
+
+    <ManeuverDef>
+        <defName>COTHInfect</defName>
+        <requiredCapacity>COTHInfect</requiredCapacity>
+        <verb>
+            <verbClass>Verb_MeleeAttackDamage</verbClass>
+            <meleeDamageDef>COTHInfect</meleeDamageDef>
+        </verb>
+        <logEntryDef>MeleeAttack</logEntryDef>
+        <combatLogRulesHit>Maneuver_Bite_MeleeHit</combatLogRulesHit>
+        <combatLogRulesDeflect>Maneuver_Bite_MeleeDeflect</combatLogRulesDeflect>
+        <combatLogRulesMiss>Maneuver_Bite_MeleeMiss</combatLogRulesMiss>
+        <combatLogRulesDodge>Maneuver_Bite_MeleeDodge</combatLogRulesDodge>
+    </ManeuverDef>
+
+    <!-- Direct conversion damage, used to directly convert creatures to their assimilated form. -->
+
+    <ToolCapacityDef>
+        <defName>ScramSRP_DirectConvertCapBite</defName>
+        <label>infector</label>
+    </ToolCapacityDef>
+    <ToolCapacityDef>
+        <defName>ScramSRP_DirectConvertCapStab</defName>
+        <label>infector</label>
+    </ToolCapacityDef>
+
+    <DamageDef>
+        <defName>ScramSRP_DirectConvertDamageBite</defName>
+        <label>assimilate</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <hediff>ScramSRP_InfectBite</hediff>
+        <hediffSolid>Crack</hediffSolid>
+        <deathMessage>{0} has been assimilated.</deathMessage>
+    </DamageDef>
+
+    <DamageDef>
+        <defName>ScramSRP_DirectConvertDamageStab</defName>
+        <label>assimilate</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <hediff>ScramSRP_InfectInjectSim</hediff>
+        <hediffSolid>Crack</hediffSolid>
+        <deathMessage>{0} has been assimilated.</deathMessage>
+    </DamageDef>
+
+    <DamageDef ParentName="Flame">
+        <defName>ScramSRP_NadeBurn</defName>
+        <label>acid burn</label>
+        <additionalHediffs>
+            <li>
+                <hediff>ToxicBuildup</hediff>
+                <severityPerDamageDealt>0.003</severityPerDamageDealt>
+                <inverseStatScaling>true</inverseStatScaling>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <armorCategory>Blunt</armorCategory>
+        <hediff>AcidBurn</hediff>
+        <scaleDamageToBuildingsBasedOnFlammability>false</scaleDamageToBuildingsBasedOnFlammability>
+        <explosionColorCenter>(0.5,1,0.5)</explosionColorCenter>
+        <explosionColorEdge>(0.5,1,0.5)</explosionColorEdge>
+    </DamageDef>
+
+    <DamageDef ParentName="Bomb">
+        <defName>ScramSRP_ExplosionBiological</defName>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <defaultDamage>2</defaultDamage>
+        <defaultStoppingPower>2.0</defaultStoppingPower>
+        <defaultArmorPenetration>1.30</defaultArmorPenetration>
+        <soundExplosion>ScramSRP_Explosion_Sim</soundExplosion>
+    </DamageDef>
+
+    <ManeuverDef>
+        <defName>ScramSRP_DirectConvertManeuverStab</defName>
+        <requiredCapacity>ScramSRP_DirectConvertCapStab</requiredCapacity>
+        <verb>
+            <verbClass>Verb_MeleeAttackDamage</verbClass>
+            <meleeDamageDef>ScramSRP_DirectConvertDamageStab</meleeDamageDef>
+        </verb>
+        <logEntryDef>MeleeAttack</logEntryDef>
+        <combatLogRulesHit>Maneuver_Stab_MeleeHit</combatLogRulesHit>
+        <combatLogRulesDeflect>Maneuver_Stab_MeleeDeflect</combatLogRulesDeflect>
+        <combatLogRulesMiss>Maneuver_Stab_MeleeMiss</combatLogRulesMiss>
+        <combatLogRulesDodge>Maneuver_Stab_MeleeDodge</combatLogRulesDodge>
+    </ManeuverDef>
+
+    <ManeuverDef>
+      <defName>ScramSRP_DirectConvertManeuverBite</defName>
+      <requiredCapacity>ScramSRP_DirectConvertCapBite</requiredCapacity>
+      <verb>
+        <verbClass>Verb_MeleeAttackDamage</verbClass>
+        <meleeDamageDef>ScramSRP_DirectConvertDamageBite</meleeDamageDef>
+        <commonalityVsEdificeFactor>0.01</commonalityVsEdificeFactor>
+      </verb>
+      <logEntryDef>MeleeAttack</logEntryDef>
+      <combatLogRulesHit>Maneuver_Bite_MeleeHit</combatLogRulesHit>
+      <combatLogRulesDeflect>Maneuver_Bite_MeleeDeflect</combatLogRulesDeflect>
+      <combatLogRulesMiss>Maneuver_Bite_MeleeMiss</combatLogRulesMiss>
+      <combatLogRulesDodge>Maneuver_Bite_MeleeDodge</combatLogRulesDodge>
+    </ManeuverDef>
+</Defs>

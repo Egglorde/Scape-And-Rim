@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <PawnRenderTreeDef>
+    <defName>ScramSRP_ManglerTendrils</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <tagDef>Body</tagDef>
+          <useRottenColor>true</useRottenColor>
+          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+          <children>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleA</debugLabel>
+              <texPath>Parasite/Inborn/Mangler/Mangler_tendrilb</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>10~30</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.7, 0.01, -0.05)</offset>
+                </defaultData>
+                <dataWest>
+                  <offset>(-0.7, 0.01, -0.05)</offset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataSouth>
+                  <offset>(0, -0.01, 0)</offset>
+                  <flip>true</flip>
+                </dataSouth>
+                <dataNorth>
+                  <offset>(0, -0.01, 0)</offset>
+                  <flip>true</flip>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleB</debugLabel>
+              <texPath>Parasite/Inborn/Mangler/Mangler_tendrila</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>10~30</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.6, -0.01, -0.05)</offset>
+                  <rotationOffset>10</rotationOffset>
+                </defaultData>
+                <dataWest>
+                  <offset>(-0.6, -0.01, -0.05)</offset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataSouth>
+                  <offset>(0.15, 0.01, -0.4)</offset>
+                  <rotationOffset>-75</rotationOffset>
+                </dataSouth>
+                <dataNorth>
+                  <offset>(0.15, -0.01, 0.4)</offset>
+                  <rotationOffset>120</rotationOffset>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleC</debugLabel>
+              <texPath>Parasite/Inborn/Mangler/Mangler_tendrila</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>10~30</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.6, 0.01, -0.05)</offset>
+                  <rotationOffset>10</rotationOffset>
+                </defaultData>
+                <dataWest>
+                  <offset>(-0.6, 0.01, -0.05)</offset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataSouth>
+                  <offset>(-0.15, 0.01, -0.4)</offset>
+                  <rotationOffset>-75</rotationOffset>
+                  <flip>true</flip>
+                </dataSouth>
+                <dataNorth>
+                  <offset>(-0.15, -0.01, 0.4)</offset>
+                  <rotationOffset>120</rotationOffset>
+                  <flip>true</flip>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleD</debugLabel>
+              <texPath>Parasite/Inborn/Mangler/Mangler_tendrilc</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>10~30</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.35, 0.01, 0.1)</offset>
+                </defaultData>
+                <dataWest>
+                  <offset>(-0.35, 0.01, 0.1)</offset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataSouth>
+                  <offset>(0.25, 0.01, -0.15)</offset>
+                  <rotationOffset>-80</rotationOffset>
+                </dataSouth>
+                <dataNorth>
+                  <offset>(0.25, -0.01, 0.15)</offset>
+                  <rotationOffset>80</rotationOffset>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleE</debugLabel>
+              <texPath>Parasite/Inborn/Mangler/Mangler_tendrilc</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>10~30</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.35, -0.01, 0.1)</offset>
+                </defaultData>
+                <dataWest>
+                  <offset>(-0.35, -0.01, 0.1)</offset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataSouth>
+                  <offset>(-0.25, 0.01, -0.15)</offset>
+                  <rotationOffset>-80</rotationOffset>
+                  <flip>true</flip>
+                </dataSouth>
+                <dataNorth>
+                  <offset>(-0.25, -0.01, 0.15)</offset>
+                  <rotationOffset>80</rotationOffset>
+                  <flip>true</flip>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleF</debugLabel>
+              <texPath>Parasite/Inborn/Mangler/Mangler_tendrilc</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>10~30</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.4, 0.01, 0)</offset>
+                  <rotationOffset>-40</rotationOffset>
+                </defaultData>
+                <dataWest>
+                  <offset>(-0.4, 0.01, 0)</offset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataSouth>
+                  <offset>(0.3, 0.01, -0.11)</offset>
+                  <rotationOffset>-70</rotationOffset>
+                </dataSouth>
+                <dataNorth>
+                  <offset>(0.3, -0.01, 0.11)</offset>
+                  <rotationOffset>70</rotationOffset>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleG</debugLabel>
+              <texPath>Parasite/Inborn/Mangler/Mangler_tendrilc</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>10~30</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.4, -0.01, 0)</offset>
+                  <rotationOffset>-40</rotationOffset>
+                </defaultData>
+                <dataWest>
+                  <offset>(-0.4, -0.01, 0)</offset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataSouth>
+                  <offset>(-0.3, 0.01, -0.11)</offset>
+                  <rotationOffset>70</rotationOffset>
+                  <flip>true</flip>
+                </dataSouth>
+                <dataNorth>
+                  <offset>(-0.3, -0.01, 0.11)</offset>
+                  <rotationOffset>70</rotationOffset>
+                  <flip>true</flip>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleH</debugLabel>
+              <texPath>Parasite/Inborn/Mangler/Mangler_tendrilc</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>10~30</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.57, 0.01, 0.1)</offset>
+                </defaultData>
+                <dataWest>
+                  <offset>(-0.57, 0.01, 0.1)</offset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataSouth>
+                  <offset>(0.4, 0.01, -0.05)</offset>
+                  <rotationOffset>-60</rotationOffset>
+                </dataSouth>
+                <dataNorth>
+                  <offset>(0.4, -0.01, 0.05)</offset>
+                  <rotationOffset>60</rotationOffset>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleI</debugLabel>
+              <texPath>Parasite/Inborn/Mangler/Mangler_tendrilc</texPath>
+              <drawSize>1.5</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>10~30</durationTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.5, -0.01, 0.1)</offset>
+                </defaultData>
+                <dataWest>
+                  <offset>(-0.5, -0.01, 0.1)</offset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataSouth>
+                  <offset>(-0.4, 0.01, -0.05)</offset>
+                  <rotationOffset>-60</rotationOffset>
+                  <flip>true</flip>
+                </dataSouth>
+                <dataNorth>
+                  <offset>(-0.4, -0.01, 0.05)</offset>
+                  <rotationOffset>60</rotationOffset>
+                  <flip>true</flip>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li>
+              <debugLabel>Wounds</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>10</baseLayer>
+            </li>
+            <li>
+              <debugLabel>Firefoam</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>20</baseLayer>
+            </li>
+          </children>
+        </li>
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+</Defs>

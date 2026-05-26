@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EffecterDef>
+    <defName>InfectionZoneEffecterDef</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_GroupedChance</subEffecterClass> <!-- For synchronizing effects from the same random event -->
+        <chancePerTick>.01</chancePerTick>
+        <chancePeriodTicks>20</chancePeriodTicks>
+        <children>
+          <li>
+          <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+          <fleckDef>Smoke</fleckDef>
+          <initialDelayTicks>0</initialDelayTicks>
+          <burstCount>2~3</burstCount>
+          <spawnLocType>OnSource</spawnLocType>
+          <positionRadius>1</positionRadius>
+          <scale>0.5~2</scale>
+          <color>(0.1, 0.1, 0.1, 1)</color>
+          <rotation>0</rotation>
+          <absoluteAngle>False</absoluteAngle>
+          <positionOffset>(0, 0, 0)</positionOffset>
+          <angle>0</angle>
+          <makeMoteOnSubtrigger>true</makeMoteOnSubtrigger>
+          </li>
+        </children>
+      </li>
+    </children>
+  </EffecterDef>
+  <EffecterDef>
+    <defName>ScramSRP_BiomassEffecter</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <ticksBetweenMotes>20</ticksBetweenMotes>
+        <scale>.25~.5</scale>
+        <moteDef>ScramSRP_BiomassMoteGreater</moteDef>
+        <burstCount>1~2</burstCount>
+        <speed>-0.8~0.8</speed>
+        <rotateTowardsTargetCenter>false</rotateTowardsTargetCenter>
+        <rotation>0</rotation>
+        <angle>60~120</angle>
+        <spawnLocType>OnSource</spawnLocType>
+        <absoluteAngle>true</absoluteAngle>
+        <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <ticksBetweenMotes>20</ticksBetweenMotes>
+        <scale>.25~.5</scale>
+        <moteDef>ScramSRP_BiomassMoteLesser</moteDef>
+        <burstCount>1~2</burstCount>
+        <speed>-0.4~0.4</speed>
+        <rotateTowardsTargetCenter>false</rotateTowardsTargetCenter>
+        <rotation>0</rotation>
+        <angle>60~120</angle>
+        <spawnLocType>OnTarget</spawnLocType>
+        <absoluteAngle>true</absoluteAngle>
+        <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+      </li>
+    </children>
+  </EffecterDef>
+  <EffecterDef>
+    <defName>ScramSRP_BiomassShareEffecter</defName>
+    <offsetTowardsTarget>0.5</offsetTowardsTarget>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <ticksBetweenMotes>1</ticksBetweenMotes>
+        <scale>.25~.5</scale>
+        <moteDef>ScramSRP_BiomassMoteShare</moteDef>
+        <burstCount>1~2</burstCount>
+        <speed>-1.8~-1.2</speed>
+        <rotation>170~190</rotation>
+        <positionRadius>0.3</positionRadius>
+        <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+        <angle>-5~5</angle>
+        <absoluteAngle>true</absoluteAngle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>ScramSRP_ProjBloodTrail</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>BloodSplash</fleckDef>
+        <scale>2</scale>
+        <chancePerTick>.1</chancePerTick>
+        <spawnLocType>OnSource</spawnLocType>
+        <absoluteAngle>false</absoluteAngle>
+        <angle>-30~30</angle>
+        <speed>-2~2</speed>
+        <positionOffset>(0, 0, 1)</positionOffset>
+        <color>(1, 0.1, 0.1, 1)</color>
+        <rotation>0</rotation>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>BloodSplash</fleckDef>
+        <scale>2~3</scale>
+        <chancePerTick>.3</chancePerTick>
+        <spawnLocType>OnSource</spawnLocType>
+        <absoluteAngle>true</absoluteAngle>
+        <angle>-30~30</angle>
+        <speed>-4~0</speed>
+        <positionOffset>(0, 0, 1)</positionOffset>
+        <color>(1, 0.1, 0.1, 1)</color>
+        <rotation>0</rotation>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>ScramSRP_ResurrectionEffecter</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass> <!-- For synchronizing effects from the same random event -->
+        <moteDef>Mote_FoodBitMeat</moteDef>
+        <scale>.5~.75</scale>
+        <speed>0.25~0.75</speed>
+        <positionRadius>0.75</positionRadius>
+        <ticksBetweenMotes>20</ticksBetweenMotes>
+        <rotation>150~-150</rotation>
+        <angle>0</angle>
+        <burstCount>2~3</burstCount>
+      </li>
+    </children>
+  </EffecterDef>
+  <EffecterDef>
+    <defName>ScramSRP_AssimilationEffecter</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_GroupedChance</subEffecterClass> <!-- For synchronizing effects from the same random event -->
+        <chancePerTick>1</chancePerTick>
+        <chancePeriodTicks>5</chancePeriodTicks>
+        <children>
+          <li>
+            <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+            <fleckDef>BloodSplash</fleckDef>
+            <initialDelayTicks>0</initialDelayTicks>
+            <burstCount>1~2</burstCount>
+            <spawnLocType>OnSource</spawnLocType>
+            <positionRadius>0.5</positionRadius>
+            <scale>0.5~2</scale>
+            <color>(1, 0.1, 0.1, 1)</color>
+            <rotation>0</rotation>
+            <absoluteAngle>False</absoluteAngle>
+            <positionOffset>(0, 0, 0)</positionOffset>
+            <angle>0</angle>
+            <makeMoteOnSubtrigger>true</makeMoteOnSubtrigger>
+          </li>
+        </children>
+      </li>
+    </children>
+  </EffecterDef>
+  <EffecterDef>
+    <defName>ScramSRP_ExplosionEffecter</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>BloodSplash</fleckDef>
+        <burstCount>5</burstCount>
+        <rotation>-150~150</rotation>
+        <positionRadius>1.3</positionRadius>
+        <speed>0.6~1.1</speed>
+        <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+</Defs>

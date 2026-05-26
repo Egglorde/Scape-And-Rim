@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <JobDef>
+    <defName>ScramSRP_GestateNeutral</defName>
+    <driverClass>AssemblyParasitesColonThree.JobDriver_Summon</driverClass>
+    <reportString>gestating parasite.</reportString>
+    <alwaysShowReport>true</alwaysShowReport>
+    <casualInterruptible>false</casualInterruptible>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  <JobDef>
+    <defName>ScramSRP_ConvertDowned</defName>
+    <driverClass>AssemblyParasitesColonThree.JobDrivers.JobDriver_ConvertDownedPawn</driverClass>
+    <reportString>converting downed pawn.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  <JobDef>
+    <defName>ScramSRP_Dissolve</defName>
+    <driverClass>AssemblyParasitesColonThree.JobDrivers.JobDriver_Dissolve</driverClass>
+    <reportString>converting downed pawn.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  <JobDef>
+    <defName>ScramSRP_Merge</defName>
+    <driverClass>AssemblyParasitesColonThree.JobDrivers.JobDriver_Merge</driverClass>
+    <reportString>converting downed pawn.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  <JobDef>
+    <defName>ScramSRP_SimEvolve</defName>
+    <driverClass>AssemblyParasitesColonThree.JobDrivers.JobDriver_SimEvolve</driverClass>
+    <reportString>converting downed pawn.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  <JobDef>
+    <defName>ScramSRP_ConsumeDead</defName>
+    <driverClass>AssemblyParasitesColonThree.JobDrivers.JobDriver_ConsumeCorpse</driverClass>
+    <reportString>converting downed pawn.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <DutyDef>
+    <defName>ScramSRP_Merge_Dominant</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_Dissolve" />
+        <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_SimEvolve" />
+        <li Class="JobGiver_WanderNearDutyLocation">
+          <wanderRadius>12</wanderRadius>
+          <locomotionUrgencyOutsideRadius>Walk</locomotionUrgencyOutsideRadius>
+          <expireOnNearbyEnemy>true</expireOnNearbyEnemy>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  <DutyDef>
+    <defName>ScramSRP_Merge_Submissive</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_Dissolve" />
+        <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_Merge" />
+        <li Class="JobGiver_WanderNearDutyLocation">
+          <wanderRadius>12</wanderRadius>
+          <locomotionUrgencyOutsideRadius>Walk</locomotionUrgencyOutsideRadius>
+          <expireOnNearbyEnemy>true</expireOnNearbyEnemy>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  <!-- Hey, RIOT! -->
+  <DutyDef>
+    <defName>ScramSRP_Riot_Frenzy</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_AIFightEnemies">
+          <targetAcquireRadius>70</targetAcquireRadius>
+          <targetKeepRadius>78</targetKeepRadius>
+        </li>
+        <li Class="JobGiver_AITrashColonyClose" />
+        <!-- Wander near duty location -->
+        <li Class="ThinkNode_ConditionalHasDutyTarget">
+          <subNodes>
+            <li Class="JobGiver_WanderNearDutyLocation">
+              <wanderRadius>5</wanderRadius>
+              <expiryInterval>120</expiryInterval>
+              <ticksBetweenWandersRange>10~20</ticksBetweenWandersRange>
+            </li>
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+</Defs>

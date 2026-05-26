@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef ParentName="InfectionBase">
+    <defName>ScramSRP_HediffCOTHDef</defName>
+    <hediffClass>AssemblyParasitesColonThree.Hediff_COTH</hediffClass>
+    <label>call of the hive</label>
+    <labelNoun>coth</labelNoun>
+    <description>Call of the hive is a cellular disease that slowly turns living creatures into parasites.</description>
+    <tendable>false</tendable>
+    <initialSeverity>0.01</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDayRange>0.925~0.463</severityPerDayRange>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>incubating</label>
+        <becomeVisible>false</becomeVisible>
+      </li> 
+      <li>
+        <minSeverity>0.30</minSeverity>
+        <label>prodromal</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>0.60</minSeverity>
+        <label>incomplete</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>1</minSeverity>
+        <label>hidden</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
+    </HediffDef>
+</Defs>

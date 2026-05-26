@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>Sim_Human</defName>
+        <graphicPath>Mutants/Heads/Sim_Human</graphicPath>
+        <gender>None</gender>
+        <randomChosen>false</randomChosen>
+        <eyeOffsetEastWest>(0.13, 0, 0.17)</eyeOffsetEastWest>
+    </HeadTypeDef>
+
+  <MutantDef>
+    <defName>ScramSRP_AssimilatedMutant</defName>
+    <label>assimilated</label>
+    <description>This creature has been assimilated into the hive mind.</description>
+    <hediff>ScramSrp_Sim</hediff>
+    <thinkTree>ParasiteSim</thinkTree>
+    <thinkTreeConstant>ParasiteConstant</thinkTreeConstant>
+    <hideLabel>true</hideLabel>
+    <namePrefix>assimilated </namePrefix>
+    <consideredSubhuman>true</consideredSubhuman>
+    <canCarryPawns>false</canCarryPawns>
+    <canTend>false</canTend>
+    <whitelistedFloatMenuProviders />
+    <preventsMentalBreaks>true</preventsMentalBreaks>
+    <disablesIdeo>true</disablesIdeo>
+    <disableOwnership>true</disableOwnership>
+    <disablePolicies>true</disablePolicies>
+    <disableTitles>true</disableTitles>
+    <disableNeeds>true</disableNeeds>
+    <entitledToMedicalCare>false</entitledToMedicalCare>
+    <removeAllInjuries>true</removeAllInjuries>
+    <restoreLegs>true</restoreLegs>
+    <defaultFaction>ParasiteFaction</defaultFaction>
+    <tameable>false</tameable>
+    <overrideLabel>true</overrideLabel>
+    <overrideInspectString>true</overrideInspectString>
+    <canBleed>false</canBleed>
+    <terminatePregnancy>true</terminatePregnancy>
+    <isImmuneToInfections>true</isImmuneToInfections>
+    <removeChronicIllnesses>true</removeChronicIllnesses>
+    <removeAddictions>true</removeAddictions>
+    <disableAging>true</disableAging>
+    <clearMutantStatusOnDeath>false</clearMutantStatusOnDeath>
+    <canTravelInCaravan>false</canTravelInCaravan>
+    <respectsAllowedArea>false</respectsAllowedArea>
+    <canGainXP>false</canGainXP>
+    <canBeDrafted>false</canBeDrafted>
+    <disableHostilityResponse>false</disableHostilityResponse>
+    <deathOnDownedChance>0.25</deathOnDownedChance>
+    <renderNodeProperties>
+      <li>
+        <debugLabel>Body Replacement</debugLabel>
+        <nodeClass>AssemblyParasitesColonThree.Misc.PawnRenderNode_BodyReplacer</nodeClass>
+        <workerClass>PawnRenderNodeWorker_OverlayScaria</workerClass>
+        <overlayLayer>Body</overlayLayer>
+        <tagDef>BodyReplacer</tagDef>
+        <baseLayer>20</baseLayer>
+        <pawnType>NonHumanlikeOnly</pawnType>
+      </li>
+    </renderNodeProperties>
+    <tools>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>ScramSRP_DirectConvertCapBite</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>2</chanceFactor>
+        <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+        <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+      </li>
+    </tools>
+  </MutantDef>
+  
+  <InfectionPathwayDef>
+    <defName>InbornAttacked</defName>
+    <label>parasite attack</label>
+    <pawnRequired>true</pawnRequired>
+  </InfectionPathwayDef>
+</Defs>

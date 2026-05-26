@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <WorldObjectDef ParentName="StaticWorldObjectBase">
+    <defName>ScramSRP_Meteor</defName>
+    <label>infected meteor</label>
+    <description>The crash site of an infected meteor. Spreads infection around it.</description>
+    <worldObjectClass>AssemblyParasitesColonThree.MapRelated.WorldObject_Vector</worldObjectClass>
+    <texture>World/Sites/MeteorSettle</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/Sites/Meteor</expandingIconTexture>
+    <expandingIconPriority>20</expandingIconPriority>
+    <expandMore>true</expandMore>
+    <comps>
+      <li Class="WorldObjectCompProperties_FormCaravan" />
+      <li Class="WorldObjectCompProperties_TimedDetectionRaids" />
+    </comps>
+  </WorldObjectDef>
+  <WorldObjectDef ParentName="StaticWorldObjectBase">
+    <defName>ScramSRP_Vector</defName>
+    <label>infection vector</label>
+    <description>An emerging infection vector from deep underground.</description>
+    <worldObjectClass>AssemblyParasitesColonThree.MapRelated.WorldObject_Vector</worldObjectClass>
+    <texture>World/Sites/VectorSettle</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/Sites/Vector</expandingIconTexture>
+    <expandingIconPriority>20</expandingIconPriority>
+    <expandMore>true</expandMore>
+    <comps>
+      <li Class="WorldObjectCompProperties_TimedDetectionRaids" />
+    </comps>
+  </WorldObjectDef>
+</Defs>

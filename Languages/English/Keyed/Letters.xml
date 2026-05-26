@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <ScramSRP_SimResponseEventTitle>{0_labelShort} Assimilation</ScramSRP_SimResponseEventTitle> 
+  <ScramSRP_SimResponseEventDesc>{0_nameIndef} has been revealed as an assimilated form, and now hunts for more biomass to consume. </ScramSRP_SimResponseEventDesc>
+  <ScramSRP_SimResponseEventDescPlural>A group of assimilated forms have been revealed by {0_nameIndef}. </ScramSRP_SimResponseEventDescPlural>
+  <ScramSRP_SimAsimEventTitle>{0_labelShort} Assimilated</ScramSRP_SimAsimEventTitle> 
+  <ScramSRP_SimAsimEventDesc>{0_nameIndef} has been assimilated!</ScramSRP_SimAsimEventDesc>
+  <ScramSRP_PhaseIncrease>The roots grow beneath the sickened pores...</ScramSRP_PhaseIncrease>
+  <ScramSRP_MeteorCrashTitle>Meteorite</ScramSRP_MeteorCrashTitle>
+  <ScramSRP_MeteorCrashDesc>The planet rumbles beneath your colonist’s feet as the flash of a distant impact appears on the horizon. The world itself shudders as something long slumbering stirs beneath its skin. The death of this rimworld has begun, however, with enough effort, yours may be delayed.</ScramSRP_MeteorCrashDesc>
+
+  <!-- Direct Infection Methods-->
+  <ScramSRP_Infect_Error>guys it was totally infected trust</ScramSRP_Infect_Error>
+  <ScramSRP_Infect_Unknown>{VICTIM_labelShort} was infected by an unknown source.</ScramSRP_Infect_Unknown>
+  <ScramSRP_Infect_Injected>{VICTIM_labelShort} was directly infected by an injection from {CULPRIT_indefinite} during GV transmission.</ScramSRP_Infect_Injected>
+  <ScramSRP_Infect_Attacked>{VICTIM_labelShort} was directly infected through contact transmission after being attacked by {CULPRIT_indefinite}.</ScramSRP_Infect_Attacked>
+  <ScramSRP_Infect_Gas>{VICTIM_labelShort} was directly infected after breathing in gas released by {CULPRIT_indefinite} during airborne transmission.</ScramSRP_Infect_Gas>
+  <ScramSRP_Infect_Explosion>{VICTIM_labelShort} was directly infected by bone fragments from {CULPRIT_indefinite} during implosive transmission.</ScramSRP_Infect_Explosion>
+  
+  <!-- Indirect Infection Methods-->
+  <ScramSRP_Infect_BloodSim>{VICTIM_labelShort} was indirectly infected through AOS transmission by blood spilt from {CULPRIT_indefinite}.</ScramSRP_Infect_BloodSim>
+  <ScramSRP_Infect_BloodOther>{VICTIM_labelShort} was indirectly infected through vector transmission by deadblood spilt from {CULPRIT_indefinite}.</ScramSRP_Infect_BloodOther>
+  <ScramSRP_Infect_Dopple>{VICTIM_labelShort} was indirectly infected by {CULPRIT_indefinite} through doppelganger transmission.</ScramSRP_Infect_Dopple>
+  <ScramSRP_Infect_Residue>{VICTIM_labelShort} was indirectly infected by residue.</ScramSRP_Infect_Residue>
+
+  <!-- Phases-->
+  <ScramSRP_PhaseDisplay>Infection Phase</ScramSRP_PhaseDisplay>
+
+  <!-- Assim -->
+  <ScramSRP_AssimWorldEventTitle>{0} assimilation</ScramSRP_AssimWorldEventTitle>
+  <ScramSRP_AssimWorldEventDesc>Enough {0} have been assimilated for them to begin appearing regularly. Assimilated {0} will begin appearing on maps with a high enough infection level.</ScramSRP_AssimWorldEventDesc>
+
+  
+
+</LanguageData>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <SoundDef>
+        <defName>ScramSRP_Explosion_Seismic_Sound</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>10</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>EggsBeckonMod/Attack/Seismic_Explosion</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>80~80</volumeRange>
+                <pitchRange>0.8~1.2</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+    <SoundDef>
+        <defName>ScramSRP_Orb_Charge</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>2</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>EggsBeckonMod/Attack/Orb/Orb_Charge</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>80~80</volumeRange>
+                <pitchRange>0.8~1.2</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+    <SoundDef>
+        <defName>ScramSRP_Orb_Fire</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>2</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>EggsBeckonMod/Attack/Orb/Orb_Fire</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>100~120</volumeRange>
+                <pitchRange>0.8~1.2</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+    <SoundDef>
+        <defName>ScramSRP_Orb_Sustain</defName>
+        <context>MapOnly</context>
+        <sustain>True</sustain>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>EggsBeckonMod/Attack/Orb/Orb_Sustain</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>50~70</volumeRange>
+                <pitchRange>0.8~1.2</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+    <SoundDef>
+        <defName>ScramSRP_Sound_CloudInborn</defName>  
+        <context>MapOnly</context>   
+        <maxSimultaneous>10</maxSimultaneous>  
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>EggsBeckonMod/Neutral/Rupter_Cloud</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>20~20</volumeRange>
+                <pitchRange>0.8940217~1.084783</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+</Defs>

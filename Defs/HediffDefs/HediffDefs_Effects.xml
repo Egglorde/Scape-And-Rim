@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Injuries-->
+
+
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>InfectorZoneThingDef</defName>
+    <label>infectious gas</label>
+    <thingClass>AssemblyParasitesColonThree.Gas_InfestedAir</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+  </ThingDef>
+
+  <AbilityDef>
+    <defName>InfectInbornParasite</defName>
+    <label>infected gas</label>
+    <description>Release a cloud of infected gas</description>
+    <cooldownTicksRange>28800</cooldownTicksRange> <!-- 11ish hours -->
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <ai_IsOffensive>false</ai_IsOffensive>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <verbClass>Verb_Smokepop</verbClass>
+      <label>pop smoke</label>
+      <violent>false</violent>
+      <hasStandardCommand>true</hasStandardCommand>
+      <targetable>true</targetable>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+    </verbProperties>
+  </AbilityDef>
+
+    <HediffDef>
+      <defName>ScramSRP_Hemorraging</defName>
+      <label>hemorraging</label>
+      <description>This person is rapidly losing blood. This condition causes severe blood loss and can be life-threatening if not treated promptly.</description>
+      <hediffClass>HediffWithComps</hediffClass>
+      <everCurableByItem>true</everCurableByItem>
+      <defaultLabelColor>(1.0, 0.3, 0.3)</defaultLabelColor>
+      <forceRemoveOnResurrection>true</forceRemoveOnResurrection>
+      <initialSeverity>0.4</initialSeverity>
+      <isBad>true</isBad>
+      <stages>
+        <li>
+          <label>minor bleeding</label>
+          <totalBleedFactor>1.5</totalBleedFactor>
+        </li>
+        <li>
+          <label>intense bleeding</label>
+          <totalBleedFactor>3</totalBleedFactor>
+          <minSeverity>0.4</minSeverity>
+          <lifeThreatening>true</lifeThreatening>
+        </li>
+        <li>
+          <label>very intense bleeding</label>
+          <totalBleedFactor>5</totalBleedFactor>
+          <minSeverity>0.8</minSeverity>
+          <lifeThreatening>true</lifeThreatening>
+        </li>
+        <li>
+          <label>extreme bleeding</label>
+          <totalBleedFactor>10</totalBleedFactor>
+          <minSeverity>1</minSeverity>
+          <lifeThreatening>true</lifeThreatening>
+        </li>
+      </stages>
+      <comps>
+        <li Class="HediffCompProperties_SeverityPerSecond">
+          <severityPerSecond>-0.01</severityPerSecond>
+        </li>
+      </comps>
+    </HediffDef>
+
+    <HediffDef>
+      <defName>ScramSRP_Regen</defName>
+      <label>regeneration</label>
+      <description>This creature is regenerating its body using additional biomass.</description>
+      <hediffClass>AssemblyParasitesColonThree.Hediffs.Hediff_Regeneration</hediffClass>
+      <defaultLabelColor>(0.3, 0.8, 0.3)</defaultLabelColor>
+      <forceRemoveOnResurrection>true</forceRemoveOnResurrection>
+      <initialSeverity>0.1</initialSeverity>
+      <stages>
+        <li>
+          <minSeverity>0</minSeverity>
+          <label>minor</label>
+        </li>
+        <li>
+          <minSeverity>0.3</minSeverity>
+          <label>enhanced</label>
+        </li>
+        <li>
+          <minSeverity>0.5</minSeverity>
+          <label>advanced</label>
+        </li>
+        <li>
+          <minSeverity>0.7</minSeverity>
+          <label>impossible</label>
+        </li>
+    </stages>
+      <comps>
+        <li Class="HediffCompProperties_SeverityPerSecond">
+          <severityPerSecond>-0.01</severityPerSecond>
+        </li>
+      </comps>
+    </HediffDef>
+
+    <HediffDef>
+      <defName>ScramSRP_Slowness</defName>
+      <label>slowness</label>
+      <description>This creature has been slowed by external forces.</description>
+      <hediffClass>HediffWithComps</hediffClass>
+      <defaultLabelColor>(0.77, 0.77, 0.77)</defaultLabelColor>
+      <forceRemoveOnResurrection>true</forceRemoveOnResurrection>
+      <initialSeverity>0.1</initialSeverity>
+      <isBad>true</isBad>
+      <stages>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <postFactor>0.75</postFactor>
+            </li>
+          </capMods>
+          <minSeverity>0</minSeverity>
+          <label>dehbilitated</label>
+        </li>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <postFactor>0.5</postFactor>
+            </li>
+          </capMods>
+          <minSeverity>0.3</minSeverity>
+          <label>slowed</label>
+        </li>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <postFactor>0.25</postFactor>
+            </li>
+          </capMods>
+          <minSeverity>0.5</minSeverity>
+          <label>crawling</label>
+        </li>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <postFactor>0.1</postFactor>
+            </li>
+          </capMods>
+          <minSeverity>0.7</minSeverity>
+          <label>static</label>
+        </li>
+    </stages>
+      <comps>
+        <li Class="HediffCompProperties_SeverityPerSecond">
+          <severityPerSecond>-0.01</severityPerSecond>
+        </li>
+      </comps>
+    </HediffDef>
+
+    <HediffDef>
+      <defName>ScramSRP_Nausea</defName>
+      <hediffClass>HediffWithComps</hediffClass>
+      <label>nausea</label>
+      <description>BLERGHHH!</description>
+      <isBad>true</isBad>
+      <stages>
+        <li>
+          <vomitMtbDays>0.00000087</vomitMtbDays>
+        </li>
+      </stages>
+      <comps>
+        <li Class="HediffCompProperties_SeverityPerSecond">
+          <severityPerSecond>-0.01</severityPerSecond>
+        </li>
+      </comps>
+    </HediffDef>
+
+    <HediffDef>
+      <defName>ScramSRP_Hunger</defName>
+      <label>metabiolosys</label>
+      <description>This creature’s metabolic processes have been disrupted by an orb.</description>
+      <hediffClass>HediffWithComps</hediffClass>
+      <defaultLabelColor>(0.77, 0.77, 0.77)</defaultLabelColor>
+      <forceRemoveOnResurrection>true</forceRemoveOnResurrection>
+      <initialSeverity>0.1</initialSeverity>
+      <stages>
+        <li>
+          <hungerRateFactor>5</hungerRateFactor>
+          <minSeverity>0</minSeverity>
+          <label>disrupted</label>
+        </li>
+        <li>
+          <hungerRateFactor>10</hungerRateFactor>
+          <minSeverity>0.3</minSeverity>
+          <label>scrambled</label>
+        </li>
+        <li>
+          <hungerRateFactor>15</hungerRateFactor>
+          <minSeverity>0.5</minSeverity>
+          <label>mangled</label>
+        </li>
+        <li>
+          <hungerRateFactor>20</hungerRateFactor>
+          <minSeverity>0.7</minSeverity>
+          <label>destroyed</label>
+        </li>
+    </stages>
+      <comps>
+        <li Class="HediffCompProperties_SeverityPerSecond">
+          <severityPerSecond>-0.01</severityPerSecond>
+        </li>
+      </comps>
+    </HediffDef>
+
+    <HediffDef>
+      <defName>ScramSRP_Speed</defName>
+      <label>speed</label>
+      <description>This creature has been accelerated by external forces.</description>
+      <hediffClass>HediffWithComps</hediffClass>
+      <defaultLabelColor>(0.77, 0.77, 0.77)</defaultLabelColor>
+      <forceRemoveOnResurrection>true</forceRemoveOnResurrection>
+      <initialSeverity>0.1</initialSeverity>
+      <stages>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <postFactor>1.25</postFactor>
+            </li>
+          </capMods>
+          <statFactors>
+            <MeleeCooldownFactor>0.75</MeleeCooldownFactor> <!-- 66% as fast -->
+            <PsychicSensitivity>0</PsychicSensitivity>
+          </statFactors>
+          <minSeverity>0</minSeverity>
+          <label>accelerated</label>
+        </li>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <postFactor>2</postFactor>
+            </li>
+          </capMods>
+          <statFactors>
+            <MeleeCooldownFactor>0.5</MeleeCooldownFactor> <!-- 66% as fast -->
+            <PsychicSensitivity>0</PsychicSensitivity>
+          </statFactors>
+          <minSeverity>0.3</minSeverity>
+          <label>enhanced</label>
+        </li>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <postFactor>2.75</postFactor>
+            </li>
+          </capMods>
+          <statFactors>
+            <MeleeCooldownFactor>0.25</MeleeCooldownFactor> <!-- 66% as fast -->
+            <PsychicSensitivity>0</PsychicSensitivity>
+          </statFactors>
+          <minSeverity>0.5</minSeverity>
+          <label>advanced</label>
+        </li>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <postFactor>3.50</postFactor>
+            </li>
+          </capMods>
+          <statFactors>
+            <MeleeCooldownFactor>0.1</MeleeCooldownFactor> <!-- 66% as fast -->
+            <PsychicSensitivity>0</PsychicSensitivity>
+          </statFactors>
+          <minSeverity>0.7</minSeverity>
+          <label>impossible</label>
+        </li>
+    </stages>
+      <comps>
+        <li Class="HediffCompProperties_SeverityPerSecond">
+          <severityPerSecond>-0.01</severityPerSecond>
+        </li>
+      </comps>
+    </HediffDef>
+
+    <HediffDef>
+      <defName>ScramSRP_Blindness</defName>
+      <label>blindness</label>
+      <description>This creature's vision has been completely destroyed by external forces.</description>
+      <hediffClass>HediffWithComps</hediffClass>
+      <defaultLabelColor>(0.77, 0.77, 0.77)</defaultLabelColor>
+      <forceRemoveOnResurrection>true</forceRemoveOnResurrection>
+      <initialSeverity>0.1</initialSeverity>
+      <isBad>true</isBad>
+      <stages>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Sight</capacity>
+              <postFactor>0</postFactor>
+            </li>
+          </capMods>
+          <minSeverity>0</minSeverity>
+        </li>
+      </stages>
+      <comps>
+        <li Class="HediffCompProperties_SeverityPerSecond">
+          <severityPerSecond>-0.01</severityPerSecond>
+        </li>
+      </comps>
+    </HediffDef>
+
+    <HediffDef>
+      <defName>ScramSRP_Invisible</defName>
+      <label>invisibility</label>
+      <description>This creature is invisible to the naked eye.</description>
+      <hediffClass>AssemblyParasitesColonThree.Hediffs.Hediff_InvisExtraBehavior</hediffClass>
+      <defaultLabelColor>(0.3, 0.8, 0.3)</defaultLabelColor>
+      <initialSeverity>1</initialSeverity>
+      <stages>
+        <li>
+          <minSeverity>0</minSeverity>
+          <label>visible</label>
+        </li>
+        <li>
+          <minSeverity>0.3</minSeverity>
+          <label>invisible</label>
+          <statFactors>
+            <MoveSpeed>0.3</MoveSpeed>
+            <MeleeDamageFactor>2</MeleeDamageFactor>
+          </statFactors>
+        </li>
+      </stages>
+      <comps>
+        <li Class="HediffCompProperties_Invisibility">
+          <visibleToPlayer>false</visibleToPlayer>
+          <fadeDurationTicks>60</fadeDurationTicks>
+          <recoverFromDisruptedTicks>300</recoverFromDisruptedTicks>
+        </li>
+        <li Class="HediffCompProperties_DisappearsOnDeath" />
+      </comps>
+    </HediffDef>
+
+    <HediffDef>
+    <defName>ScramSRP_Hivemind</defName>
+    <label>hivemind</label>
+    <description>This creature is part of the parasite hivemind, it will not experience pain.</description>
+    <hediffClass>AssemblyParasitesColonThree.Hediffs.Hediff_Hivemind</hediffClass>
+    <everCurableByItem>false</everCurableByItem>
+    <duplicationAllowed>false</duplicationAllowed>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <stages>
+      <li>
+        <painFactor>0</painFactor>
+        <statFactors>
+          <PsychicSensitivity>1.5</PsychicSensitivity>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ScramSRP_Dissolved</defName>
+    <label>dissolved</label>
+    <description>something something dissolved desc</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <everCurableByItem>false</everCurableByItem>
+    <duplicationAllowed>false</duplicationAllowed>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>0.5</MoveSpeed>
+          <IncomingDamageFactor>3</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

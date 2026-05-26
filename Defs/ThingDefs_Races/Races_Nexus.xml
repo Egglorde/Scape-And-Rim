@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="BaseParasite" Name="BeckonRace">
+        <defName>BeckonRace</defName>
+        <label>beckon</label>
+        <race>
+            <bloodDef>ScramSRP_Filth_ResidueInfested</bloodDef>
+            <thinkTreeMain>Nexus</thinkTreeMain>
+            <thinkTreeConstant>NexusConstant</thinkTreeConstant>
+            <body>BeckonBody</body>
+            <renderTree>BeckonBloom</renderTree>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                </li>
+            </lifeStageAges>
+            <doesntMove>true</doesntMove>
+        </race>
+        <statBases>
+            <MoveSpeed>0</MoveSpeed>
+        </statBases>
+        <tools>
+            <li>
+                <label>tendril</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2</cooldownTime>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                <linkedBodyPartsGroup>BeckonTendrilAttackTool</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_Summoner">
+                <maxpoints>4</maxpoints>
+                <spawnablepawns>
+                    <li>
+                        <weight>10</weight>
+                        <kind>Rupter</kind>
+                        <points>1</points>
+                    </li>
+                </spawnablepawns>
+            </li>
+            <li Class="AssemblyParasitesColonThree.CompProperties_BeckonSpreadInfection">
+                <checks>1</checks>
+                <radius>3</radius>
+            </li>
+            <li Class="AssemblyParasitesColonThree.CompProperties_EvolverParasite_Timer">
+                <evolutionTarget>ScramSRP_Beckon2</evolutionTarget>
+                <ReqTimeTicks>54000</ReqTimeTicks>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseParasite" Name="Beckon2Race">
+        <defName>Beckon2Race</defName>
+        <label>beckon</label>
+        <race>
+            <bloodDef>ScramSRP_Filth_ResidueInfested</bloodDef>
+            <thinkTreeMain>Nexus</thinkTreeMain>
+            <thinkTreeConstant>NexusConstant</thinkTreeConstant>
+            <body>BeckonBody</body>
+            <renderTree>Beckon2Bloom</renderTree>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                </li>
+            </lifeStageAges>
+            <doesntMove>true</doesntMove>
+        </race>
+        <statBases>
+            <MoveSpeed>0</MoveSpeed>
+        </statBases>
+        <tools>
+            <li>
+                <label>tendril</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2</cooldownTime>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                <linkedBodyPartsGroup>BeckonTendrilAttackTool</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_Summoner">
+                <maxpoints>4</maxpoints>
+                <allowSims>true</allowSims>
+                <spawnablepawns>
+                    <li>
+                        <weight>10</weight>
+                        <kind>Rupter</kind>
+                        <points>1</points>
+                    </li>
+                </spawnablepawns>
+            </li>
+            <li Class="AssemblyParasitesColonThree.CompProperties_BeckonSpreadInfection">
+                <checks>1</checks>
+                <radius>3</radius>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <PawnKindDef ParentName="BaseParasiteKind">
+        <defName>ScramSRP_Beckon</defName>
+        <label>beckon</label>
+        <race>BeckonRace</race>
+        <combatPower>100</combatPower>
+        <collidesWithPawns>false</collidesWithPawns>
+        <useFixedRotation>true</useFixedRotation>
+        <fixedRotation>South</fixedRotation>
+        <overrideDeathOnDownedChance>1</overrideDeathOnDownedChance>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/Nexus/Beckon/Beckon</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                    <drawSize>2</drawSize>
+                    <shadowData>
+                        <volume>(0.4, 0.8, 0.4)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="BaseParasiteKind">
+        <defName>ScramSRP_Beckon2</defName>
+        <label>beckon</label>
+        <race>Beckon2Race</race>
+        <combatPower>300</combatPower>
+        <collidesWithPawns>false</collidesWithPawns>
+        <useFixedRotation>true</useFixedRotation>
+        <fixedRotation>South</fixedRotation>
+        <overrideDeathOnDownedChance>1</overrideDeathOnDownedChance>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/Nexus/Beckon/Beckon2</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                    <drawSize>4</drawSize>
+                    <shadowData>
+                        <volume>(0.4, 0.8, 0.4)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+</Defs>

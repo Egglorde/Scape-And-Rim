@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Basic parasite body type -->
+    <ThingDef ParentName="BasePawn" Name="BaseParasite" Abstract="True">
+        <soundImpactDefault>Impact_Nexus</soundImpactDefault>
+        <statBases>
+            <Flammability>3</Flammability>
+            <ArmorRating_Heat>0</ArmorRating_Heat>
+        </statBases>
+        <tradeability>None</tradeability>
+        <race>
+            <deathAction>
+                <workerClass>AssemblyParasitesColonThree.DeathActionWorker_Reinforce</workerClass>
+            </deathAction>
+            <trainability>None</trainability>
+            <intelligence>ToolUser</intelligence>
+            <needsRest>false</needsRest>
+            <hasGenders>false</hasGenders>
+            <foodType>None</foodType>
+            <lifeExpectancy>2500</lifeExpectancy>
+            <fleshType>ScramSRP_ParasiteFlesh</fleshType>
+            <soundCallIntervalRange>500~2000</soundCallIntervalRange>
+            <thinkTreeMain>Parasite</thinkTreeMain>
+            <thinkTreeConstant>ParasiteConstant</thinkTreeConstant>
+            <allowedOnCaravan>false</allowedOnCaravan>
+        </race>
+    </ThingDef>
+
+    <FleshTypeDef>
+      <defName>ScramSRP_ParasiteFlesh</defName>
+      <corpseCategory>CorpsesAnimal</corpseCategory>
+      <damageEffecter>Damage_HitFlesh</damageEffecter>
+      <isOrganic>true</isOrganic>
+      <genericWounds>
+        <li>
+          <texture>Things/Pawn/Wounds/WoundFleshA</texture>
+        </li>
+        <li>
+          <texture>Things/Pawn/Wounds/WoundFleshB</texture>
+        </li>
+        <li>
+          <texture>Things/Pawn/Wounds/WoundFleshC</texture>
+        </li>
+      </genericWounds>
+    </FleshTypeDef>
+
+    <!-- Basic pawnkind for parasites, prevents them from fleeing and such-->
+    <PawnKindDef Name="BaseParasiteKind" Abstract="True">
+        <defaultFactionDef>ParasiteFaction</defaultFactionDef>
+        <aiAvoidCover>true</aiAvoidCover>
+        <canStrip>false</canStrip>
+        <overrideDebugActionCategory>Parasites</overrideDebugActionCategory>
+        <startingHediffs>
+            <li>
+                <def>ScramSRP_Hivemind</def>
+            </li>
+        </startingHediffs>
+    </PawnKindDef>
+    
+    
+    <LifeStageDef>
+        <defName>InbornBaseAge</defName>
+        <label>fully-formed</label>
+        <visible>false</visible>
+    </LifeStageDef>
+    <LifeStageDef>
+        <defName>InbornYoung</defName>
+        <label>developing</label>
+        <visible>false</visible>
+    </LifeStageDef>
+    <LifeStageDef>
+        <defName>BioMass</defName>
+        <label>biomass</label>
+        <visible>false</visible>
+    </LifeStageDef>
+</Defs>

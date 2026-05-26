@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThinkTreeDef>
+      <defName>ScramSRP_SummonerParasite</defName>
+      <thinkRoot Class="ThinkNode_Priority">
+        <subNodes>
+          <!-- Despawned -->
+          <li Class="ThinkNode_Subtree">
+            <treeDef>Despawned</treeDef>
+          </li>
+          
+          <!-- Downed -->
+          <li Class="ThinkNode_Subtree">
+            <treeDef>Downed</treeDef>
+          </li>
+
+          <!-- Do a queued job -->
+          <li Class="ThinkNode_QueuedJob" />
+
+          <!-- Spawn Parasites -->
+          <li Class="ThinkNode_ConditionalHasTarget">
+            <subNodes>
+              <li Class="AssemblyParasitesColonThree.JobGiver_Summon">
+                <radius>3</radius>
+                <targetAcquireRadius>10</targetAcquireRadius>
+              </li>
+            </subNodes>
+          </li>
+          
+          <!-- React to close melee threat -->
+          <li Class="JobGiver_ReactToCloseMeleeThreat">
+            <maxDistance>2.9</maxDistance>
+          </li>
+
+          <!-- Convert the downed pawns -->
+          <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_ConvertDownedPawn">
+            <range>9.9</range>
+          </li>
+          
+          <!-- Lord directives -->
+          <li Class="ThinkNode_Subtree">
+            <treeDef>LordDuty</treeDef>
+          </li>
+
+          <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_ConsumeCorpse">
+            <range>9.9</range>
+          </li>
+
+          <!-- Regular fight -->
+          <li Class="JobGiver_AIFightEnemies">
+            <targetAcquireRadius>65</targetAcquireRadius>
+            <targetKeepRadius>72</targetKeepRadius>
+            <allowTurrets>true</allowTurrets>
+            <ignoreNonCombatants>false</ignoreNonCombatants>
+            <humanlikesOnly>false</humanlikesOnly>
+          </li>
+
+          <li Class="ThinkNode_Tagger">
+            <tagToGive>Idle</tagToGive>
+            <subNodes>
+              <li Class="JobGiver_WanderAnywhere">
+                <maxDanger>Deadly</maxDanger>
+                <ticksBetweenWandersRange>180~720</ticksBetweenWandersRange>
+                <wanderRadius>6</wanderRadius>
+                <canBashDoors>true</canBashDoors>
+                <expireOnNearbyEnemy>true</expireOnNearbyEnemy>
+              </li>
+            </subNodes>
+          </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef>
+      <defName>ScramSRP_YelloweyeParasite</defName>
+      <thinkRoot Class="ThinkNode_Priority">
+        <subNodes>
+          <!-- Despawned -->
+          <li Class="ThinkNode_Subtree">
+            <treeDef>Despawned</treeDef>
+          </li>
+          
+          <!-- Downed -->
+          <li Class="ThinkNode_Subtree">
+            <treeDef>Downed</treeDef>
+          </li>
+
+          <!-- Do a queued job -->
+          <li Class="ThinkNode_QueuedJob" />
+
+          <!-- Keep distance -->
+          <li Class="JobGiver_FleeForDistance">
+            <enemyDistToFleeRange>2.9~7.9</enemyDistToFleeRange>
+            <fleeDistRange>13.5~20</fleeDistRange>
+          </li>
+
+          <!-- React to close melee threat -->
+          <li Class="JobGiver_ReactToCloseMeleeThreat">
+            <maxDistance>2.9</maxDistance>
+          </li>
+          
+          <!-- Lord directives -->
+          <li Class="ThinkNode_Subtree">
+            <treeDef>LordDuty</treeDef>
+          </li>
+
+          <!-- Convert the downed pawns -->
+          <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_ConvertDownedPawn">
+            <range>9.9</range>
+          </li>
+
+          <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_ConsumeCorpse">
+            <range>9.9</range>
+          </li>
+          
+          <li Class="JobGiver_AIAbilityFight">
+            <targetAcquireRadius>65</targetAcquireRadius>
+            <targetKeepRadius>72</targetKeepRadius>
+            <skipIfCantTargetNow>false</skipIfCantTargetNow>
+            <ability>ScramSRP_AcidProj</ability>
+            <allowTurrets>true</allowTurrets>
+            <needLOSToAcquireNonPawnTargets>true</needLOSToAcquireNonPawnTargets>
+          </li>
+        
+          <!-- Wander -->
+          <li Class="JobGiver_WanderHerd">
+            <maxDanger>Deadly</maxDanger>
+            <ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
+          </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+</Defs>

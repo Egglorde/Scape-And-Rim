@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 1049951082
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b43f86c13e19c907815fd6313d67cd29
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b4f2efbdb85a500017afd875df75d980
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: b43f86c13e19c907815fd6313d67cd29
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/YourAverageEgg.egsarpmfu/Materials/Phase6.shader
+- Assets/Data/YourAverageEgg.egsarpmfu/Materials/Phase3.shader
+- Assets/Data/YourAverageEgg.egsarpmfu/Materials/Phase2.shader
+- Assets/Data/YourAverageEgg.egsarpmfu/Materials/OrbShader.shader
+- Assets/Data/YourAverageEgg.egsarpmfu/Textures/Noise2.png
+- Assets/Data/YourAverageEgg.egsarpmfu/Textures/Noise.png
+- Assets/Data/YourAverageEgg.egsarpmfu/Textures/Noise3.png
+- Assets/Data/YourAverageEgg.egsarpmfu/Textures/Dirt-Infested.png
+- Assets/Data/YourAverageEgg.egsarpmfu/Materials/Phase1.shader
+- Assets/Data/YourAverageEgg.egsarpmfu/Materials/Phase4.shader
+- Assets/Data/YourAverageEgg.egsarpmfu/Materials/Phase5.shader
+Dependencies: []

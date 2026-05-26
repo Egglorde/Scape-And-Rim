@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThinkTreeDef>
+      <defName>Parasite</defName>
+      <thinkRoot Class="ThinkNode_Priority">
+        <subNodes>
+          <!-- Despawned -->
+          <li Class="ThinkNode_Subtree">
+            <treeDef>Despawned</treeDef>
+          </li>
+          
+          <!-- Downed -->
+          <li Class="ThinkNode_Subtree">
+            <treeDef>Downed</treeDef>
+          </li>
+
+          <!-- Do a queued job -->
+          <li Class="ThinkNode_QueuedJob" />
+          
+          <!-- React to close melee threat -->
+          <li Class="JobGiver_ReactToCloseMeleeThreat">
+            <maxDistance>2.9</maxDistance>
+          </li>
+
+          <!-- Convert the downed pawns -->
+          <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_ConvertDownedPawn">
+            <range>9.9</range>
+          </li>
+          
+          <!-- Lord directives -->
+          <li Class="ThinkNode_Subtree">
+            <treeDef>LordDuty</treeDef>
+          </li>
+
+          <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_ConsumeCorpse">
+            <range>9.9</range>
+          </li>
+
+          <!-- Regular fight -->
+          <li Class="JobGiver_AIFightEnemies">
+            <targetAcquireRadius>65</targetAcquireRadius>
+            <targetKeepRadius>72</targetKeepRadius>
+            <allowTurrets>true</allowTurrets>
+            <ignoreNonCombatants>false</ignoreNonCombatants>
+            <humanlikesOnly>false</humanlikesOnly>
+          </li>
+
+          <li Class="ThinkNode_Tagger">
+            <tagToGive>Idle</tagToGive>
+            <subNodes>
+              <li Class="JobGiver_WanderAnywhere">
+                <maxDanger>Deadly</maxDanger>
+                <ticksBetweenWandersRange>180~720</ticksBetweenWandersRange>
+                <wanderRadius>6</wanderRadius>
+                <canBashDoors>true</canBashDoors>
+                <expireOnNearbyEnemy>true</expireOnNearbyEnemy>
+              </li>
+            </subNodes>
+          </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef>
+    <defName>Buglin</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Despawned -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+        
+        <!-- Downed -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+
+        <!-- React to close melee threat -->
+        <li Class="JobGiver_ReactToCloseMeleeThreat">
+          <maxDistance>0.9</maxDistance>
+        </li>
+        
+        <!-- Wander -->
+        <li Class="JobGiver_WanderHerd">
+          <maxDanger>Deadly</maxDanger>
+          <ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+  
+  <ThinkTreeDef>
+    <defName>ParasiteLeaper</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        
+        <!-- Downed -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+        
+        <li Class="ThinkNode_Subtree">
+          <treeDef>BurningResponse</treeDef>
+        </li>
+        
+        <!-- React to close melee threat -->
+        <li Class="JobGiver_ReactToCloseMeleeThreat">
+          <maxDistance>1.9</maxDistance>
+        </li>
+
+        <!-- Do a queued job -->
+        <li Class="ThinkNode_QueuedJob" />
+
+        <!-- Convert the downed pawns -->
+        <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_ConvertDownedPawn">
+          <range>9.9</range>
+        </li>
+        
+        <!-- Lord directives -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>LordDuty</treeDef>
+        </li>
+        
+        <li Class="ThinkNode_ConditionalHasAbility">
+          <ability>ScramSRP_InfectAnimal</ability>
+          <subNodes>
+            <li Class="AssemblyParasitesColonThree.WorkRelated.JobGiver_AICastAbilityMelee">
+              <ability>ScramSRP_InfectAnimal</ability>
+            </li>
+          </subNodes>
+        </li>
+
+        <!-- Fire spikes at distant enemies -->
+        <li Class="JobGiver_AIAbilityFight">
+          <targetAcquireRadius>65</targetAcquireRadius>
+          <targetKeepRadius>72</targetKeepRadius>
+          <skipIfCantTargetNow>false</skipIfCantTargetNow>
+          <ability>ScramSRP_AttackLeapParasite</ability>
+          <allowTurrets>true</allowTurrets>
+          <needLOSToAcquireNonPawnTargets>true</needLOSToAcquireNonPawnTargets>
+        </li>
+        
+        <li Class="JobGiver_ReactToCloseMeleeThreat">
+          <maxDistance>2.9</maxDistance>
+        </li>
+
+        <li Class="JobGiver_AIFightEnemies">
+          <targetAcquireRadius>15</targetAcquireRadius>
+          <targetKeepRadius>30</targetKeepRadius>
+          <allowTurrets>true</allowTurrets>
+        </li>
+        
+        <!-- Wander -->
+        <li Class="JobGiver_WanderAnywhere">
+          <maxDanger>Deadly</maxDanger>
+          <ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+  <ThinkTreeDef>
+    <defName>ParasiteConstant</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+      
+        <!-- Despawned -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+        <li Class="ThinkNode_ConditionalCanDoLordJobNow">
+          <subNodes>
+            <!-- Lord directives -->
+            <li Class="ThinkNode_Subtree">
+              <treeDef>LordDutyConstant</treeDef>
+            </li>
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+    <ThinkTreeDef>
+    <defName>Nexus</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+        
+        <li Class="AssemblyParasitesColonThree.JobGiver_Summon">
+          <radius>3</radius>
+          <targetAcquireRadius>57</targetAcquireRadius>
+        </li>
+
+        <li Class="JobGiver_ReactToCloseMeleeThreat">
+          <maxDistance>0.9</maxDistance>
+        </li>
+        
+        <!-- Idle fallback -->
+        <li Class="JobGiver_Idle" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+  <ThinkTreeDef>
+    <defName>NexusConstant</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Despawned -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+</Defs>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="BaseParasite" Name="BaseAdapted" Abstract="True">
+        <statBases>
+            <MoveSpeed>4</MoveSpeed>
+            <ArmorRating_Heat>0</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.222</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.461</ArmorRating_Sharp>
+        </statBases>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_DeathExplosionRemain">
+                <remaintier>Adapted</remaintier>
+            </li>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_Adaptation">
+                <learnChance>0.8</learnChance>
+                <failChance>0.5</failChance>
+                <reductionPerPoint>0.1</reductionPerPoint>
+                <reductionCap>10</reductionCap>
+                <maxLearnedDamageSources>8</maxLearnedDamageSources>
+            </li>
+        </comps>
+        <race>
+            <soundMoving>ScramSRP_PriAdaMoving</soundMoving>
+        </race>
+    </ThingDef>
+    <ThingDef ParentName="BaseAdapted">
+        <defName>ScramSRP_Ada_LongArms</defName>
+        <label>adapted longarms</label>
+        <race>
+            <baseHealthScale>4.75</baseHealthScale>
+            <body>ScramSRP_PrimitiveLongarmsBody</body>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                    <soundWounded>ScramSRP_PriLongarmsHurt</soundWounded>
+                    <soundDeath>ScramSRP_PriLongarmsDeath</soundDeath>
+                    <soundCall>ScramSRP_PriLongarmsCall</soundCall>
+                </li>
+            </lifeStageAges>
+        </race>
+        <tools>
+            <li>
+                <label>left club</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>22.5</power>
+                <cooldownTime>2</cooldownTime>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>right club</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>22.5</power>
+                <cooldownTime>2</cooldownTime>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>maw</label>
+                <capacities>
+                    <li>ScramSRP_DirectConvertCapBite</li>
+                </capacities>
+                <power>36.67</power>
+                <cooldownTime>3</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.6</chanceFactor>
+            </li>
+            <li>
+                <label>body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.13</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>BodyAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProperties_ExplodeOnMeleeAttack">
+                <damage>ScramSRP_Seismic_Explosion</damage>
+                <radius>3.2</radius>
+            </li>
+        </comps>
+    </ThingDef>
+    <PawnKindDef ParentName="BaseParasiteKind">
+        <defName>ScramSRP_Ada_LongArmsKind</defName>
+        <label>Adapted longarms</label>
+        <race>ScramSRP_Ada_LongArms</race>
+        <combatPower>500</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/PriAda/Ada_Longarms/Ada_Longarms</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>2.8</drawSize>
+                    <shadowData>
+                        <volume>(0.5, 0.8, 0.5)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <abilities>
+            <li>ScramSRP_Wave</li>
+            <li>ScramSRP_AttackHopParasite</li>
+        </abilities>
+    </PawnKindDef>
+</Defs>

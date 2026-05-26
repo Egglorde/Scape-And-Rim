@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <PawnRenderTreeDef>
+    <defName>ScramSRP_LongarmsArms</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <tagDef>Body</tagDef>
+          <useRottenColor>true</useRottenColor>
+          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+          <children>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>ArmA</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_LeftArm</linkedBodyPartsGroup>
+              <texPath>Parasite/PriAda/Pri_Longarms/Pri_Longarms_ArmA</texPath>
+              <drawSize>2.4</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <durationTicksRange>10~35</durationTicksRange>
+              <nextSpasmTicksRange>10~50</nextSpasmTicksRange>
+              <baseLayer>-10</baseLayer>
+              <drawData>
+                <dataNorth>
+                  <offset>(-0.6, 0.01, 0.43)</offset>
+                </dataNorth>
+                <dataEast>
+                  <offset>(0.1, 0.01, 0.43)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                </dataEast>
+                <dataSouth>
+                  <offset>(-0.6, -0.01, 0.43)</offset>
+                  <rotationOffset>-180</rotationOffset>
+                </dataSouth>
+                <dataWest>
+                  <offset>(-0.1, -0.01, 0.43)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                  <flip>true</flip>
+                </dataWest>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>ArmB</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_RightArm</linkedBodyPartsGroup>
+              <texPath>Parasite/PriAda/Pri_Longarms/Pri_Longarms_ArmB</texPath>
+              <drawSize>2.4</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <durationTicksRange>10~35</durationTicksRange>
+              <nextSpasmTicksRange>10~50</nextSpasmTicksRange>
+              <baseLayer>-10</baseLayer>
+              <drawData>
+                <dataNorth>
+                  <offset>(0.6, 0.01, 0.43)</offset>
+                </dataNorth>
+                <dataEast>
+                  <offset>(0.1, -0.01, 0.43)</offset>
+                  <rotationOffset>90</rotationOffset>
+                  <flip>true</flip>
+                </dataEast>
+                <dataSouth>
+                  <offset>(0.6, -0.01, 0.43)</offset>
+                  <rotationOffset>180</rotationOffset>
+                </dataSouth>
+                <dataWest>
+                  <offset>(-0.1, 0.01, 0.43)</offset>
+                  <rotationOffset>90</rotationOffset>
+                </dataWest>
+              </drawData>
+            </li>
+            <li>
+              <debugLabel>Wounds</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>10</baseLayer>
+            </li>
+            <li>
+              <debugLabel>Firefoam</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>20</baseLayer>
+            </li>
+          </children>
+        </li>
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+  <PawnRenderTreeDef>
+    <defName>ScramSRP_ArachnidaRenderTree</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <tagDef>Body</tagDef>
+          <useRottenColor>true</useRottenColor>
+          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+          <children>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>ArmA</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_LeftArm</linkedBodyPartsGroup>
+              <texPath>Parasite/PriAda/Pri_Arachnida/Pri_Arachnida_arm</texPath>
+              <drawSize>1.7</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-15~15</rotationRange>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <baseLayer>-10</baseLayer>
+              <drawData>
+                <dataNorth>
+                  <offset>(-0.4, -0.01, 0)</offset>
+                  <rotationOffset>90</rotationOffset>
+                  <flip>true</flip>
+                </dataNorth>
+                <dataEast>
+                  <offset>(0.48, -0.01, 0.15)</offset>
+                  <rotationOffset>180</rotationOffset>
+                  <flip>true</flip>
+                </dataEast>
+                <dataSouth>
+                  <offset>(0.37, 0.01, -0.43)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                </dataSouth>
+                <dataWest>
+                  <offset>(-0.48, 0.01, -0.23)</offset>
+                  <rotationOffset>180</rotationOffset>
+                </dataWest>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>ArmB</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_RightArm</linkedBodyPartsGroup>
+              <texPath>Parasite/PriAda/Pri_Arachnida/Pri_Arachnida_arm</texPath>
+              <drawSize>1.7</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-15~15</rotationRange>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <baseLayer>-10</baseLayer>
+              <drawData>
+                <dataNorth>
+                  <offset>(0.4, -0.01, 0)</offset>
+                  <rotationOffset>90</rotationOffset>
+                </dataNorth>
+                <dataEast>
+                  <offset>(0.48, 0.01, -0.23)</offset>
+                  <rotationOffset>180</rotationOffset>
+                  <flip>true</flip>
+                </dataEast>
+                <dataSouth>
+                  <offset>(-0.37, 0.01, -0.43)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                  <flip>true</flip>
+                </dataSouth>
+                <dataWest>
+                  <offset>(-0.48, -0.01, 0.15)</offset>
+                  <rotationOffset>180</rotationOffset>
+                </dataWest>
+              </drawData>
+            </li>
+            <li>
+              <debugLabel>Wounds</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>10</baseLayer>
+            </li>
+            <li>
+              <debugLabel>Firefoam</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>20</baseLayer>
+            </li>
+          </children>
+        </li>
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+  <PawnRenderTreeDef>
+    <defName>ScramSRP_BolsterRenderTree</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <tagDef>Body</tagDef>
+          <useRottenColor>true</useRottenColor>
+          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+          <children>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>ArmA</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_LeftArm</linkedBodyPartsGroup>
+              <texPath>Parasite/PriAda/Pri_Bolster/Pri_Bolster_tendril</texPath>
+              <drawSize>1.6</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-15~15</rotationRange>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <baseLayer>-10</baseLayer>
+              <drawData>
+                <dataNorth>
+                  <offset>(-0.45, -0.01, 0.55)</offset>
+                  <flip>true</flip>
+                </dataNorth>
+                <dataEast>
+                  <offset>(0, -0.01, 0.55)</offset>
+                  <rotationOffset>90</rotationOffset>
+                  <flip>true</flip>
+                </dataEast>
+                <dataSouth>
+                  <offset>(0.45, 0.01, 0.5)</offset>
+                  <rotationOffset>180</rotationOffset>
+                </dataSouth>
+                <dataWest>
+                  <offset>(0, 0.01, 0.45)</offset>
+                  <rotationOffset>90</rotationOffset>
+                </dataWest>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>ArmB</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_RightArm</linkedBodyPartsGroup>
+              <texPath>Parasite/PriAda/Pri_Bolster/Pri_Bolster_tendril</texPath>
+              <drawSize>1.6</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-15~15</rotationRange>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <baseLayer>-10</baseLayer>
+              <drawData>
+                <dataNorth>
+                  <offset>(0.45, -0.01, 0.55)</offset>
+                </dataNorth>
+                <dataEast>
+                  <offset>(0, 0.01, 0.45)</offset>
+                  <rotationOffset>90</rotationOffset>
+                  <flip>true</flip>
+                </dataEast>
+                <dataSouth>
+                  <offset>(-0.45, 0.01, 0.5)</offset>
+                  <rotationOffset>180</rotationOffset>
+                  <flip>true</flip>
+                </dataSouth>
+                <dataWest>
+                  <offset>(0, -0.01, 0.55)</offset>
+                  <rotationOffset>90</rotationOffset>
+                </dataWest>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>ArmC</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilA</linkedBodyPartsGroup>
+              <texPath>Parasite/PriAda/Pri_Bolster/Pri_Bolster_tendril</texPath>
+              <drawSize>1.6</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-15~15</rotationRange>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <baseLayer>-10</baseLayer>
+              <drawData>
+                <dataNorth>
+                  <offset>(-0.3, -0.02, 0.4)</offset>
+                  <flip>true</flip>
+                </dataNorth>
+                <dataEast>
+                  <offset>(0.4, -0.01, 0.15)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                </dataEast>
+                <dataSouth>
+                  <offset>(0.35, 0.01, 0.1)</offset>
+                  <rotationOffset>180</rotationOffset>
+                </dataSouth>
+                <dataWest>
+                  <offset>(-0.4, 0.01, 0.05)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                  <flip>true</flip>
+                </dataWest>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>ArmD</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilB</linkedBodyPartsGroup>
+              <texPath>Parasite/PriAda/Pri_Bolster/Pri_Bolster_tendril</texPath>
+              <drawSize>1.6</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-15~15</rotationRange>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <baseLayer>-10</baseLayer>
+              <drawData>
+                <dataNorth>
+                  <offset>(0.3, -0.02, 0.4)</offset>
+                </dataNorth>
+                <dataEast>
+                  <offset>(0.4, 0.01, 0.05)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                </dataEast>
+                <dataSouth>
+                  <offset>(-0.35, 0.01, 0.1)</offset>
+                  <rotationOffset>180</rotationOffset>
+                  <flip>true</flip>
+                </dataSouth>
+                <dataWest>
+                  <offset>(-0.4, -0.01, 0.15)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                  <flip>true</flip>
+                </dataWest>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>ArmE</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilC</linkedBodyPartsGroup>
+              <texPath>Parasite/PriAda/Pri_Bolster/Pri_Bolster_tendril</texPath>
+              <drawSize>1.6</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-15~15</rotationRange>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <baseLayer>-10</baseLayer>
+              <drawData>
+                <dataNorth>
+                  <offset>(-0.4, 0.01, 0.25)</offset>
+                  <flip>true</flip>
+                </dataNorth>
+                <dataEast>
+                  <offset>(-0.48, -0.01, 0.25)</offset>
+                  <rotationOffset>90</rotationOffset>
+                  <flip>true</flip>
+                </dataEast>
+                <dataSouth>
+                  <offset>(0.45, -0.01, 0.3)</offset>
+                  <rotationOffset>180</rotationOffset>
+                </dataSouth>
+                <dataWest>
+                  <offset>(0.48, 0.01, 0.15)</offset>
+                  <rotationOffset>90</rotationOffset>
+                </dataWest>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>ArmF</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilD</linkedBodyPartsGroup>
+              <texPath>Parasite/PriAda/Pri_Bolster/Pri_Bolster_tendril</texPath>
+              <drawSize>1.6</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-15~15</rotationRange>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <baseLayer>-10</baseLayer>
+              <drawData>
+                <dataNorth>
+                  <offset>(0.4, 0.01, 0.25)</offset>
+                </dataNorth>
+                <dataEast>
+                  <offset>(-0.48, 0.01, 0.15)</offset>
+                  <rotationOffset>90</rotationOffset>
+                  <flip>true</flip>
+                </dataEast>
+                <dataSouth>
+                  <offset>(-0.4, -0.01, 0.3)</offset>
+                  <rotationOffset>180</rotationOffset>
+                  <flip>true</flip>
+                </dataSouth>
+                <dataWest>
+                  <offset>(0.48, -0.01, 0.25)</offset>
+                  <rotationOffset>90</rotationOffset>
+                </dataWest>
+              </drawData>
+            </li>
+            <li>
+              <debugLabel>Wounds</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>10</baseLayer>
+            </li>
+            <li>
+              <debugLabel>Firefoam</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>20</baseLayer>
+            </li>
+          </children>
+        </li>
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+  <PawnRenderTreeDef>
+    <defName>ScramSRP_ReekerRenderTree</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <tagDef>Body</tagDef>
+          <useRottenColor>true</useRottenColor>
+          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+          <children>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>ArmA</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_RightArm</linkedBodyPartsGroup>
+              <texPath>Parasite/PriAda/Pri_Reeker/Pri_Reeker_arm</texPath>
+              <drawSize>1.6</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <durationTicksRange>10~35</durationTicksRange>
+              <nextSpasmTicksRange>10~50</nextSpasmTicksRange>
+              <baseLayer>-10</baseLayer>
+              <drawData>
+                <dataEast>
+                  <offset>(-0.35, 0.02, -0.1)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                </dataEast>
+                <dataSouth>
+                  <offset>(-0.16, 0.01, 0.4)</offset>
+                  <flip>true</flip>
+                  <rotationOffset>-115</rotationOffset>
+                </dataSouth>
+                <dataWest>
+                  <offset>(0.35, -0.01, 0.1)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataNorth>
+                  <offset>(0.16, 0.01, -0.14)</offset>
+                  <rotationOffset>-65</rotationOffset>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>ArmB</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_LeftArm</linkedBodyPartsGroup>
+              <texPath>Parasite/PriAda/Pri_Reeker/Pri_Reeker_arm</texPath>
+              <drawSize>1.6</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <durationTicksRange>10~35</durationTicksRange>
+              <nextSpasmTicksRange>10~50</nextSpasmTicksRange>
+              <baseLayer>-10</baseLayer>
+              <drawData>
+                <dataEast>
+                  <offset>(-0.35, -0.01, 0.1)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                </dataEast>
+                <dataSouth>
+                  <offset>(0.16, 0.01, 0.4)</offset>
+                  <rotationOffset>-115</rotationOffset>
+                </dataSouth>
+                <dataWest>
+                  <offset>(0.35, 0.02, -0.1)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataNorth>
+                  <offset>(-0.16, 0.01, -0.14)</offset>
+                  <flip>true</flip>
+                  <rotationOffset>-65</rotationOffset>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li>
+              <debugLabel>Head</debugLabel>
+              <linkedBodyPartsGroup>FullHead</linkedBodyPartsGroup>
+              <texPath>Parasite/PriAda/Pri_Reeker/Pri_Reeker_head</texPath>
+              <drawSize>0.9</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <baseLayer>-10</baseLayer>
+              <drawData>
+                <dataEast>
+                  <offset>(0.65, 0.01, 0.6)</offset>
+                </dataEast>
+                <dataSouth>
+                  <offset>(0, 0.01, 0.1)</offset>
+                </dataSouth>
+                <dataWest>
+                  <offset>(-0.65, 0.01, 0.6)</offset>
+                </dataWest>
+                <dataNorth>
+                  <offset>(0, -0.01, 0.65)</offset>
+                  <flip>true</flip>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li>
+              <debugLabel>Wounds</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>10</baseLayer>
+            </li>
+            <li>
+              <debugLabel>Firefoam</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>20</baseLayer>
+            </li>
+          </children>
+        </li>
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+  
+</Defs>

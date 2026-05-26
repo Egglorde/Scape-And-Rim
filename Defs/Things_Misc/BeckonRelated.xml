@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="EtherealThingBase">
+        <defName>TunnelBeckonSpawner</defName>
+        <label>tunnel</label>
+        <thingClass>AssemblyParasitesColonThree.GroundSpawner_Beckon</thingClass>
+        <tickerType>Normal</tickerType>
+        <drawerType>RealtimeOnly</drawerType>
+        <alwaysFlee>true</alwaysFlee>
+        <building>
+            <groundSpawnerSustainedEffecter>EmergencePointSustained2X2</groundSpawnerSustainedEffecter>
+            <groundSpawnerCompleteEffecter>EmergencePointComplete2X2</groundSpawnerCompleteEffecter>
+        </building>
+    </ThingDef>
+
+    <ThingDef Abstract="True" Name="BiomassBase" ParentName="BuildingNaturalBase">
+      <thingClass>AssemblyParasitesColonThree.Thing_BiomassParasite</thingClass>
+      <label>biomass</label>
+      <tickerType>Normal</tickerType>
+      <graphicData>
+        <texPath>Parasite/Nexus/Beckon/Biomass</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>1.5</drawSize>
+      </graphicData>
+      <building>
+        <combatPower>150</combatPower>
+      </building>
+      <comps>
+        <li Class="CompProperties_SpawnEffecterOnDestroy">
+          <effect>CocoonDestroyed</effect>
+        </li>
+      </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ChunkBase">
+      <defName>ScramSRP_ParasiteGoreLarge</defName>
+      <thingClass>ThingWithComps</thingClass>
+      <description>A chunk of gore taken from a parasite.</description>
+      <label>remain</label>
+      <comps>
+        <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_Remain">
+        </li>
+      </comps>
+      <statBases>
+        <Mass>8</Mass>
+        <Beauty>-16</Beauty>
+        <Flammability>50</Flammability>
+      </statBases>
+      <graphicData>
+        <color>(129,17,31)</color>
+        <texPath>Things/Remains</texPath>
+        <graphicClass>Graphic_Random</graphicClass>
+        <shaderType>CutoutComplex</shaderType>
+      </graphicData>
+      <soundDrop>ScramSRP_MeatImpact</soundDrop>
+      <randomizeRotationOnSpawn>false</randomizeRotationOnSpawn>
+      <thingCategories>
+        <li>Corpses</li>
+      </thingCategories>
+    </ThingDef>
+
+    <ThingDef ParentName="EtherealThingBase">
+      <defName>ScramSRP_ExplodingPawn</defName>
+      <drawerType>RealtimeOnly</drawerType>
+      <label>exploding parasite</label>
+      <selectable>false</selectable>
+      <tickerType>Normal</tickerType>
+      <thingClass>AssemblyParasitesColonThree.Things.Explosion_Death_Aneurysm</thingClass>
+      <drawOffscreen>true</drawOffscreen>
+      <comps>
+        <li Class="CompProperties_SpawnEffecterOnDestroy">
+          <effect>ScramSRP_ExplosionEffecter</effect>
+        </li>
+      </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="EtherealThingBase">
+      <defName>ScramSRP_TransformationCutscene</defName>
+      <drawerType>RealtimeOnly</drawerType>
+      <label>parasite</label>
+      <selectable>true</selectable>
+      <tickerType>Normal</tickerType>
+      <thingClass>AssemblyParasitesColonThree.Things.Thing_TransformationCutscene</thingClass>
+      <comps>
+        <li Class="CompProperties_DestroyAfterDelay">
+          <delayTicks>300</delayTicks>
+        </li>
+      </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="BiomassBase">
+      <defName>BiomassSmall</defName>
+    </ThingDef>
+
+    <SoundDef>
+        <defName>TunnelBell</defName>
+        <sustain>True</sustain>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Misc/Tunnel/TunnelLoop</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>18~18</volumeRange>
+                <sustainAttack>2.5</sustainAttack>
+                <sustainRelease>2.5</sustainRelease>
+                <distRange>20~100</distRange>
+            </li>
+        </subSounds>
+        <sustainStartSound>Beckon_Bell</sustainStartSound>
+        <sustainStopSound>Tunnel_End</sustainStopSound>
+    </SoundDef>
+
+  <ThingDef ParentName="PlantBase" Name="Plant_Brambles">
+    <defName>ScramSRP_ParasiteBrambles</defName>
+    <label>brambles</label>
+    <description>Tangled, thorny, woody shoots covered with leaves. Brambles grow in clusters, and slow down anyone moving over them.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Nutrition>0.50</Nutrition>
+    </statBases>
+    <pathCost>14</pathCost>
+    <graphicData>
+      <texPath>Terrain/Plants/Brambles</texPath>
+        <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>1.7</drawSize>
+      <color>(70,70,70)</color>
+    </graphicData>
+    <ingestible />
+    <plant>
+      <fertilitySensitivity>0.7</fertilitySensitivity>
+      <growDays>3</growDays>
+      <harvestWork>60</harvestWork>
+      <maxMeshCount>4</maxMeshCount>
+      <visualSizeRange>0.7~0.85</visualSizeRange>
+      <topWindExposure>0.15</topWindExposure>
+      <wildClusterRadius>4</wildClusterRadius>
+      <wildClusterWeight>200</wildClusterWeight>
+      <wildOrder>1</wildOrder>
+      <wildEqualLocalDistribution>false</wildEqualLocalDistribution>
+      <pollution>Any</pollution>
+      <completelyIgnoreFertility>true</completelyIgnoreFertility>
+    </plant>
+  </ThingDef>
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>ScramSRP_InfestedSoil</defName>
+    <label>infested soil</label>
+    <description>A section of ground taken over by beckonic roots.</description>
+    <texturePath>Terrain/Parasite/Dirt-Infested</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>340</renderPrecedence>
+    <pathCost>2</pathCost>
+    <categoryType>Soil</categoryType>
+    <designationCategory />
+    <statBases>
+      <Beauty>-10</Beauty>
+      <BeautyOutdoors>-5</BeautyOutdoors>
+      <Cleanliness>-3</Cleanliness>
+      <Flammability>0.32</Flammability>
+      <CleaningTimeFactor>1.5</CleaningTimeFactor>
+    </statBases>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Walkable</li>
+    </affordances>
+    <fertility>0</fertility>
+  </TerrainDef>
+  
+</Defs>

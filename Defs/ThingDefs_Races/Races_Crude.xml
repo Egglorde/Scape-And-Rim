@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Abstract for Ruptoid Parasites-->
+    <ThingDef ParentName="BaseParasite">
+        <defName>ScramSRP_IncompleteMedium</defName>
+        <label>medium incomplete form</label>
+        <statBases>
+            <MoveSpeed>4</MoveSpeed>
+        </statBases>
+        <race>
+            <baseHealthScale>1.4</baseHealthScale>
+            <body>ScramSRP_IncompleteMediumBody</body>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                    <soundWounded>Hurt_Inborn</soundWounded>
+                    <soundDeath>Death_Inborn</soundDeath>
+                    <soundCall>Call_Inborn</soundCall>
+                </li>
+            </lifeStageAges>
+        </race>
+        <tools>
+            <li>
+                <label>left bonespike</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>11.02</power>
+                <cooldownTime>2</cooldownTime>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                <linkedBodyPartsGroup>ScramSRP_BoneWeaponLeft</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>right bonespike</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>11.02</power>
+                <cooldownTime>2</cooldownTime>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                <linkedBodyPartsGroup>ScramSRP_BoneWeaponRight</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>maw</label>
+                <capacities>
+                    <li>ScramSRP_DirectConvertCapBite</li>
+                </capacities>
+                <power>18.59</power>
+                <cooldownTime>3</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <hediff>ScramSRP_HediffCOTHDef</hediff>
+                <chanceFactor>0.4</chanceFactor>
+            </li>
+            <li>
+                <label>tounge</label>
+                <capacities>
+                    <li>ScramSRP_DirectConvertCapStab</li>
+                </capacities>
+                <power>10.01 </power>
+                <cooldownTime>1</cooldownTime>
+                <linkedBodyPartsGroup>ScramSRP_Tongue</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <hediff>ScramSRP_HediffCOTHDef</hediff>
+                <chanceFactor>0.4</chanceFactor>
+            </li>
+            <li>
+                <label>body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>BodyAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+    </ThingDef>
+    
+    <ThingDef ParentName="BaseParasite">
+        <defName>ScramSRP_IncompleteSmall</defName>
+        <label>small incomplete form</label>
+        <statBases>
+            <MoveSpeed>4</MoveSpeed>
+        </statBases>
+        <race>
+            <baseHealthScale>0.9</baseHealthScale>
+            <body>ScramSRP_IncompleteSmallBody</body>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                    <soundWounded>Hurt_Inborn</soundWounded>
+                    <soundDeath>Death_Inborn</soundDeath>
+                    <soundCall>Call_Inborn</soundCall>
+                </li>
+            </lifeStageAges>
+        </race>
+        <tools>
+            <li>
+                <label>left bonespike</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>8.02</power>
+                <cooldownTime>2</cooldownTime>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                <linkedBodyPartsGroup>ScramSRP_BoneWeaponLeft</linkedBodyPartsGroup>
+                <chanceFactor>0.40</chanceFactor>
+            </li>
+            <li>
+                <label>right bonespike</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>8.02</power>
+                <cooldownTime>2</cooldownTime>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                <linkedBodyPartsGroup>ScramSRP_BoneWeaponRight</linkedBodyPartsGroup>
+                <chanceFactor>0.40</chanceFactor>
+            </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+            <li>
+                <label>teeth</label>
+                <capacities>
+                    <li>Stab</li>
+                    <li>ScramSRP_DirectConvertCapBite</li>
+                </capacities>
+                <power>14.57 </power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <hediff>ScramSRP_HediffCOTHDef</hediff>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+    </ThingDef>
+    
+    <PawnKindDef ParentName="BaseParasiteKind">
+        <defName>ScramSRP_IncompleteMediumKind</defName>
+        <label>medium incomplete form</label>
+        <race>ScramSRP_IncompleteMedium</race>
+        <combatPower>70</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/Crude/Incomplete_Medium/Incomplete_Medium</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>2</drawSize>
+                    <shadowData>
+                        <volume>(0.5, 0.8, 0.5)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+    </lifeStages>
+    </PawnKindDef>
+    <PawnKindDef ParentName="BaseParasiteKind">
+        <defName>ScramSRP_IncompleteSmallKind</defName>
+        <label>small incomplete form</label>
+        <race>ScramSRP_IncompleteSmall</race>
+        <combatPower>70</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/Crude/Incomplete_Small/Incomplete_Small</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>2</drawSize>
+                    <shadowData>
+                        <volume>(0.2, 0.3, 0.2)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+    </lifeStages>
+    </PawnKindDef>
+</Defs>

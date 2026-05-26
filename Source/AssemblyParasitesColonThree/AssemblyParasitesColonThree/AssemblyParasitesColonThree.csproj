@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{749C1664-E38C-4632-A88B-F74FF9224CD4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AssemblyParasitesColonThree</RootNamespace>
+    <AssemblyName>AssemblyParasitesColonThree</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lib.Harmony.2.4.2\lib\net48\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompProps\AbilityCompProperties_ReleaseCOTHGas.cs" />
+    <Compile Include="CompProps\AbilityCompProperties_RessurectParasites.cs" />
+    <Compile Include="CompProps\CompProperties_HealerParasite.cs" />
+    <Compile Include="CompProps\CompProperties_Adaptation.cs" />
+    <Compile Include="CompProps\CompProperties_BeckonSpreadInfection.cs" />
+    <Compile Include="CompProps\CompProperties_DeathExplosionRemain.cs" />
+    <Compile Include="CompProps\CompProperties_DeTargetOnSameFaction.cs" />
+    <Compile Include="CompProps\CompProperties_EvolverParasite_Kills.cs" />
+    <Compile Include="CompProps\CompProperties_EvolverParasite_Timer.cs" />
+    <Compile Include="CompProps\CompProperties_ExplodeOnMeleeAttack.cs" />
+    <Compile Include="CompProps\CompProperties_OrbUser.cs" />
+    <Compile Include="CompProps\CompProperties_Remain.cs" />
+    <Compile Include="CompProps\CompProperties_Summoner.cs" />
+    <Compile Include="Comps\AbilityComp_OrbComp.cs" />
+    <Compile Include="Comps\AbilityComp_ReleaseCOTHGas.cs" />
+    <Compile Include="Comps\AbilityComp_ResurrectParasites.cs" />
+    <Compile Include="Comps\Comp_Adaptation.cs" />
+    <Compile Include="Comps\Comp_BeckonSpreadInfection.cs" />
+    <Compile Include="Comps\Comp_DeathExplosionRemain.cs" />
+    <Compile Include="Comps\Comp_DeTargetOnSameFaction.cs" />
+    <Compile Include="Comps\Comp_EvolverParasite.cs" />
+    <Compile Include="Comps\Comp_EvolverParasite_Kills.cs" />
+    <Compile Include="Comps\Comp_EvolverParasite_Timer.cs" />
+    <Compile Include="Comps\Comp_ExplodeOnMeleeAttack.cs" />
+    <Compile Include="Comps\Comp_HealerParasite.cs" />
+    <Compile Include="Comps\Comp_OrbUser.cs" />
+    <Compile Include="Harmony\TileInspectStringPatch.cs" />
+    <Compile Include="Hediffs\Hediff_Injury_Infector.cs" />
+    <Compile Include="Hediffs\Hediff_InvisExtraBehavior.cs" />
+    <Compile Include="Comps\Comp_Remain.cs" />
+    <Compile Include="Comps\Comp_Summoner.cs" />
+    <Compile Include="DamageWorkers\DamageWorker_Siesmic.cs" />
+    <Compile Include="DeathActionProps\DeathActionProperties_PopIntoParas.cs" />
+    <Compile Include="DeathActionWorkers\DeathActionWorker_PopIntoParas.cs" />
+    <Compile Include="DeathActionWorkers\DeathActionWorker_Reinforce.cs" />
+    <Compile Include="Harmony\HarmonyPatches.cs" />
+    <Compile Include="Harmony\KillExplosionPatch.cs" />
+    <Compile Include="Harmony\MutantErrorPatch.cs" />
+    <Compile Include="HediffCompPropertiess\HediffCompProperties_ConvertComplete.cs" />
+    <Compile Include="HediffCompPropertiess\HediffCompProperties_InfectionVectors.cs" />
+    <Compile Include="HediffCompPropertiess\HediffCompProperties_KillTracker.cs" />
+    <Compile Include="HediffComps\HediffComp_ConvertComplete.cs" />
+    <Compile Include="HediffComps\HediffComp_InfectionVectors.cs" />
+    <Compile Include="HediffComps\HediffComp_KillTracker.cs" />
+    <Compile Include="Hediffs\Hediff_Hivemind.cs" />
+    <Compile Include="Hediffs\Hediff_AdaptationDisplay.cs" />
+    <Compile Include="Hediffs\Hediff_Regeneration.cs" />
+    <Compile Include="JobDrivers\JobDriver_ConsumeCorpse.cs" />
+    <Compile Include="JobDrivers\JobDriver_ConvertDownedPawn.cs" />
+    <Compile Include="JobDrivers\JobDriver_Dissolve.cs" />
+    <Compile Include="JobDrivers\JobDriver_Merge.cs" />
+    <Compile Include="JobDrivers\JobDriver_SimEvolve.cs" />
+    <Compile Include="JobGivers\JobGiver_ConsumeCorpse.cs" />
+    <Compile Include="JobGivers\JobGiver_ConvertDownedPawn.cs" />
+    <Compile Include="JobGivers\JobGiver_Dissolve.cs" />
+    <Compile Include="JobGivers\JobGiver_Merge.cs" />
+    <Compile Include="JobGivers\JobGiver_SearchForMergeable.cs" />
+    <Compile Include="JobGivers\JobGiver_SimEvolve.cs" />
+    <Compile Include="LordRelated\LordJob_Merge.cs" />
+    <Compile Include="LordRelated\LordJob_Riot.cs" />
+    <Compile Include="LordRelated\LordToil_Merge.cs" />
+    <Compile Include="LordRelated\LordToil_Riot.cs" />
+    <Compile Include="MapRelated\MapComp_InfectionTracker.cs" />
+    <Compile Include="MapRelated\WorldComp_UbiquitousDevelopment.cs" />
+    <Compile Include="MapRelated\WorldDrawLayer_Phase.cs" />
+    <Compile Include="MapRelated\WorldObject_Vector.cs" />
+    <Compile Include="Misc Defs\PhaseDef.cs" />
+    <Compile Include="Misc\DebugActions.cs" />
+    <Compile Include="Misc\Makers\ParasiteGroupMaker.cs" />
+    <Compile Include="Misc\ParasiteTier.cs" />
+    <Compile Include="Misc\PawnRenderNode_BodyReplacer.cs" />
+    <Compile Include="Misc\PawnRenderSubWorker_BodyInfected.cs" />
+    <Compile Include="Misc\TransmissionData.cs" />
+    <Compile Include="Misc\Verb_AbilityCharge.cs" />
+    <Compile Include="Things\Explosion_Death_Aneurysm.cs" />
+    <Compile Include="Things\Filths\Filth_Acid.cs" />
+    <Compile Include="Things\Filths\Filth_Webbing.cs" />
+    <Compile Include="Things\Gas_InfestedAir.cs" />
+    <Compile Include="Things\GroundSpawner_Beckon.cs" />
+    <Compile Include="Things\Filths\Filth_Parasite.cs" />
+    <Compile Include="Hediffs\Hediff_COTH.cs" />
+    <Compile Include="Misc\DefOf_Parasite.cs" />
+    <Compile Include="Hediffs\Hediff_Infected.cs" />
+    <Compile Include="Misc Defs\InfectedFormDef.cs" />
+    <Compile Include="Misc Defs\InfectedFormTypeDef.cs" />
+    <Compile Include="JobDrivers\JobDriver_Summon.cs" />
+    <Compile Include="JobGivers\JobGiver_Summon.cs" />
+    <Compile Include="Misc\ParasiteUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Misc\KillCredit.cs" />
+    <Compile Include="Things\Projectiles\Projectile_Charger.cs" />
+    <Compile Include="Things\Projectiles\Projectile_Junk.cs" />
+    <Compile Include="Things\Projectiles\Projectile_Kidnapper.cs" />
+    <Compile Include="Things\Thing_BiomassParasite.cs" />
+    <Compile Include="Things\Thing_TransformationCutscene.cs" />
+    <Compile Include="ThinkNodes\ThinkNode_ConditionalAntiPhase.cs" />
+    <Compile Include="ThinkNodes\ThinkNode_ConditionalPhase.cs" />
+    <Compile Include="JobGivers\JobGiver_AICastAbilityMelee.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Alerts\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
