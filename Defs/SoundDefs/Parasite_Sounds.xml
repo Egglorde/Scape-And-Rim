@@ -3,7 +3,7 @@
 
     <!-- Nexus noises -->
     <SoundDef>
-        <defName>Impact_Nexus</defName>  
+        <defName>ScramSRP_Impact_Nexus</defName>  
         <context>MapOnly</context>   
         <maxSimultaneous>1</maxSimultaneous>  
         <subSounds>
@@ -36,7 +36,7 @@
         </subSounds>
     </SoundDef>
     <SoundDef>
-        <defName>Hurt_Carrier</defName>  
+        <defName>ScramSRP_Hurt_Carrier</defName>  
         <context>MapOnly</context>   
         <maxSimultaneous>10</maxSimultaneous>  
         <subSounds>
@@ -52,7 +52,7 @@
         </subSounds>
     </SoundDef>
     <SoundDef>
-        <defName>Death_Carrier</defName>  
+        <defName>ScramSRP_Death_Carrier</defName>  
         <context>MapOnly</context>   
         <maxSimultaneous>10</maxSimultaneous>  
         <subSounds>
@@ -68,7 +68,7 @@
         </subSounds>
     </SoundDef>
     <SoundDef>
-        <defName>Call_Carrier</defName>  
+        <defName>ScramSRP_Call_Carrier</defName>  
         <context>MapOnly</context>   
         <maxSimultaneous>10</maxSimultaneous>  
         <subSounds>
@@ -84,7 +84,7 @@
         </subSounds>
     </SoundDef>
     <SoundDef>
-        <defName>Hurt_Inborn</defName>  
+        <defName>ScramSRP_Hurt_Inborn</defName>  
         <context>MapOnly</context>   
         <maxSimultaneous>10</maxSimultaneous>  
         <subSounds>
@@ -100,7 +100,7 @@
         </subSounds>
     </SoundDef>
     <SoundDef>
-        <defName>Call_Inborn</defName>  
+        <defName>ScramSRP_Call_Inborn</defName>  
         <context>MapOnly</context>   
         <maxSimultaneous>10</maxSimultaneous>  
         <subSounds>
@@ -116,7 +116,7 @@
         </subSounds>
     </SoundDef>
     <SoundDef>
-        <defName>Death_Inborn</defName>  
+        <defName>ScramSRP_Death_Inborn</defName>  
         <context>MapOnly</context>   
         <maxSimultaneous>10</maxSimultaneous>  
         <subSounds>
@@ -132,7 +132,7 @@
         </subSounds>
     </SoundDef>
     <SoundDef>
-        <defName>Hurt_Sim</defName>  
+        <defName>ScramSRP_Hurt_Sim</defName>  
         <context>MapOnly</context>   
         <maxSimultaneous>10</maxSimultaneous>  
         <subSounds>
@@ -148,7 +148,7 @@
         </subSounds>
     </SoundDef>
     <SoundDef>
-        <defName>Death_Sim</defName>  
+        <defName>ScramSRP_Death_Sim</defName>  
         <context>MapOnly</context>   
         <maxSimultaneous>10</maxSimultaneous>  
         <subSounds>
@@ -212,7 +212,7 @@
         </subSounds>
     </SoundDef>
     <SoundDef>
-        <defName>Call_Sim</defName>  
+        <defName>ScramSRP_Call_Sim</defName>  
         <context>MapOnly</context>   
         <maxSimultaneous>10</maxSimultaneous>  
         <subSounds>
@@ -244,7 +244,7 @@
         </subSounds>
     </SoundDef>
     <SoundDef>
-        <defName>Beckon_Bell</defName>
+        <defName>ScramSRP_Beckon_Bell</defName>
         <context>MapOnly</context>
         <subSounds>
           <li>

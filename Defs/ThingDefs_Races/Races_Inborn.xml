@@ -11,9 +11,9 @@
                 <li>
                     <def>InbornBaseAge</def>
                     <minAge>0</minAge>
-                    <soundWounded>Hurt_Inborn</soundWounded>
-                    <soundDeath>Death_Inborn</soundDeath>
-                    <soundCall>Call_Inborn</soundCall>
+                    <soundWounded>ScramSRP_Hurt_Inborn</soundWounded>
+                    <soundDeath>ScramSRP_Death_Inborn</soundDeath>
+                    <soundCall>ScramSRP_Call_Inborn</soundCall>
                 </li>
             </lifeStageAges>
             <baseHealthScale>0.5</baseHealthScale>
@@ -95,16 +95,16 @@
                 <li>
                     <def>InbornYoung</def>
                     <minAge>0</minAge>
-                    <soundWounded>Hurt_Inborn</soundWounded>
-                    <soundDeath>Death_Inborn</soundDeath>
-                    <soundCall>Call_Inborn</soundCall>
+                    <soundWounded>ScramSRP_Hurt_Inborn</soundWounded>
+                    <soundDeath>ScramSRP_Death_Inborn</soundDeath>
+                    <soundCall>ScramSRP_Call_Inborn</soundCall>
                 </li>
                 <li>
                     <def>InbornYoung</def>
                     <minAge>4.16E-3</minAge>
-                    <soundWounded>Hurt_Inborn</soundWounded>
-                    <soundDeath>Death_Inborn</soundDeath>
-                    <soundCall>Call_Inborn</soundCall>
+                    <soundWounded>ScramSRP_Hurt_Inborn</soundWounded>
+                    <soundDeath>ScramSRP_Death_Inborn</soundDeath>
+                    <soundCall>ScramSRP_Call_Inborn</soundCall>
                 </li>
             </lifeStageAges>
         </race>
@@ -217,9 +217,9 @@
                 <li>
                     <def>InbornBaseAge</def>
                     <minAge>0</minAge>
-                    <soundWounded>Hurt_Carrier</soundWounded>
-                    <soundDeath>Death_Carrier</soundDeath>
-                    <soundCall>Call_Carrier</soundCall>
+                    <soundWounded>ScramSRP_Hurt_Carrier</soundWounded>
+                    <soundDeath>ScramSRP_Death_Carrier</soundDeath>
+                    <soundCall>ScramSRP_Call_Carrier</soundCall>
                 </li>
             </lifeStageAges>
         </race>

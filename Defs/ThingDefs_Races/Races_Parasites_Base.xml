@@ -2,7 +2,7 @@
 <Defs>
     <!-- Basic parasite body type -->
     <ThingDef ParentName="BasePawn" Name="BaseParasite" Abstract="True">
-        <soundImpactDefault>Impact_Nexus</soundImpactDefault>
+        <soundImpactDefault>ScramSRP_Impact_Nexus</soundImpactDefault>
         <statBases>
             <Flammability>3</Flammability>
             <ArmorRating_Heat>0</ArmorRating_Heat>

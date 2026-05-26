@@ -14,9 +14,9 @@
                 <li>
                     <def>InbornBaseAge</def>
                     <minAge>0</minAge>
-                    <soundWounded>Hurt_Inborn</soundWounded>
-                    <soundDeath>Death_Inborn</soundDeath>
-                    <soundCall>Call_Inborn</soundCall>
+                    <soundWounded>ScramSRP_Hurt_Inborn</soundWounded>
+                    <soundDeath>ScramSRP_Death_Inborn</soundDeath>
+                    <soundCall>ScramSRP_Call_Inborn</soundCall>
                 </li>
             </lifeStageAges>
         </race>
@@ -92,9 +92,9 @@
                 <li>
                     <def>InbornBaseAge</def>
                     <minAge>0</minAge>
-                    <soundWounded>Hurt_Inborn</soundWounded>
-                    <soundDeath>Death_Inborn</soundDeath>
-                    <soundCall>Call_Inborn</soundCall>
+                    <soundWounded>ScramSRP_Hurt_Inborn</soundWounded>
+                    <soundDeath>ScramSRP_Death_Inborn</soundDeath>
+                    <soundCall>ScramSRP_Call_Inborn</soundCall>
                 </li>
             </lifeStageAges>
         </race>

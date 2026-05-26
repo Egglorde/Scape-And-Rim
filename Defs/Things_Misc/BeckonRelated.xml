@@ -111,7 +111,7 @@
                 <distRange>20~100</distRange>
             </li>
         </subSounds>
-        <sustainStartSound>Beckon_Bell</sustainStartSound>
+        <sustainStartSound>ScramSRP_Beckon_Bell</sustainStartSound>
         <sustainStopSound>Tunnel_End</sustainStopSound>
     </SoundDef>
 
