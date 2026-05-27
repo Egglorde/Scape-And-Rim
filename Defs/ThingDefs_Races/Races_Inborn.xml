@@ -50,6 +50,7 @@
         <description>Rupters are infestation propagators and swarm units, attacking at close to moderate range and guaranteed to inflict the Call of the Hive.</description>
         <race>
             <thinkTreeMain>ParasiteAmbusher</thinkTreeMain>
+            <renderTree>ScramSRP_RupterTendrils</renderTree>
         </race>
         <comps>
             <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_EvolverParasite_Kills">
@@ -168,7 +169,6 @@
                 <bodyGraphicData>
                     <texPath>Parasite/Inborn/Rupter/Rupter</texPath>
                     <graphicClass>Graphic_Multi</graphicClass>
-                    <color>(84,73,69)</color>
                     <drawSize>2.2</drawSize>
                     <shadowData>
                         <volume>(0.4, 0.8, 0.4)</volume>

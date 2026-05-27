@@ -283,4 +283,184 @@
       </children>
     </root>
   </PawnRenderTreeDef>
+
+  <PawnRenderTreeDef>
+    <defName>ScramSRP_RupterTendrils</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <tagDef>Body</tagDef>
+          <useRottenColor>true</useRottenColor>
+          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+          <children>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleA</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilA</linkedBodyPartsGroup>
+              <texPath>Parasite/Inborn/Mangler/Mangler_tendrilb</texPath>
+              <drawSize>1.3</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>10~30</durationTicksRange>
+              <drawData>
+                <dataEast>
+                  <offset>(0.1, 0.01, 0.1)</offset>
+                </dataEast>
+                <dataWest>
+                  <offset>(-0.1, 0.01, 0.1)</offset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataSouth>
+                  <offset>(-0.2, 0.01, 0)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                  <flip>true</flip>
+                </dataSouth>
+                <dataNorth>
+                  <offset>(0.15, -0.01, 0.2)</offset>
+                  <rotationOffset>90</rotationOffset>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleB</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilB</linkedBodyPartsGroup>
+              <texPath>Parasite/Inborn/Mangler/Mangler_tendrila</texPath>
+              <drawSize>1.3</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>10~30</durationTicksRange>
+              <drawData>
+                <dataEast>
+                  <offset>(0.3, 0.01, -0.1)</offset>
+                  <rotationOffset>10</rotationOffset>
+                </dataEast>
+                <dataWest>
+                  <offset>(-0.3, 0.01, -0.1)</offset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataSouth>
+                  <offset>(-0.15, 0.01, -0.2)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                  <flip>true</flip>
+                </dataSouth>
+                <dataNorth>
+                  <offset>(0.1, -0.01, 0.25)</offset>
+                  <rotationOffset>90</rotationOffset>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleC</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilC</linkedBodyPartsGroup>
+              <texPath>Parasite/Inborn/Rupter/Rupter_tendril</texPath>
+              <drawSize>1.3</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>10~30</durationTicksRange>
+              <drawData>
+                <dataEast>
+                  <offset>(0.44, 0.01, -0.05)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                </dataEast>
+                <dataWest>
+                  <offset>(-0.44, 0.01, -0.05)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataSouth>
+                  <offset>(0, 0.01, -0.3)</offset>
+                  <rotationOffset>180</rotationOffset>
+                </dataSouth>
+                <dataNorth>
+                  <offset>(0, -0.01, 0.3)</offset>
+                  <flip>true</flip>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleD</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilD</linkedBodyPartsGroup>
+              <texPath>Parasite/Inborn/Mangler/Mangler_tendrila</texPath>
+              <drawSize>1.3</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>10~30</durationTicksRange>
+              <drawData>
+                <dataEast>
+                  <offset>(0.3, -0.01, -0.1)</offset>
+                </dataEast>
+                <dataWest>
+                  <offset>(-0.3, -0.01, -0.1)</offset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataSouth>
+                  <offset>(0.15, 0.01, -0.2)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                </dataSouth>
+                <dataNorth>
+                  <offset>(-0.1, -0.01, 0.25)</offset>
+                  <rotationOffset>90</rotationOffset>
+                  <flip>true</flip>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleE</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilE</linkedBodyPartsGroup>
+              <texPath>Parasite/Inborn/Mangler/Mangler_tendrilb</texPath>
+              <drawSize>1.3</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <nextSpasmTicksRange>30~90</nextSpasmTicksRange>
+              <durationTicksRange>10~30</durationTicksRange>
+              <drawData>
+                <dataEast>
+                  <offset>(0.1, -0.01, 0.1)</offset>
+                </dataEast>
+                <dataWest>
+                  <offset>(-0.1, -0.01, 0.1)</offset>
+                  <flip>true</flip>
+                </dataWest>
+                <dataSouth>
+                  <offset>(0.2, 0.01, 0)</offset>
+                  <rotationOffset>-90</rotationOffset>
+                </dataSouth>
+                <dataNorth>
+                  <offset>(-0.15, -0.01, 0.2)</offset>
+                  <rotationOffset>90</rotationOffset>
+                  <flip>true</flip>
+                </dataNorth>
+              </drawData>
+            </li>
+            <li>
+              <debugLabel>Wounds</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>10</baseLayer>
+            </li>
+            <li>
+              <debugLabel>Firefoam</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>20</baseLayer>
+            </li>
+          </children>
+        </li>
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
 </Defs>

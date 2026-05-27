@@ -24,6 +24,9 @@
         <defName>ScramSRP_TendrilD</defName>
     </BodyPartGroupDef>
     <BodyPartGroupDef>
+        <defName>ScramSRP_TendrilE</defName>
+    </BodyPartGroupDef>
+    <BodyPartGroupDef>
         <defName>RightLeg</defName>
     </BodyPartGroupDef>
     <BodyPartGroupDef>

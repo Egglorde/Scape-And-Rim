@@ -15,22 +15,18 @@
         <li>
             <def>SensorTendril</def>
             <coverage>0.05</coverage>
-            <customLabel>left primary antenna</customLabel>
-        </li>
-        <li>
-            <def>SensorTendril</def>
-            <coverage>0.05</coverage>
-            <customLabel>right primary antenna</customLabel>
-        </li>
-        <li>
-            <def>SensorTendril</def>
-            <coverage>0.05</coverage>
             <customLabel>left secondary antenna</customLabel>
+            <groups>
+              <li>ScramSRP_TendrilA</li>
+            </groups>
         </li>
         <li>
             <def>SensorTendril</def>
             <coverage>0.05</coverage>
-            <customLabel>right secondary antenna</customLabel>
+            <customLabel>left primary antenna</customLabel>
+            <groups>
+              <li>ScramSRP_TendrilB</li>
+            </groups>
         </li>
         <!-- Infector tendril, the large central tendril-->
         <li>
@@ -39,6 +35,23 @@
             <customLabel>infector tendril</customLabel>
             <groups>
                 <li>InfectorAttackTool</li>
+                <li>ScramSRP_TendrilC</li>
+            </groups>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.05</coverage>
+            <customLabel>right primary antenna</customLabel>
+            <groups>
+              <li>ScramSRP_TendrilD</li>
+            </groups>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.05</coverage>
+            <customLabel>right secondary antenna</customLabel>
+            <groups>
+              <li>ScramSRP_TendrilE</li>
             </groups>
         </li>
         <!-- Internal bits, assmued from whatever is available-->
