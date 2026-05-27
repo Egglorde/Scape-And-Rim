@@ -28,7 +28,6 @@
                 <cooldownTime>2</cooldownTime>
                 <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
                 <linkedBodyPartsGroup>InfectorAttackTool</linkedBodyPartsGroup>
-                <hediff>ScramSRP_HediffCOTHDef</hediff>
                 <chanceFactor>1.00</chanceFactor>
             </li>
             <li>

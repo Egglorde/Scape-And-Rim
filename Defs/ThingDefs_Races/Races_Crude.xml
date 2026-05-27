@@ -50,7 +50,6 @@
                 <cooldownTime>3</cooldownTime>
                 <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-                <hediff>ScramSRP_HediffCOTHDef</hediff>
                 <chanceFactor>0.4</chanceFactor>
             </li>
             <li>
@@ -62,7 +61,6 @@
                 <cooldownTime>1</cooldownTime>
                 <linkedBodyPartsGroup>ScramSRP_Tongue</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-                <hediff>ScramSRP_HediffCOTHDef</hediff>
                 <chanceFactor>0.4</chanceFactor>
             </li>
             <li>
@@ -142,7 +140,6 @@
                 <cooldownTime>2</cooldownTime>
                 <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-                <hediff>ScramSRP_HediffCOTHDef</hediff>
                 <chanceFactor>0.2</chanceFactor>
             </li>
         </tools>
