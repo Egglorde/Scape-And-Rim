@@ -46,7 +46,7 @@
 
     <!-- Basic pawnkind for parasites, prevents them from fleeing and such-->
     <PawnKindDef Name="BaseParasiteKind" Abstract="True">
-        <defaultFactionDef>ParasiteFaction</defaultFactionDef>
+        <defaultFactionDef>ScramSRP_ParasiteFaction</defaultFactionDef>
         <aiAvoidCover>true</aiAvoidCover>
         <canStrip>false</canStrip>
         <overrideDebugActionCategory>Parasites</overrideDebugActionCategory>

@@ -27,6 +27,15 @@
         <defName>ScramSRP_TendrilE</defName>
     </BodyPartGroupDef>
     <BodyPartGroupDef>
+        <defName>ScramSRP_TendrilF</defName>
+    </BodyPartGroupDef>
+    <BodyPartGroupDef>
+        <defName>ScramSRP_TendrilG</defName>
+    </BodyPartGroupDef>
+    <BodyPartGroupDef>
+        <defName>ScramSRP_TendrilH</defName>
+    </BodyPartGroupDef>
+    <BodyPartGroupDef>
         <defName>RightLeg</defName>
     </BodyPartGroupDef>
     <BodyPartGroupDef>
@@ -69,7 +78,7 @@
     </BodyPartDef>
 
     <BodyPartDef>
-        <defName>BeckonTendril</defName>
+        <defName>ScramSRP_BeckonTendril</defName>
         <label>tendril</label>
         <hitPoints>20</hitPoints>
         <skinCovered>true</skinCovered>

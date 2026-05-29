@@ -1,0 +1,23 @@
+<LanguageData>
+    <ScramSRP_ModName>Scape and Rim Parasites</ScramSRP_ModName> 
+
+    <!-- Settings related stuff -->
+    <ScramSRP_VectorRadiusGrowthMultiplierTitle>Vector Radius Growth Multiplier</ScramSRP_VectorRadiusGrowthMultiplierTitle> 
+    <ScramSRP_VectorRadiusGrowthMultiplierDesc>Affects the speed at which the radius of vectors grows. Radius growth affects when parasites will begin appearing. Note that this does NOT affect the rate at which parasites infect the worldmap.</ScramSRP_VectorRadiusGrowthMultiplierDesc> 
+
+    <ScramSRP_VectorInfectionGrowthMultiplierTitle>Vector Infection Growth Multiplier</ScramSRP_VectorInfectionGrowthMultiplierTitle>
+    <ScramSRP_VectorInfectionGrowthMultiplierDesc>Affects how fast vectors will infect the world around them.</ScramSRP_VectorInfectionGrowthMultiplierDesc>
+
+    <ScramSRP_WorldInfectionDifficultyModifierTitle>World Infection Difficulty Modifier</ScramSRP_WorldInfectionDifficultyModifierTitle>
+    <ScramSRP_WorldInfectionDifficultyModifierDesc>Affects how fast world infection will spread over tiles, and how much. Lower number = faster spread.</ScramSRP_WorldInfectionDifficultyModifierDesc>
+
+    <ScramSRP_MeteorMaxDistanceTitle>Meteor Max Distance</ScramSRP_MeteorMaxDistanceTitle>
+    <ScramSRP_MeteorMaxDistanceDesc>The maximum distance (in tiles) from your starting colony the first meteor will drop.</ScramSRP_MeteorMaxDistanceDesc>
+
+    <ScramSRP_VectorMeteorDropDayTitle>Meteor Drop Day</ScramSRP_VectorMeteorDropDayTitle>
+    <ScramSRP_VectorMeteorDropDayDesc>How many days it takes for the meteor to drop.</ScramSRP_VectorMeteorDropDayDesc>
+
+    <ScramSRP_ParasiteEnrageChanceTitle>Parasite Enrage Chance</ScramSRP_ParasiteEnrageChanceTitle>
+    <ScramSRP_ParasiteEnrageChanceDesc>The chance that parasites will cause others on the map to enrage when killed.</ScramSRP_ParasiteEnrageChanceDesc>
+
+</LanguageData>

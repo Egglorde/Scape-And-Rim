@@ -30,7 +30,7 @@
     <entitledToMedicalCare>false</entitledToMedicalCare>
     <removeAllInjuries>true</removeAllInjuries>
     <restoreLegs>true</restoreLegs>
-    <defaultFaction>ParasiteFaction</defaultFaction>
+    <defaultFaction>ScramSRP_ParasiteFaction</defaultFaction>
     <tameable>false</tameable>
     <overrideLabel>true</overrideLabel>
     <overrideInspectString>true</overrideInspectString>
@@ -53,7 +53,7 @@
         <nodeClass>AssemblyParasitesColonThree.Misc.PawnRenderNode_BodyReplacer</nodeClass>
         <workerClass>PawnRenderNodeWorker_OverlayScaria</workerClass>
         <overlayLayer>Body</overlayLayer>
-        <tagDef>BodyReplacer</tagDef>
+        <tagDef>ScramSRP_BodyReplacer</tagDef>
         <baseLayer>20</baseLayer>
         <pawnType>NonHumanlikeOnly</pawnType>
       </li>

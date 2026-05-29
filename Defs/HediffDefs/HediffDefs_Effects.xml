@@ -235,7 +235,6 @@
           </capMods>
           <statFactors>
             <MeleeCooldownFactor>0.75</MeleeCooldownFactor> <!-- 66% as fast -->
-            <PsychicSensitivity>0</PsychicSensitivity>
           </statFactors>
           <minSeverity>0</minSeverity>
           <label>accelerated</label>
@@ -249,7 +248,6 @@
           </capMods>
           <statFactors>
             <MeleeCooldownFactor>0.5</MeleeCooldownFactor> <!-- 66% as fast -->
-            <PsychicSensitivity>0</PsychicSensitivity>
           </statFactors>
           <minSeverity>0.3</minSeverity>
           <label>enhanced</label>
@@ -263,7 +261,6 @@
           </capMods>
           <statFactors>
             <MeleeCooldownFactor>0.25</MeleeCooldownFactor> <!-- 66% as fast -->
-            <PsychicSensitivity>0</PsychicSensitivity>
           </statFactors>
           <minSeverity>0.5</minSeverity>
           <label>advanced</label>
@@ -277,7 +274,6 @@
           </capMods>
           <statFactors>
             <MeleeCooldownFactor>0.1</MeleeCooldownFactor> <!-- 66% as fast -->
-            <PsychicSensitivity>0</PsychicSensitivity>
           </statFactors>
           <minSeverity>0.7</minSeverity>
           <label>impossible</label>
@@ -286,6 +282,42 @@
       <comps>
         <li Class="HediffCompProperties_SeverityPerSecond">
           <severityPerSecond>-0.01</severityPerSecond>
+        </li>
+      </comps>
+    </HediffDef>    
+
+    <HediffDef>
+      <defName>ScramSRP_Rage</defName>
+      <label>raging</label>
+      <description>This creature's system has been flooded with adrenaline, causing it to rage. Raging gives mild bonuses to melee damage and speed, but leaves the host more vulnerable to damage.</description>
+      <hediffClass>HediffWithComps</hediffClass>
+      <defaultLabelColor>(1, 0.6, 0.7)</defaultLabelColor>
+      <forceRemoveOnResurrection>true</forceRemoveOnResurrection>
+      <initialSeverity>0.1</initialSeverity>
+      <stages>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <postFactor>1.1</postFactor>
+            </li>
+          </capMods>
+          <statFactors>
+            <MeleeCooldownFactor>0.75</MeleeCooldownFactor>
+            <MeleeDamageFactor>1.2</MeleeDamageFactor>
+            <IncomingDamageFactor>1.1</IncomingDamageFactor>
+            <MeleeArmorPenetration>1.5</MeleeArmorPenetration>
+            <MeleeDodgeChance>0.5</MeleeDodgeChance>
+          </statFactors>
+          <minSeverity>0</minSeverity>
+        </li>
+    </stages>
+      <comps>
+        <li Class="HediffCompProperties_SeverityPerSecond">
+          <severityPerSecond>-0.01</severityPerSecond>
+        </li>
+        <li Class="HediffCompProperties_Effecter">
+          <stateEffecter>ScramSRP_RageEffecter</stateEffecter>
         </li>
       </comps>
     </HediffDef>

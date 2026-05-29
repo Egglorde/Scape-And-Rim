@@ -1,0 +1,174 @@
+<Defs>  
+    <PawnRenderTreeDef>
+    <defName>ScramSRP_WormTendrils</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <tagDef>Body</tagDef>
+          <useRottenColor>true</useRottenColor>
+          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+          <children>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleA</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilA</linkedBodyPartsGroup>
+              <texPath>Parasite/Deterrent/Worm/Worm_tendrilB</texPath>
+              <drawSize>3</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.35, 0.02, 0.5)</offset>
+                  <rotationOffset>180</rotationOffset>
+                  <flip>true</flip>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleB</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilB</linkedBodyPartsGroup>
+              <texPath>Parasite/Deterrent/Worm/Worm_tendrilB</texPath>
+              <drawSize>3</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(-0.35, 0.02, 0.5)</offset>
+                  <rotationOffset>180</rotationOffset>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleC</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilC</linkedBodyPartsGroup>
+              <texPath>Parasite/Deterrent/Worm/Worm_tendrilA</texPath>
+              <drawSize>3</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.6, 0.01, 0.7)</offset>
+                  <rotationOffset>180</rotationOffset>
+                  <flip>true</flip>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleD</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilD</linkedBodyPartsGroup>
+              <texPath>Parasite/Deterrent/Worm/Worm_tendrilA</texPath>
+              <drawSize>3</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(-0.6, 0.01, 0.7)</offset>
+                  <rotationOffset>180</rotationOffset>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleE</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilE</linkedBodyPartsGroup>
+              <texPath>Parasite/Deterrent/Worm/Worm_tendrilA</texPath>
+              <drawSize>3</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.7, -0.01, 1.2)</offset>
+                  <rotationOffset>180</rotationOffset>
+                  <flip>true</flip>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleF</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilF</linkedBodyPartsGroup>
+              <texPath>Parasite/Deterrent/Worm/Worm_tendrilA</texPath>
+              <drawSize>3</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(-0.7, -0.01, 1.2)</offset>
+                  <rotationOffset>180</rotationOffset>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleG</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilG</linkedBodyPartsGroup>
+              <texPath>Parasite/Deterrent/Worm/Worm_tendrilB</texPath>
+              <drawSize>3</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <color>(0.7,0.7,0.7)</color>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(0.5, -0.02, 1.4)</offset>
+                  <rotationOffset>180</rotationOffset>
+                  <flip>true</flip>
+                </defaultData>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>TentacleH</debugLabel>
+              <linkedBodyPartsGroup>ScramSRP_TendrilH</linkedBodyPartsGroup>
+              <texPath>Parasite/Deterrent/Worm/Worm_tendrilB</texPath>
+              <drawSize>3</drawSize>
+              <useRottenColor>true</useRottenColor>
+              <rotationRange>-10~10</rotationRange>
+              <color>(0.7,0.7,0.7)</color>
+              <durationTicksRange>5~15</durationTicksRange>
+              <nextSpasmTicksRange>5~10</nextSpasmTicksRange>
+              <drawData>
+                <defaultData>
+                  <offset>(-0.5, -0.02, 1.4)</offset>
+                  <rotationOffset>180</rotationOffset>
+                </defaultData>
+              </drawData>
+            </li>
+            <li>
+              <debugLabel>Wounds</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>10</baseLayer>
+            </li>
+            <li>
+              <debugLabel>Firefoam</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>20</baseLayer>
+            </li>
+          </children>
+        </li>
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+    
+</Defs>

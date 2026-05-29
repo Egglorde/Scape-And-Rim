@@ -3,10 +3,10 @@
   
   
   <PawnRenderNodeTagDef>
-    <defName>BodyReplacer</defName>
+    <defName>ScramSRP_BodyReplacer</defName>
   </PawnRenderNodeTagDef>
 
-    <PawnRenderTreeDef>
+  <PawnRenderTreeDef>
     <defName>BeckonBloom</defName>
     <root Class="PawnRenderNodeProperties_Parent">
       <debugLabel>Root</debugLabel>

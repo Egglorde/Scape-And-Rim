@@ -63,6 +63,7 @@
         <label>primitive arachnida</label>
         <description>Assembled from the merging of several assimilated bodies into a larger form. Primitive parasites are the first large parasites to appear during infestation.\n\nAn arachnoid assemblage of the deceased. Though its abdomen is weak, it can create silk as tough as steel, used to latch onto and drag hapless victims into its claws. Precursor to greater forms.</description>
         <race>
+            <baseBodySize>2.65</baseBodySize>
             <baseHealthScale>1.75</baseHealthScale>
             <body>ScramSRP_PrimitiveReekerBody</body>
             <renderTree>ScramSRP_ArachnidaRenderTree</renderTree>
@@ -145,6 +146,7 @@
         <label>primitive reeker</label>
         <description>Assembled from the merging of several assimilated bodies into a larger form. Primitive parasites are the first large parasites to appear during infestation.\n\nA set of bodies cobbled together in a horse-like form. The musculature within its back legs is wound taught like a spring, allowing it to throw itself towards enemies at impossible speed. It stinks.</description>
         <race>
+            <baseBodySize>2.85</baseBodySize>
             <baseHealthScale>2</baseHealthScale>
             <body>ScramSRP_PrimitiveReekerBody</body>
             <renderTree>ScramSRP_ReekerRenderTree</renderTree>
@@ -262,6 +264,7 @@
         <label>primitive longarms</label>
         <description>Assembled from the merging of several assimilated bodies into a larger form. Primitive parasites are the first large parasites to appear during infestation.\n\nA thin set of remains assembled into a tall humanoid figure. Its titular arms allow it to rend apart flesh with startling efficiency. Primitive Longarms make use of seismic frequencies to cause massive explosions at range and in melee combat.</description>
         <race>
+            <baseBodySize>1.75</baseBodySize>
             <baseHealthScale>2.25</baseHealthScale>
             <body>ScramSRP_PrimitiveLongarmsBody</body>
             <renderTree>ScramSRP_LongarmsArms</renderTree>
@@ -368,6 +371,7 @@
         <label>primitive manducater</label>
         <description>Assembled from the merging of several assimilated bodies into a larger form. Primitive parasites are the first large parasites to appear during infestation.\n\nA bizarre dog-like mass of flesh. Within its body exists a powerful core, allowing it to render itself psychically invisible. This invisibility allows it to stalk its prey and rapidly appear to tear into their flesh with its razor-sharp teeth. Its grinding jaws never cease.</description>
         <race>
+            <baseBodySize>1.75</baseBodySize>
             <baseHealthScale>1.5</baseHealthScale>
             <body>ScramSRP_PrimitiveManducaterBody</body>
             <lifeStageAges>
@@ -460,6 +464,7 @@
             <ArmorRating_Sharp>0.233</ArmorRating_Sharp>
         </statBases>
         <race>
+            <baseBodySize>0.65</baseBodySize>
             <baseHealthScale>1.5</baseHealthScale>
             <body>ScramSRP_PrimitiveYelloweyeBody</body>
             <thinkTreeMain>ScramSRP_YelloweyeParasite</thinkTreeMain>
@@ -518,6 +523,7 @@
         <label>primitive summoner</label>
         <description>Assembled from the merging of several assimilated bodies into a larger form. Primitive parasites are the first large parasites to appear during infestation.\n\nA slouched figure sown out of still-living dead. Within its body exists a powerful core, allowing it to summon lesser minions. Re-sews what was slain out of leftovers.</description>
         <race>
+            <baseBodySize>1.85</baseBodySize>
             <baseHealthScale>2</baseHealthScale>
             <body>ScramSRP_PrimitiveSummonerBody</body>
             <thinkTreeMain>ScramSRP_SummonerParasite</thinkTreeMain>
@@ -629,6 +635,7 @@
         <label>primitive bolster</label>
         <description>Assembled from the merging of several assimilated bodies into a larger form. Primitive parasites are the first large parasites to appear during infestation.\n\nA towering mass of conjoined bodies atop legs barely able to hold it up. Their mass allows them to absorb hits that other primitive parasites cannot. Primitive Bolsters make use of their antennae to broadcast psychic signals to their allies, allowing them to accelerate their healing. Primitive, yet resilient.</description>
         <race>
+            <baseBodySize>3</baseBodySize>
             <baseHealthScale>3.5</baseHealthScale>
             <body>ScramSRP_PrimitiveBolsterBody</body>
             <renderTree>ScramSRP_BolsterRenderTree</renderTree>

@@ -4,7 +4,19 @@
     <ShaderTypeDef>
         <defName>ScramSRP_MoteShaderOrb</defName>
         <shaderPath>OrbShader</shaderPath>
-    </ShaderTypeDef>
+    </ShaderTypeDef> 
+     
+    <FleckDef ParentName="FleckBase_Thrown">
+        <defName>ScramSRP_FleckRage</defName>
+        <graphicData>
+          <texPath>Projectile/Rage_icon</texPath>
+        </graphicData>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <fadeInTime>.1</fadeInTime>
+        <solidTime>.8</solidTime>
+        <fadeOutTime>.2</fadeOutTime>
+        <useAttachLink>true</useAttachLink>
+    </FleckDef>
 
     <ThingDef ParentName="MoteBase">
         <defName>ScramSRP_Mote_AdaptationIncomplete</defName>

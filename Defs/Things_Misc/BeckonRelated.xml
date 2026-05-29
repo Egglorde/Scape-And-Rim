@@ -115,7 +115,7 @@
         <sustainStopSound>Tunnel_End</sustainStopSound>
     </SoundDef>
 
-  <ThingDef ParentName="PlantBase" Name="Plant_Brambles">
+  <ThingDef ParentName="PlantBase">
     <defName>ScramSRP_ParasiteBrambles</defName>
     <label>brambles</label>
     <description>Tangled, thorny, woody shoots covered with leaves. Brambles grow in clusters, and slow down anyone moving over them.</description>
@@ -168,6 +168,7 @@
       <li>Light</li>
       <li>Medium</li>
       <li>Walkable</li>
+      <li>Diggable</li>
     </affordances>
     <fertility>0</fertility>
   </TerrainDef>

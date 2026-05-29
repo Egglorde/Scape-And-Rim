@@ -3,7 +3,7 @@
     <SoundDef>
         <defName>ScramSRP_NodeSound</defName>  
         <context>Any</context>
-        <maxSimultaneous>10</maxSimultaneous>  
+        <maxSimultaneous>1</maxSimultaneous>  
         <subSounds>
             <li>
                 <onCamera>True</onCamera>
@@ -26,6 +26,22 @@
                 <grains>
                     <li Class="AudioGrain_Clip">
                         <clipPath>Incident/Incident_Assim</clipPath>
+                    </li>
+                </grains>
+            </li>
+        </subSounds>
+    </SoundDef>
+    <SoundDef>
+        <defName>ScramSRP_VomitSound</defName>  
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>  
+        <subSounds>
+            <li>
+                <volumeRange>90~110</volumeRange>
+                <pitchRange>0.9~1.1</pitchRange>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Misc/Vomit</clipPath>
                     </li>
                 </grains>
             </li>

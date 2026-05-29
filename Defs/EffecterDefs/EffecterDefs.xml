@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+<Defs>    
+  <EffecterDef>
+    <defName>ScramSRP_RageEffecter</defName>
+    <offsetMode>Free</offsetMode>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <scale>1.1~1.2</scale>
+        <ticksBetweenMotes>50</ticksBetweenMotes>
+        <rotation>0</rotation>
+        <rotationRate>-1~1</rotationRate>
+        <positionRadius>0.05</positionRadius>
+        <fleckDef>ScramSRP_FleckRage</fleckDef>
+        <attachToSpawnThing>true</attachToSpawnThing>
+        <fleckUsesAngleForVelocity>false</fleckUsesAngleForVelocity>
+        <spawnLocType>OnSource</spawnLocType>
+        <positionOffset>(-0.45, 0, 0.45)</positionOffset>
+        <speed>0</speed>
+        <angle>0</angle>
+      </li>
+    </children>
+  </EffecterDef>
+
   <EffecterDef>
     <defName>InfectionZoneEffecterDef</defName>
     <children>
@@ -76,6 +98,36 @@
         <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
         <angle>-5~5</angle>
         <absoluteAngle>true</absoluteAngle>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>  
+  
+  <EffecterDef>
+    <defName>ScramSRP_VomitEffect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+        <soundDef>ScramSRP_VomitSound</soundDef>
+        <spawnLocType>OnTarget</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>Mote_CocoonDestroyedFlyingSlime</moteDef>
+        <burstCount>3</burstCount>
+        <rotation>-150~150</rotation>
+        <positionRadius>0.6</positionRadius>
+        <speed>1~2</speed>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>Mote_CocoonDestroyedFlyingPiece</moteDef>
+        <burstCount>5</burstCount>
+        <rotation>-150~150</rotation>
+        <positionRadius>0.5</positionRadius>
+        <speed>5~7</speed>
+        <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
         <spawnLocType>OnSource</spawnLocType>
       </li>
     </children>

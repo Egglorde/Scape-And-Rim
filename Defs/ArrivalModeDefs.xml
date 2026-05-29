@@ -1,0 +1,51 @@
+<Defs>
+
+    <RaidStrategyDef>
+        <defName>ScramSRP_WormRaid</defName>
+        <workerClass>RaidStrategyWorker_ImmediateAttack</workerClass>
+        <selectionWeightPerPointsCurve>
+            <points>
+                <li>(0, 0)</li>
+            </points>
+        </selectionWeightPerPointsCurve>
+        <selectionWeightCurvesPerFaction>
+            <li>
+                <faction>ScramSRP_ParasiteFaction</faction>  <!-- Special case for parasites -->
+                <selectionWeightPerPointsCurve>
+                      <points>
+                        <li>(0, 1)</li>
+                      </points>
+                </selectionWeightPerPointsCurve>
+            </li>
+        </selectionWeightCurvesPerFaction>
+        <pointsFactorCurve>
+            <points>
+                <li>0, 1</li>
+            </points>
+        </pointsFactorCurve>
+        <arriveModes>
+            <li>ScramSRP_WormArrival</li>
+        </arriveModes>
+        <letterLabelEnemy>Raid</letterLabelEnemy>
+        <arrivalTextEnemy>They are attacking immediately.</arrivalTextEnemy>
+        <letterLabelFriendly>Friendlies</letterLabelFriendly>
+        <arrivalTextFriendly>They are moving in to help you immediately.</arrivalTextFriendly>
+    </RaidStrategyDef>
+
+    <PawnsArrivalModeDef>
+        <defName>ScramSRP_WormArrival</defName>
+        <workerClass>AssemblyParasitesColonThree.PawnArrivalModeWorkers.PawnArrivalModeWorker_Worms</workerClass>
+        <layerWhitelist>
+            <li>Surface</li>
+        </layerWhitelist>
+        <selectionWeightCurve>
+          <points>
+            <li>(0, 1)</li> <!--Constant 1 -->
+          </points>
+        </selectionWeightCurve>
+        <textEnemy>A group of {0} from {1} have dug onto this map through worms.</textEnemy>
+        <textFriendly>A group of friendly {0} from {1} have dug onto this map through worms... somehow.</textFriendly>
+        <textWillArrive>{0_pawnsPluralDef} will arrive via worms.</textWillArrive>
+    </PawnsArrivalModeDef>
+
+</Defs>

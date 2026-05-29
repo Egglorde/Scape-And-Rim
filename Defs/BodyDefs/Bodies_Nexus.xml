@@ -10,7 +10,7 @@
             <customLabel>stalk</customLabel>
             <parts>
                 <li>
-                    <def>BeckonTendril</def>
+                    <def>ScramSRP_BeckonTendril</def>
                     <coverage>0.05</coverage>
                     <groups>
                         <li>BeckonTendrilAttackTool</li>
@@ -23,7 +23,7 @@
                     </parts>
                 </li>
                 <li>
-                    <def>BeckonTendril</def>
+                    <def>ScramSRP_BeckonTendril</def>
                     <coverage>0.05</coverage>
                     <groups>
                         <li>BeckonTendrilAttackTool</li>
@@ -36,7 +36,7 @@
                     </parts>
                 </li>
                 <li>
-                    <def>BeckonTendril</def>
+                    <def>ScramSRP_BeckonTendril</def>
                     <coverage>0.05</coverage>
                     <groups>
                         <li>BeckonTendrilAttackTool</li>
@@ -49,7 +49,7 @@
                     </parts>
                 </li>
                 <li>
-                    <def>BeckonTendril</def>
+                    <def>ScramSRP_BeckonTendril</def>
                     <coverage>0.05</coverage>
                     <groups>
                         <li>BeckonTendrilAttackTool</li>
