@@ -78,6 +78,7 @@
             <kindDef>Combat</kindDef>
             <commonality>100</commonality>
             <options>
+                <ScramSRP_Mangler>1</ScramSRP_Mangler>
                 <Rupter>15</Rupter>
                 <ScramSRP_Carrier_Light>3</ScramSRP_Carrier_Light>
             </options>

@@ -185,7 +185,7 @@
         <defName>ScramSRP_Mangler</defName>
         <label>mangler</label>
         <race>ScramSRP_ManglerRace</race>
-        <combatPower>50</combatPower>
+        <combatPower>200</combatPower>
         <lifeStages>
             <li>
                 <bodyGraphicData>
