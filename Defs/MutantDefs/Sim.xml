@@ -28,7 +28,7 @@
     <disableTitles>true</disableTitles>
     <disableNeeds>true</disableNeeds>
     <entitledToMedicalCare>false</entitledToMedicalCare>
-    <removeAllInjuries>true</removeAllInjuries>
+    <removeAllInjuries>false</removeAllInjuries>
     <restoreLegs>true</restoreLegs>
     <defaultFaction>ScramSRP_ParasiteFaction</defaultFaction>
     <tameable>false</tameable>
