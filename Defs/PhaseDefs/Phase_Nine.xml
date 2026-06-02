@@ -4,6 +4,11 @@
         <defName>ScramSRP_Phase9</defName>
         <groupMakers>
             <li>
+                <weight>5</weight>
+                <kind>ScramSRP_HeedKind</kind>
+                <pawnRange>1</pawnRange>
+            </li>
+            <li>
                 <weight>15</weight>
                 <kind>ScramSRP_Pri_LongArmsKind</kind>
                 <pawnRange>2~3</pawnRange>

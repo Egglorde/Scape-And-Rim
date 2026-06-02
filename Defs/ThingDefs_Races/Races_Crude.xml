@@ -185,9 +185,9 @@
     <ThingDef ParentName="BaseParasite">
         <defName>ScramSRP_Heed</defName>
         <label>heed</label>
-        <description>Assembled from the merging of several assimilated bodies into a larger form. Primitive parasites are the first large parasites to appear during infestation.\n\nA set of bodies cobbled together in a horse-like form. The musculature within its back legs is wound taught like a spring, allowing it to throw itself towards enemies at impossible speed. It stinks.</description>
+        <description>Five-headed scout borne on an ant-like frame, with a maw set sideways across the face. It does little leading of its own, instead carrying signals forward and stirring the hunt where resistance is found.</description>
         <race>
-            <baseBodySize>2.85</baseBodySize>
+            <baseBodySize>3.5</baseBodySize>
             <baseHealthScale>2.5</baseHealthScale>
             <body>ScramSRP_HeedBody</body>
             <soundCallIntervalRange>500~1000</soundCallIntervalRange>
