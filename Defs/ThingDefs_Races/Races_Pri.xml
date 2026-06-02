@@ -89,11 +89,12 @@
                 <capacities>
                     <li>ScramSRP_DirectConvertCapBite</li>
                 </capacities>
-                <power>30</power>
+                <power>20</power>
                 <cooldownTime>3</cooldownTime>
                 <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
                 <chanceFactor>0.6</chanceFactor>
+                <armorPenetration>0.6</armorPenetration>
             </li>
             <li>
                 <label>body</label>
@@ -105,6 +106,26 @@
                 <linkedBodyPartsGroup>BodyAttackTool</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
                 <chanceFactor>0.2</chanceFactor>
+            </li>
+            <li>
+                <label>right claw</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>21.5</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+                <armorPenetration>0.25</armorPenetration>
+            </li>
+            <li>
+                <label>left claw</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>21.5</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+                <armorPenetration>0.25</armorPenetration>
             </li>
         </tools>
         <comps>
@@ -172,10 +193,11 @@
                 <capacities>
                     <li>ScramSRP_DirectConvertCapBite</li>
                 </capacities>
-                <power>30</power>
+                <power>20</power>
                 <cooldownTime>3</cooldownTime>
                 <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
                 <chanceFactor>0.6</chanceFactor>
+                <armorPenetration>0.6</armorPenetration>
             </li>
             <li>
                 <label>body</label>
@@ -214,6 +236,7 @@
                 <power>21.5</power>
                 <cooldownTime>2</cooldownTime>
                 <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+                <armorPenetration>0.25</armorPenetration>
             </li>
             <li>
                 <label>left claw</label>
@@ -223,6 +246,7 @@
                 <power>21.5</power>
                 <cooldownTime>2</cooldownTime>
                 <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+                <armorPenetration>0.25</armorPenetration>
             </li>
         </tools>
         <comps>
@@ -310,11 +334,12 @@
                 <capacities>
                     <li>ScramSRP_DirectConvertCapBite</li>
                 </capacities>
-                <power>36.67</power>
+                <power>30</power>
                 <cooldownTime>3</cooldownTime>
                 <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
                 <chanceFactor>0.6</chanceFactor>
+                <armorPenetration>0.6</armorPenetration>
             </li>
             <li>
                 <label>body</label>
@@ -407,10 +432,11 @@
                 <capacities>
                     <li>ScramSRP_DirectConvertCapBite</li>
                 </capacities>
-                <power>30</power>
+                <power>40</power>
                 <cooldownTime>3</cooldownTime>
                 <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
                 <chanceFactor>0.6</chanceFactor>
+                <armorPenetration>1</armorPenetration>
             </li>
         </tools>
         <comps>
@@ -583,6 +609,7 @@
                 <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
                 <chanceFactor>0.6</chanceFactor>
+                <armorPenetration>0.6</armorPenetration>
             </li>
         </tools>
         <comps>

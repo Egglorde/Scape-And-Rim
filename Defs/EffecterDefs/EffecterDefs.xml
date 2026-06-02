@@ -102,6 +102,55 @@
       </li>
     </children>
   </EffecterDef>  
+
+  <EffecterDef>
+    <defName>ScramSRP_Shriek</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>Mote_DistortionPulse</moteDef>
+        <spawnLocType>OnSource</spawnLocType>
+        <destroyMoteOnCleanup>false</destroyMoteOnCleanup>
+      </li>
+      
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>ExpandingDistortionRing</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>1</burstCount>
+        <positionRadius>0</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>1</scale>
+        <rotation>0</rotation>
+        <rotationRate>0</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>  
+  
+  <EffecterDef>
+    <defName>ScramSRP_ShriekWarmup</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>PulsingDistortionRing</fleckDef>
+        <spawnLocType>OnTarget</spawnLocType>
+        <burstCount>1</burstCount>
+        <chancePerTick>1</chancePerTick>
+        <chancePeriodTicks>96</chancePeriodTicks>
+        <positionRadius>0</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <scale>.3</scale>
+        <rotation>0</rotation>
+        <rotationRate>0</rotationRate>
+        <angle>0~0</angle>
+        <speed>0</speed>
+        <attachToSpawnThing>true</attachToSpawnThing>
+      </li>
+    </children>
+  </EffecterDef>
   
   <EffecterDef>
     <defName>ScramSRP_VomitEffect</defName>

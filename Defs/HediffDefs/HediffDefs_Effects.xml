@@ -365,6 +365,8 @@
           <minSeverity>0.3</minSeverity>
           <label>invisible</label>
           <statFactors>
+            <MeleeArmorPenetration>2</MeleeArmorPenetration>
+            <MeleeHitChance>10</MeleeHitChance>
             <MoveSpeed>0.3</MoveSpeed>
             <MeleeDamageFactor>2</MeleeDamageFactor>
           </statFactors>

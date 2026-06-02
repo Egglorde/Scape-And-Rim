@@ -4,13 +4,13 @@
     <defName>ScramSRP_ParasiteRageCondition</defName>
     <conditionClass>AssemblyParasitesColonThree.MapRelated.GameConditions.GameCondition_ParasiteRage</conditionClass>
     <label>parasitic rage</label>
-    <description>Parasites within the local area have become engraged. During this time, parasite raids may occur, and all parasites will be somewhat stronger.</description>
-    <letterText>All parasites within the local area have become enraged. For as long as this lasts, parasites within the area will have increased speed.</letterText>
+    <description>Parasites within the local area are engraged. During this time, parasite raids may occur, and all parasites will be somewhat stronger.</description>
+    <letterText>All parasites within the local area have become enraged. For as long as this lasts, parasite raids may occur, and all parasites will be somewhat stronger.</letterText>
     <endMessage>Local parasites are no longer enraged.</endMessage>
     <letterDef>NegativeEvent</letterDef>
     <canBePermanent>true</canBePermanent>
     <natural>false</natural>
     <canAffectAllPlanetLayers>true</canAffectAllPlanetLayers>
   </GameConditionDef>
-    
+    <!-- 3150 / 5 days -->
 </Defs>

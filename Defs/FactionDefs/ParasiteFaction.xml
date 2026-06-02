@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+<Defs>  
+    <IncidentDef>
+      <defName>ScramSRP_RaidParasiteScent</defName>
+      <label>parasite raid</label>
+      <targetTags>
+        <li>Map_PlayerHome</li>
+        <li>Map_TempIncident</li>
+        <li>Map_Misc</li>
+        <li>Map_RaidBeacon</li>
+      </targetTags>
+      <workerClass>AssemblyParasitesColonThree.Misc.IncidentWorker_RaidParasite</workerClass>
+      <baseChance>10</baseChance>
+      <category>ScramSRP_ThreatBigParasite</category>
+      <pointsScaleable>true</pointsScaleable>
+      <tale>Raid</tale>
+      <ignoreRecentSelectionWeighting>true</ignoreRecentSelectionWeighting>
+      <canOccurOnAllPlanetLayers>true</canOccurOnAllPlanetLayers>
+    </IncidentDef>
+
+    <IncidentCategoryDef>
+      <defName>ScramSRP_ThreatBigParasite</defName>
+      <needsParmsPoints>true</needsParmsPoints>
+      <tale>MajorThreat</tale>
+      <canUseAnomalyChance>false</canUseAnomalyChance>
+    </IncidentCategoryDef>
+
     <FactionDef ParentName="FactionBase">
     <defName>ScramSRP_ParasiteFaction</defName>
     <label>parasite horde</label>
@@ -62,6 +87,7 @@
             <commonality>500</commonality>
             <options>
                 <Rupter>15</Rupter>
+                <ScramSRP_HeedKind>1</ScramSRP_HeedKind>
                 <ScramSRP_Carrier_Light>3</ScramSRP_Carrier_Light>
                 <ScramSRP_Pri_ArachnidaKind>3</ScramSRP_Pri_ArachnidaKind>
                 <ScramSRP_Pri_ReekerKind>3</ScramSRP_Pri_ReekerKind>

@@ -330,5 +330,283 @@
             </parts>
         </corePart>
     </BodyDef>
+
+  <!-- Primitive Reeker Body -->
+  <BodyDef>
+    <defName>ScramSRP_HeedBody</defName>
+    <label>reeker</label>
+    <corePart>
+      <def>Body</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <groups>
+        <li>BodyAttackTool</li>
+        <li>Torso</li>
+      </groups>
+      <parts>
+        <li>
+            <def>ParasiteBrain</def>
+            <coverage>0.005</coverage>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>ParasiteLiver</def>
+            <coverage>0.01</coverage>
+            <customLabel>viscera</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>ParasiteHeart</def>
+            <coverage>0.01</coverage>
+            <customLabel>hiveheart</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Pronotum</def>
+          <coverage>0.2</coverage>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.45</coverage>
+              <groups>
+                <li>HeadAttackTool</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>Jaw</def>
+                  <coverage>0.08</coverage>
+                  <groups>
+                    <li>Mouth</li>
+                    <li>Teeth</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>SensorTendril</def>
+          <coverage>0.08</coverage>
+          <customLabel>first neck</customLabel>
+          <groups>
+            <li>Arms</li>
+            <li>ScramSRP_TendrilA</li>
+          </groups>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.15</coverage>
+              <customLabel>second head</customLabel>
+              <groups>
+                <li>HeadAttackTool</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>Jaw</def>
+                  <coverage>0.2</coverage>
+                  <customLabel>second head jaw</customLabel>
+                  <groups>
+                    <li>Teeth</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>SensorTendril</def>
+          <coverage>0.08</coverage>
+          <customLabel>second neck</customLabel>
+          <groups>
+            <li>Arms</li>
+            <li>ScramSRP_TendrilB</li>
+          </groups>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.15</coverage>
+              <customLabel>second head</customLabel>
+              <groups>
+                <li>HeadAttackTool</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>Jaw</def>
+                  <coverage>0.2</coverage>
+                  <customLabel>second head jaw</customLabel>
+                  <groups>
+                    <li>Teeth</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>SensorTendril</def>
+          <coverage>0.08</coverage>
+          <customLabel>third neck</customLabel>
+          <groups>
+            <li>Arms</li>
+            <li>ScramSRP_TendrilC</li>
+          </groups>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.15</coverage>
+              <customLabel>third head</customLabel>
+              <groups>
+                <li>HeadAttackTool</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>Jaw</def>
+                  <coverage>0.2</coverage>
+                  <customLabel>third head jaw</customLabel>
+                  <groups>
+                    <li>Teeth</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>SensorTendril</def>
+          <coverage>0.08</coverage>
+          <customLabel>fourth neck</customLabel>
+          <groups>
+            <li>Arms</li>
+            <li>ScramSRP_TendrilD</li>
+          </groups>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.15</coverage>
+              <customLabel>fourth head</customLabel>
+              <groups>
+                <li>HeadAttackTool</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>Jaw</def>
+                  <coverage>0.08</coverage>
+                  <customLabel>fourth head jaw</customLabel>
+                  <groups>
+                    <li>Teeth</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>SensorTendril</def>
+          <coverage>0.08</coverage>
+          <customLabel>fifth neck</customLabel>
+          <groups>
+            <li>Arms</li>
+            <li>ScramSRP_TendrilE</li>
+          </groups>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.15</coverage>
+              <customLabel>fifth head</customLabel>
+              <groups>
+                <li>HeadAttackTool</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>Jaw</def>
+                  <coverage>0.08</coverage>
+                  <customLabel>fifth head jaw</customLabel>
+                  <groups>
+                    <li>Teeth</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>Leg</def>
+          <customLabel>first left leg</customLabel>
+          <coverage>0.02</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>Legs</li>
+          </groups>
+          <flipGraphic>true</flipGraphic>
+        </li>
+        <li>
+          <def>Leg</def>
+          <customLabel>first right leg</customLabel>
+          <coverage>0.02</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>Legs</li>
+          </groups>
+        </li>
+        <li>
+          <def>Leg</def>
+          <customLabel>second left leg</customLabel>
+          <coverage>0.02</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>Legs</li>
+          </groups>
+          <flipGraphic>true</flipGraphic>
+        </li>
+        <li>
+          <def>Leg</def>
+          <customLabel>second right leg</customLabel>
+          <coverage>0.02</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>Legs</li>
+          </groups>
+        </li>
+        <li>
+          <def>Leg</def>
+          <customLabel>third left leg</customLabel>
+          <coverage>0.02</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>Legs</li>
+          </groups>
+          <flipGraphic>true</flipGraphic>
+        </li>
+        <li>
+          <def>Leg</def>
+          <customLabel>third right leg</customLabel>
+          <coverage>0.02</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>Legs</li>
+          </groups>
+        </li>
+        <li>
+          <def>Leg</def>
+          <customLabel>fourth left leg</customLabel>
+          <coverage>0.02</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>Legs</li>
+          </groups>
+          <flipGraphic>true</flipGraphic>
+        </li>
+        <li>
+          <def>Leg</def>
+          <customLabel>fourth right leg</customLabel>
+          <coverage>0.02</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>Legs</li>
+          </groups>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
   
 </Defs>

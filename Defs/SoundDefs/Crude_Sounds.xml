@@ -1,0 +1,90 @@
+<Defs>
+
+
+    <!-- Heed -->
+    <SoundDef>
+        <defName>ScramSRP_HeedCall</defName>
+        <context>MapOnly</context>   
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Parasite/Cru/Heed/Heed_Call</clipPath> 
+                    </li>
+                </grains>
+                <volumeRange>45~60</volumeRange>      
+                <pitchRange>0.7~1.2</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ScramSRP_HeedHurt</defName>  
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Parasite/Cru/Heed/Heed_Hurt</clipPath> 
+                    </li>
+                </grains>
+                <volumeRange>40~45</volumeRange>
+                <pitchRange>0.8940217~1.084783</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ScramSRP_HeedDeath</defName>  
+        <context>MapOnly</context>   
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Parasite/Cru/Heed/Heed_Death</clipPath> 
+                    </li>
+                </grains>
+                <volumeRange>40~60</volumeRange>
+                <pitchRange>0.8940217~1.084783</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ScramSRP_HeedShriek</defName>  
+        <context>Any</context>
+        <maxSimultaneous>1</maxSimultaneous>  
+        <subSounds>
+            <li>
+                <onCamera>True</onCamera>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Ability/Heed_Shriek</clipPath> 
+                    </li>
+                </grains>
+                <volumeRange>80~100</volumeRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ScramSRP_HeedShriekCharge</defName> 
+        <sustain>true</sustain>
+        <context>MapOnly</context>
+        <maxSimultaneous>3</maxSimultaneous>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+            <li>
+                <tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Ability/Heed_Shriek_Charge</clipPath> 
+                    </li>
+                </grains>
+                <volumeRange>70~90</volumeRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+
+</Defs>

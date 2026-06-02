@@ -1,0 +1,15 @@
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/StorytellerDef[@Name="BaseStoryteller"]/comps</xpath>
+        <value>
+            <li Class="StorytellerCompProperties_OnOffCycle">
+              <category>ScramSRP_ThreatBigParasite</category>
+              <minDaysPassed>3.0</minDaysPassed>
+              <onDays>4.0</onDays>
+              <offDays>6.0</offDays>
+              <minSpacingDays>1.0</minSpacingDays>
+              <numIncidentsRange>1~2</numIncidentsRange>
+            </li>
+        </value>
+    </Operation>
+</Patch>

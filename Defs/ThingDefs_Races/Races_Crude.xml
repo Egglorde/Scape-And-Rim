@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <!-- Abstract for Ruptoid Parasites-->
     <ThingDef ParentName="BaseParasite">
         <defName>ScramSRP_IncompleteMedium</defName>
         <label>medium incomplete form</label>
@@ -180,5 +179,97 @@
                 </bodyGraphicData>
             </li>
     </lifeStages>
+    </PawnKindDef>
+
+    <!-- Reekers -->
+    <ThingDef ParentName="BaseParasite">
+        <defName>ScramSRP_Heed</defName>
+        <label>heed</label>
+        <description>Assembled from the merging of several assimilated bodies into a larger form. Primitive parasites are the first large parasites to appear during infestation.\n\nA set of bodies cobbled together in a horse-like form. The musculature within its back legs is wound taught like a spring, allowing it to throw itself towards enemies at impossible speed. It stinks.</description>
+        <race>
+            <baseBodySize>2.85</baseBodySize>
+            <baseHealthScale>2.5</baseHealthScale>
+            <body>ScramSRP_HeedBody</body>
+            <soundCallIntervalRange>500~1000</soundCallIntervalRange>
+            <renderTree>ScramSRP_HeedRenderTree</renderTree>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                    <soundWounded>ScramSRP_HeedHurt</soundWounded>
+                    <soundDeath>ScramSRP_HeedDeath</soundDeath>
+                    <soundCall>ScramSRP_HeedCall</soundCall>
+                </li>
+            </lifeStageAges>
+            <leatherDef>Leather_Patch</leatherDef>
+            <specificMeatDef>ScramSRP_InfectedFlesh</specificMeatDef>
+        </race>
+        <statBases>
+            <MoveSpeed>5</MoveSpeed>
+            <ArmorRating_Heat>0.113</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.281</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.763</ArmorRating_Sharp>
+            <ComfyTemperatureMin>-80</ComfyTemperatureMin>
+            <ComfyTemperatureMax>60</ComfyTemperatureMax>
+            <PsychicSensitivity>1.5</PsychicSensitivity>
+            <ToxicResistance>0.5</ToxicResistance>
+            <LeatherAmount>30</LeatherAmount>
+        </statBases>
+        <tools>
+            <li>
+                <label>maw</label>
+                <capacities>
+                    <li>ScramSRP_DirectConvertCapBite</li>
+                </capacities>
+                <power>30</power>
+                <cooldownTime>3</cooldownTime>
+                <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+                <chanceFactor>0.6</chanceFactor>
+                <armorPenetration>0.6</armorPenetration>
+            </li>
+            <li>
+                <label>heads</label>
+                <capacities>
+                    <li>ScramSRP_DirectConvertCapBite</li>
+                </capacities>
+                <power>8.3</power>
+                <cooldownTime>0.3</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <chanceFactor>5</chanceFactor>
+            </li>
+            <li>
+                <label>body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>15</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>BodyAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <PawnKindDef ParentName="BaseParasiteKind">
+        <defName>ScramSRP_HeedKind</defName>
+        <label>heed</label>
+        <race>ScramSRP_Heed</race>
+        <combatPower>450</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/Crude/Heed/Heed</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>4.5</drawSize>
+                    <shadowData>
+                        <volume>(1.2, 2, 1)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <abilities>
+            <li>ScramSRP_RageScreech</li>
+        </abilities>
     </PawnKindDef>
 </Defs>

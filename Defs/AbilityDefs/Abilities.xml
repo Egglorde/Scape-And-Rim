@@ -38,6 +38,36 @@
         <compClass>AssemblyParasitesColonThree.Comps.AbilityComp_OrbComp</compClass>
       </li>
     </comps>
+  </AbilityDef>  
+  
+  <AbilityDef>
+    <defName>ScramSRP_RageScreech</defName>
+    <label>rage screech</label>
+    <description>Release a shriek that causes all parasites to enter into a rage.</description>
+    <cooldownTicksRange>5000</cooldownTicksRange>
+    <stunTargetWhileCasting>false</stunTargetWhileCasting>
+    <targetRequired>true</targetRequired>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <soundAiming>ScramSRP_HeedShriekCharge</soundAiming>
+      <range>35.9</range>
+      <warmupTime>5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>ScramSRP_HeedShriek</soundCast>
+      <warmupEffecter>ScramSRP_ShriekWarmup</warmupEffecter>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="AssemblyParasitesColonThree.CompProps.AbilityCompProperties_ParasiteRage" />
+      <li Class="CompProperties_AbilityEffecterOnCaster">
+        <effecterDef>ScramSRP_Shriek</effecterDef>
+      </li>
+    </comps>
   </AbilityDef>
 
   <AbilityDef >
@@ -260,7 +290,6 @@
       <speed>30</speed>
       <explosionRadius>2.9</explosionRadius>
       <soundAmbient>Tunnel</soundAmbient>
-      <soundImpactAnticipate>Tunnel</soundImpactAnticipate>
     </projectile>
   </ThingDef>
 
