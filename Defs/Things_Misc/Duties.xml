@@ -8,6 +8,21 @@
     <casualInterruptible>false</casualInterruptible>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
+
+  <JobDef>
+    <defName>ScramSRP_ExtractSample</defName>
+    <driverClass>AssemblyParasitesColonThree.JobDrivers.JobDriver_ExtractTestKit</driverClass>
+    <reportString>taking sample from TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+  <JobDef>
+    <defName>ScramSRP_RunTest</defName>
+    <driverClass>AssemblyParasitesColonThree.JobDrivers.JobDriver_TestTestKit</driverClass>
+    <reportString>running test.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
   <JobDef>
     <defName>ScramSRP_ConvertDowned</defName>
     <driverClass>AssemblyParasitesColonThree.JobDrivers.JobDriver_ConvertDownedPawn</driverClass>

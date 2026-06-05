@@ -24,6 +24,25 @@
   <ScramSRP_Infect_Dopple>{VICTIM_labelShort} was indirectly infected by {CULPRIT_indefinite} through doppelganger transmission.</ScramSRP_Infect_Dopple>
   <ScramSRP_Infect_Residue>{VICTIM_labelShort} was indirectly infected by residue.</ScramSRP_Infect_Residue>
 
+  <!-- TestKit Related -->
+  <ScramSRP_Extract_Error>Cannot extract</ScramSRP_Extract_Error>
+  <ScramSRP_Extract_Error_Elaborate>Cannot extract from {0}</ScramSRP_Extract_Error_Elaborate>
+  <ScramSRP_ExtractCommand>Extract sample from...</ScramSRP_ExtractCommand>
+  <ScramSRP_WouldDieBloodLoss>Would die from bloodloss.</ScramSRP_WouldDieBloodLoss>
+  <ScramSRP_Test_Error>Cannot test</ScramSRP_Test_Error>
+  <ScramSRP_TestKitRun>Run test...</ScramSRP_TestKitRun>
+  <ScramSRP_TestKitFull>Test kit is already full.</ScramSRP_TestKitFull>
+  <ScramSRP_NeedsFire>Requires fire.</ScramSRP_NeedsFire>
+
+  <ScramSRP_CannotCureDoesNotHave>{0} does not have COTH.</ScramSRP_CannotCureDoesNotHave>
+  <ScramSRP_CannotCureTooFarGone>{0} is too far gone.</ScramSRP_CannotCureTooFarGone>
+
+  <ScramSRP_Uninfected>Negative : {0}</ScramSRP_Uninfected>
+  <ScramSRP_UninfectedDesc>{0} tested negative for COTH. Due to high quality testing equipment, {1} is certain that {0} is not infected.</ScramSRP_UninfectedDesc>
+  <ScramSRP_UninfectedDescSuspicious>{0} tested negative for COTH, however, due to poor or damaged testing equipment, {1} is unsure of whether or not the test was truly correct.</ScramSRP_UninfectedDescSuspicious>
+  <ScramSRP_Infected>Positive : {0}</ScramSRP_Infected>
+  <ScramSRP_InfectedDesc>{0} has tested positive for COTH. Depending on the severity, curing may still be possible.</ScramSRP_InfectedDesc>
+
   <!-- Phases-->
   <ScramSRP_PhaseDisplay>Infection Phase</ScramSRP_PhaseDisplay>
 

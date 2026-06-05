@@ -1,0 +1,226 @@
+<Defs>
+    <ThingDef Name="ScramSRP_TestKitBase" Abstract="True">   
+        <label>test kit</label>
+        <description>A kit for testing for COTH</description> 
+        <tradeability>None</tradeability>
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <drawerType>MapMeshOnly</drawerType>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <altitudeLayer>Item</altitudeLayer>
+        <alwaysHaulable>true</alwaysHaulable>
+        <tickerType>Never</tickerType>
+        <useHitPoints>true</useHitPoints>
+        <pathCost>14</pathCost>
+        <selectable>true</selectable>
+        <rotatable>false</rotatable>
+        <stackLimit>10</stackLimit>
+        <statBases>
+          <MaxHitPoints>100</MaxHitPoints>
+          <Flammability>1.0</Flammability>
+          <DeteriorationRate>1</DeteriorationRate>
+          <Beauty>-3</Beauty>
+          <SellPriceFactor>0.05</SellPriceFactor>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+        </comps>
+        <allowedArchonexusCount>30</allowedArchonexusCount>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smelt</effectWorking>
+            <soundWorking>Recipe_MakeBow</soundWorking>
+            <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+            <displayPriority>510</displayPriority>
+        </recipeMaker>
+    </ThingDef>
+    
+    <ThingDef ParentName="ScramSRP_TestKitBase">
+        <defName>ScramSRP_TestKitCrude</defName>
+        <label>crude test kit</label>
+        <description>The simplest test kit, consisting only of a crude piece of metal and bowl for blood. The crude construction requires that the metal piece be heated over a fire and plunged into the blood-bowl. Due to its simple construction, this test kit will only correctly identify those infected with COTH 50% of the time, and those successfully identified will emerge immediately. Damage to the test kit can cause a loss of accuracy.</description> 
+        <graphicData>
+          <texPath>Items/TestKits/TestKit_Crude</texPath>
+          <graphicClass>AssemblyParasitesColonThree.Misc.GraphicClasses.Graphic_TestKit</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>5</MaxHitPoints>
+            <WorkToMake>5000</WorkToMake>
+            <Mass>1.2</Mass>
+        </statBases>
+        <costList>
+            <WoodLog>20</WoodLog>
+            <Steel>20</Steel>
+        </costList>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_TestKit">
+                <crude>true</crude>
+                <successChancePerHP>0.5</successChancePerHP>
+                <emergeChance>1</emergeChance>
+                <ticksToExtract>480</ticksToExtract>
+            </li>
+        </comps>
+        <recipeMaker>
+            <recipeUsers>
+                <li>CraftingSpot</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>2</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef ParentName="ScramSRP_TestKitBase">
+        <defName>ScramSRP_TestKitSimple</defName>
+        <label>simple test kit</label>
+        <description>A more complex test kit, created at a machining table. A chemfuel-powered heating element allows testing to be done anywhere. Though more complex, it is still only capable of 80% accuracy, and has a 50% chance of causing an immediate emergence. Damage to the test kit can cause a loss of accuracy.</description> 
+        <graphicData>
+          <texPath>Items/TestKits/TestKit_Simple</texPath>
+          <graphicClass>AssemblyParasitesColonThree.Misc.GraphicClasses.Graphic_TestKit</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>10</MaxHitPoints>
+            <WorkToMake>7000</WorkToMake>
+            <Mass>1.0</Mass>
+        </statBases>
+        <costList>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <Steel>40</Steel>
+            <Chemfuel>20</Chemfuel>
+        </costList>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_TestKit">
+                <successChancePerHP>0.8</successChancePerHP>
+                <emergeChance>0.5</emergeChance>
+            </li>
+        </comps>
+        <recipeMaker>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef ParentName="ScramSRP_TestKitBase">
+        <defName>ScramSRP_TestKitAdvanced</defName>
+        <label>advanced test kit</label>
+        <description>An advanced test kit created at a fabrication bench. Drawing blood through a syringe, it uses advanced mechanical and chemical processes to identify COTH cells. These processes allow it to correctly identify COTH 100% of the time, without causing an immediate emergence. Though the testing process is typically perfect, damage to the test kit can cause a loss of accuracy.</description> 
+        <graphicData>
+          <texPath>Items/TestKits/TestKit_Advanced</texPath>
+          <graphicClass>AssemblyParasitesColonThree.Misc.GraphicClasses.Graphic_TestKit</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>20</MaxHitPoints>
+            <WorkToMake>10000</WorkToMake>
+            <Mass>1.4</Mass>
+        </statBases>
+        <costList>
+            <Neutroamine>10</Neutroamine>
+            <Steel>80</Steel>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_TestKit">
+                <successChancePerHP>1</successChancePerHP>
+                <emergeChance>0</emergeChance>
+            </li>
+        </comps>
+        <recipeMaker>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <recipeUsers>
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>14</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef ParentName="MechSerumBase">
+        <defName>ScramSRP_Panacea</defName>
+        <label>Panacyte</label>
+        <description>A modified healer mech serum, capable of curing COTH below a certain level. The modified super-mechites flood the body of the patient and exterminate any COTH cells they come across with extreme heat. Using this serum can have dire consequences, as the merciless heat produced by the mechites can easily burn internal organs.</description>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smelt</effectWorking>
+            <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+            <displayPriority>510</displayPriority>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <recipeUsers>
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>14</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <graphicData>
+          <texPath>Loot/Panacyte</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <stackLimit>10</stackLimit>
+        <statBases>
+            <MarketValue>3000</MarketValue>
+        </statBases>
+        <costList>
+            <Neutroamine>30</Neutroamine>
+            <MechSerumHealer>1</MechSerumHealer>
+            <ComponentSpacer>3</ComponentSpacer>
+        </costList>
+        <thingCategories>
+            <li>Drugs</li>
+        </thingCategories>
+        <tradeability>All</tradeability>
+        <comps>
+          <li Class="CompProperties_Usable">
+            <useJob>UseItem</useJob>
+            <useLabel>Use {0_label}</useLabel>
+            <useDuration>600</useDuration>
+            <showUseGizmo>true</showUseGizmo>
+          </li>
+          <li Class="CompProperties_UseEffect">
+            <compClass>AssemblyParasitesColonThree.Comps.CompUseEffect_CureCoth</compClass>
+          </li>
+          <li Class="CompProperties_UseEffectPlaySound">
+            <soundOnUsed>MechSerumUsed</soundOnUsed>
+          </li>
+          <li Class="CompProperties_UseEffectDestroySelf" />
+        </comps>
+        <thingSetMakerTags>
+          <li>RewardStandardCore</li>
+        </thingSetMakerTags>
+    </ThingDef>
+  
+    <RecipeDef>
+      <defName>ScramSRP_AdministerPanacea</defName>
+      <label>administer panacyte</label>
+      <description>Administer panacyte to cure COTH.</description>
+      <workerClass>AssemblyParasitesColonThree.Misc.Recipe_AdministerUsableItemPanacea</workerClass>
+      <jobString>Administering panacyte.</jobString>
+      <targetsBodyPart>false</targetsBodyPart>
+      <anesthetize>false</anesthetize>
+      <workAmount>600</workAmount>
+      <dontShowIfAnyIngredientMissing>false</dontShowIfAnyIngredientMissing>
+      <surgeryOutcomeEffect IsNull="True"/>
+      <ingredients>
+        <li>
+          <filter>
+            <thingDefs>
+              <li>ScramSRP_Panacea</li>
+            </thingDefs>
+          </filter>
+          <count>1</count>
+        </li>
+      </ingredients>
+      <fixedIngredientFilter>
+        <thingDefs>
+          <li>ScramSRP_Panacea</li>
+        </thingDefs>
+      </fixedIngredientFilter>
+    </RecipeDef>
+</Defs>

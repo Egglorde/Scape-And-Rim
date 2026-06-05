@@ -34,5 +34,29 @@
         <becomeVisible>false</becomeVisible>
       </li>
     </stages>
-    </HediffDef>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ScramSRP_Superheated</defName>
+    <hediffClass>AssemblyParasitesColonThree.Hediffs.Hediff_Overheating</hediffClass>
+    <label>internal overheat</label>
+    <labelNoun>overheat</labelNoun>
+    <description>The internal processes of this creature are running on overdrive, damaging internal organs.</description>
+    <tendable>false</tendable>
+    <initialSeverity>0.5</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDayRange>-0.7~-0.3</severityPerDayRange>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <painOffset>1</painOffset>
+        <statFactors>
+          <ComfyTemperatureMax>0.1</ComfyTemperatureMax>
+        </statFactors>
+      </li> 
+    </stages>
+  </HediffDef>
 </Defs>

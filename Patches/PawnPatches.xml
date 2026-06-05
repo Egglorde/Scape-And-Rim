@@ -1,0 +1,14 @@
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="Human"]/recipes</xpath>
+        <value>
+            <li>ScramSRP_AdministerPanacea</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="AnimalThingBase"]/recipes</xpath>
+        <value>
+            <li>ScramSRP_AdministerPanacea</li>
+        </value>
+    </Operation>
+</Patch>
