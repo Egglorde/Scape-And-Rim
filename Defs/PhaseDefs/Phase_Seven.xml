@@ -54,7 +54,7 @@
                 <kind>ScramSRP_IncompleteSmallKind</kind>
             </li>
         </incompleteGroupMakers>
-        <phase>6</phase>
+        <phase>7</phase>
         <mincount>80</mincount>
         <maxcount>100</maxcount>
         <eventLetter>ScramSRP_Phase7Event</eventLetter>
