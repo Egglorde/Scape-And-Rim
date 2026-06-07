@@ -256,9 +256,11 @@
       <warmupTime>1</warmupTime>   
       <range>-1</range>
       <targetParams>
-        <canTargetSelf>true</canTargetSelf>
+        <canTargetSelf>false</canTargetSelf>
         <canTargetPawns>true</canTargetPawns>
         <canTargetAnimals>true</canTargetAnimals>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
       </targetParams>
     </verbProperties>
     <comps>
