@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+    <BodyPartTagDef>
+      <defName>ScramSRP_PowerSource</defName>
+    </BodyPartTagDef>
+
     <BodyPartGroupDef>
         <defName>ScramSRP_Tongue</defName>
         <label>tongue</label>
@@ -66,7 +70,7 @@
     <BodyPartDef>
         <defName>SensorTendril</defName>
         <label>tendril</label>
-        <hitPoints>10</hitPoints>
+        <hitPoints>8</hitPoints>
         <frostbiteVulnerability>0.5</frostbiteVulnerability>
         <delicate>true</delicate>
         <skinCovered>false</skinCovered>
@@ -135,7 +139,7 @@
     <BodyPartDef>
         <defName>ParasiteHeart</defName>
         <label>hiveheart</label>
-        <hitPoints>10</hitPoints>
+        <hitPoints>8</hitPoints>
         <skinCovered>false</skinCovered>
         <tags>
             <li>BloodPumpingSource</li>
@@ -154,7 +158,7 @@
     <BodyPartDef>
         <defName>ParasiteBrain</defName>
         <label>neural clump</label>
-        <hitPoints>10</hitPoints>
+        <hitPoints>8</hitPoints>
         <tags>
             <li>ConsciousnessSource</li>
         </tags>
@@ -176,7 +180,9 @@
             <li>BloodFiltrationSource</li>
             <li>BloodPumpingSource</li>
         </tags>
-  </BodyPartDef>  
+  </BodyPartDef> 
+  
+  <!-- Legdefs for legs that may not match the typical 30 health-->
   <BodyPartDef>
     <defName>ScramSRP_LegGreater</defName>
     <label>leg</label>
@@ -187,14 +193,44 @@
       <li>MovingLimbCore</li>
     </tags>
   </BodyPartDef>
+  <BodyPartDef>
+    <defName>ScramSRP_LegLesser</defName>
+    <label>leg</label>
+    <hitPoints>18</hitPoints>
+    <skinCovered>true</skinCovered>
+    <canScarify>true</canScarify>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
     <BodyPartDef>
-        <defName>ParasiteLiver</defName>
+        <defName>ScramSRP_ParasiteLiver</defName>
         <label>viscera</label>
-        <hitPoints>15</hitPoints>
+        <hitPoints>14</hitPoints>
         <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
         <skinCovered>false</skinCovered>
         <tags>
             <li>BloodFiltrationSource</li>
+        </tags>
+  </BodyPartDef>
+    <BodyPartDef>
+        <defName>ScramSRP_ParasiteLiver_Large</defName>
+        <label>guts</label>
+        <hitPoints>34</hitPoints>
+        <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+        <skinCovered>false</skinCovered>
+        <tags>
+            <li>BloodFiltrationSource</li>
+        </tags>
+  </BodyPartDef>
+    <BodyPartDef>
+        <defName>ScramSRP_ParasiteCore_Powers</defName>
+        <label>core</label>
+        <hitPoints>10</hitPoints>
+        <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+        <skinCovered>false</skinCovered>
+        <tags>
+            <li>ScramSRP_PowerSource</li>
         </tags>
   </BodyPartDef>
 </Defs>

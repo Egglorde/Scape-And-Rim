@@ -66,6 +66,22 @@
         </subSounds>
     </SoundDef>
     <SoundDef>
+        <defName>ScramSRP_Vomit_Splatter</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>10</maxSimultaneous>  
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Ability/Vomit</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>30~50</volumeRange>
+                <pitchRange>0.6~1.2</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+    <SoundDef>
         <defName>ScramSRP_Sound_CloudInborn</defName>  
         <context>MapOnly</context>   
         <maxSimultaneous>10</maxSimultaneous>  

@@ -15,6 +15,8 @@
     <showCastingProgressBar>true</showCastingProgressBar>
     <!--<warmupStartSound>CombatCommand_Warmup</warmupStartSound>-->
 
+    
+
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     <warmupStartSound>ScramSRP_Orb_Charge</warmupStartSound>
     <warmupSound>ScramSRP_Orb_Sustain</warmupSound>
@@ -24,7 +26,7 @@
     </statBases>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <warmupTime>4</warmupTime>
+      <warmupTime>3</warmupTime>
       <range>0.9</range>
       <drawAimPie>false</drawAimPie>
       <requireLineOfSight>False</requireLineOfSight>
@@ -39,6 +41,66 @@
       </li>
     </comps>
   </AbilityDef>  
+  
+  <AbilityDef>
+    <defName>ScramSRP_VomitAbility</defName>
+    <label>vomit spray</label>
+    <description>Spray vomit.</description>
+    <cooldownTicksRange>1250</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <displayOrder>300</displayOrder>
+    <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>AssemblyParasitesColonThree.Verbs.Verb_AbilityArcSprayProjectile</verbClass>
+      <defaultProjectile>ScramSRP_Proj_VomitFluid</defaultProjectile>
+      <soundCast>ScramSRP_VomitSound</soundCast>
+      <warmupTime>0.25</warmupTime>
+      <range>11.9</range>
+      <minRange>3.9</minRange>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>21</burstShotCount>
+      <sprayWidth>4.9</sprayWidth>
+      <sprayArching>1.8</sprayArching>
+      <sprayThicknessCells>3</sprayThicknessCells>
+      <sprayNumExtraCells>20</sprayNumExtraCells>
+      <sprayEffecterDef>ScramSRP_VomitSpray_Directional</sprayEffecterDef>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <ai_IsWeapon>false</ai_IsWeapon>
+    </verbProperties>
+  </AbilityDef>
+
+  <ThingDef>
+    <defName>ScramSRP_Proj_VomitFluid</defName>
+    <label>corrosive vomit</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <texPath>Projectile/Vomit</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>Mote</shaderType>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>ScramSRP_VomitDamage</damageDef>
+      <explosionRadius>1.9</explosionRadius>
+      <speed>35</speed>
+      <damageAmountBase>1</damageAmountBase>
+      <arcHeightFactor>0.4</arcHeightFactor>
+      <armorPenetrationBase>0.8</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <shadowSize>0</shadowSize>
+      <filth>ScramSRP_Filth_Vomit</filth>
+      <soundExplode>ScramSRP_Vomit_Splatter</soundExplode>
+      <doExplosionVFX>false</doExplosionVFX>
+      <filthCount>1</filthCount>
+    </projectile>
+  </ThingDef>
   
   <AbilityDef>
     <defName>ScramSRP_RageScreech</defName>
@@ -103,7 +165,7 @@
       <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
       <warmupTime>0.5</warmupTime>
       <soundCast>ScramSRP_PriYelloweyeShoot</soundCast>
-      <ai_IsWeapon>false</ai_IsWeapon>
+      <ai_IsWeapon>true</ai_IsWeapon>
     </verbProperties>
   </AbilityDef>
 
@@ -142,7 +204,6 @@
       <burstShotCount>1</burstShotCount>
       <warmupTime>3</warmupTime>
       <soundCast>ScramSRP_PriYelloweyeShoot</soundCast>
-      <ai_IsWeapon>false</ai_IsWeapon>
     </verbProperties>
   </AbilityDef>
 
@@ -155,7 +216,7 @@
       <drawSize>0.6</drawSize>
     </graphicData>
     <projectile>
-      <damageDef>AcidBurn</damageDef>
+      <damageDef>ScramSRP_SuperNadeBurn</damageDef>
       <damageAmountBase>10</damageAmountBase>
       <armorPenetrationBase>0.2</armorPenetrationBase>
       <stoppingPower>0.7</stoppingPower>
@@ -174,7 +235,7 @@
     </graphicData>    
     <projectile>
       <explosionRadius>1.8</explosionRadius>
-      <damageDef>ScramSRP_NadeBurn</damageDef>
+      <damageDef>ScramSRP_SuperNadeBurn</damageDef>
       <damageAmountBase>2</damageAmountBase>
       <preExplosionSpawnThingDef>ScramSRP_Filth_AcidPuddle</preExplosionSpawnThingDef>
       <ai_IsIncendiary>true</ai_IsIncendiary>

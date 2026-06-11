@@ -72,6 +72,66 @@
     </HediffDef>
 
     <HediffDef>
+      <defName>ScramSRP_Corrosion</defName>
+      <label>corrosion</label>
+      <description>This creature has been covered by corrosive acid. Until the acid dissapates, the creature's natural armor is rendered useless. Luckily, this effect dissapates quickly, but deals corrosive damage over time.</description>
+      <hediffClass>HediffWithComps</hediffClass>
+      <defaultLabelColor>(0.6, 1, 0.6)</defaultLabelColor>
+      <initialSeverity>0.1</initialSeverity>
+      <stages>
+        <li>
+          <minSeverity>0</minSeverity>
+          <statFactors>
+            <ArmorRating_Blunt>0</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0</ArmorRating_Sharp>
+            <ArmorRating_Heat>0</ArmorRating_Heat>
+          </statFactors>
+        </li>
+    </stages>
+      <comps>
+        <li Class="HediffCompProperties_SeverityPerSecond">
+          <severityPerSecond>-0.03</severityPerSecond>
+        </li>
+        <li Class="AssemblyParasitesColonThree.HediffCompPropertiess.HediffCompProperties_DoT">
+          <MTBdamage>0.6</MTBdamage>
+          <percentPerSeverity>0.4</percentPerSeverity>
+          <Damage>2~8</Damage>
+          <damageDef>ScramSRP_NadeBurn</damageDef>
+        </li>
+      </comps>
+    </HediffDef>
+
+    <HediffDef>
+      <defName>ScramSRP_Necrosis</defName>
+      <label>necrosis</label>
+      <description>The tissues within this creature are dying faster than they can be replaced. Injuries taken by this creature will begin to develop necrosis unless tended to. Necrosis is not lethal on its own, but can exacerbate existing injuries. Additionally, necrosis slows wound healing.</description>
+      <hediffClass>HediffWithComps</hediffClass>
+      <defaultLabelColor>(0.6, 0.4, 0.4)</defaultLabelColor>
+      <initialSeverity>0.1</initialSeverity>
+      <stages>
+        <li>
+          <minSeverity>0</minSeverity>
+          <statFactors>
+            <InjuryHealingFactor>0.1</InjuryHealingFactor>
+          </statFactors>
+        </li>
+    </stages>
+      <comps>
+        <li Class="HediffCompProperties_SeverityPerSecond">
+          <severityPerSecond>-0.005</severityPerSecond>
+        </li>
+        <li Class="AssemblyParasitesColonThree.HediffCompPropertiess.HediffCompProperties_DoT">
+          <MTBdamage>2</MTBdamage>
+          <percentPerSeverity>1</percentPerSeverity>
+          <Damage>2~8</Damage>
+          <damageDef>ScramSRP_NecrosisDamage</damageDef>
+          <onlyOnExisting>true</onlyOnExisting>
+          <ignoreArmor>true</ignoreArmor>
+        </li>
+      </comps>
+    </HediffDef>
+
+    <HediffDef>
       <defName>ScramSRP_Regen</defName>
       <label>regeneration</label>
       <description>This creature is regenerating its body using additional biomass.</description>
@@ -100,6 +160,47 @@
       <comps>
         <li Class="HediffCompProperties_SeverityPerSecond">
           <severityPerSecond>-0.01</severityPerSecond>
+        </li>
+      </comps>
+    </HediffDef>
+
+    <HediffDef>
+      <defName>ScramSRP_Bolstered</defName>
+      <label>bolstered</label>
+      <description>This creature's internal systems have been bolstered by a support parasite.</description>
+      <hediffClass>HediffWithComps</hediffClass>
+      <defaultLabelColor>(0.3, 0.8, 0.3)</defaultLabelColor>
+      <forceRemoveOnResurrection>true</forceRemoveOnResurrection>
+      <initialSeverity>0.1</initialSeverity>
+      <stages>
+        <li>
+          <minSeverity>0</minSeverity>
+          <label>minor</label>
+          <statFactors>
+            <IncomingDamageFactor>0.8</IncomingDamageFactor>
+          </statFactors>
+          <regeneration>200</regeneration>
+        </li>
+        <li>
+          <minSeverity>0.5</minSeverity>
+          <label>advanced</label>
+          <statFactors>
+            <IncomingDamageFactor>0.6</IncomingDamageFactor>
+          </statFactors>
+          <regeneration>400</regeneration>
+        </li>
+        <li>
+          <minSeverity>1</minSeverity>
+          <label>impossible</label>
+          <statFactors>
+            <IncomingDamageFactor>0.4</IncomingDamageFactor>
+          </statFactors>
+          <regeneration>800</regeneration>
+        </li>
+      </stages>
+      <comps>
+        <li Class="HediffCompProperties_Disappears">
+          <disappearsAfterTicks>20</disappearsAfterTicks>
         </li>
       </comps>
     </HediffDef>

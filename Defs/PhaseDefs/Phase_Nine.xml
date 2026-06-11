@@ -55,8 +55,6 @@
             </li>
         </incompleteGroupMakers>
         <phase>9</phase>
-        <mincount>90</mincount>
-        <maxcount>110</maxcount>
         <eventLetter>ScramSRP_Phase9Event</eventLetter>
         <eventLetterName>Nine</eventLetterName>
         <allowSims>true</allowSims>

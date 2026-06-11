@@ -23,8 +23,15 @@
         <drawSize>1.5</drawSize>
       </graphicData>
       <building>
-        <combatPower>150</combatPower>
-      </building>
+        <combatPower>75</combatPower>
+        <buildingTags>
+          <li>MechClusterMember</li>
+          <li>MechClusterCombatThreat</li>
+        </buildingTags>
+        <ai_combatDangerous>true</ai_combatDangerous>
+        <turretGunDef>Gun_MiniTurretMech</turretGunDef>
+        <turretBurstCooldownTime>2.5</turretBurstCooldownTime>
+        </building>
       <comps>
         <li Class="CompProperties_SpawnEffecterOnDestroy">
           <effect>CocoonDestroyed</effect>
@@ -55,7 +62,7 @@
       <soundDrop>ScramSRP_MeatImpact</soundDrop>
       <randomizeRotationOnSpawn>false</randomizeRotationOnSpawn>
       <thingCategories>
-        <li>Corpses</li>
+        <li>CorpsesParasite</li>
       </thingCategories>
     </ThingDef>
 
@@ -83,6 +90,7 @@
       <thingClass>AssemblyParasitesColonThree.Things.Thing_TransformationCutscene</thingClass>
       <comps>
         <li Class="CompProperties_DestroyAfterDelay">
+          <destroyMode>WillReplace</destroyMode>
           <delayTicks>300</delayTicks>
         </li>
       </comps>
@@ -90,6 +98,9 @@
 
     <ThingDef ParentName="BiomassBase">
       <defName>BiomassSmall</defName>
+      <statBases>
+          <MaxHitPoints>20</MaxHitPoints>
+      </statBases>
     </ThingDef>
 
     <SoundDef>

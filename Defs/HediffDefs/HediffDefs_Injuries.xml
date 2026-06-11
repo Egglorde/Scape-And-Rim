@@ -35,6 +35,31 @@
       <destroyedOutLabel>Bitten out</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
+  
+  <HediffDef ParentName="InjuryBase">
+    <defName>ScramSRP_NecrosisWound</defName>
+    <label>tissue necrosis</label>
+    <hediffClass>AssemblyParasitesColonThree.Hediffs.Hediff_Injury_Necrosis</hediffClass>
+    <labelNoun>a necrotic wound</labelNoun>
+    <description>A necrotic wound. Necrotic wounds never heal unless tended to, and have a high chance of infection.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>tended</labelTendedWellInner>
+        <labelSolidTendedWell>tended</labelSolidTendedWell>
+        <baseTendDurationHours>20</baseTendDurationHours>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.45</infectionChance>
+      </li>
+    </comps>
+    <injuryProps>
+      <destroyedLabel>Rotted away</destroyedLabel>
+      <destroyedOutLabel>Rotted out</destroyedOutLabel>
+      <painPerSeverity>0.01875</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+    </injuryProps>
+  </HediffDef>
 
   <HediffDef ParentName="ScramSRP_InfeciousInjuryBase">
     <defName>ScramSRP_InfectInjectSim</defName>
@@ -61,6 +86,34 @@
       <canMerge>false</canMerge>
       <destroyedLabel>Cut off</destroyedLabel>
       <destroyedOutLabel>Cut out</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="ScramSRP_InfeciousInjuryBase">
+    <defName>ScramSRP_InfectScratch</defName>
+    <label>scratch</label>
+    <labelNoun>an infectious scratch</labelNoun>
+    <description>An infectious scratch or tear.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.15</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>scratch scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.06</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Torn off</destroyedLabel>
+      <destroyedOutLabel>Torn out</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
 </Defs>

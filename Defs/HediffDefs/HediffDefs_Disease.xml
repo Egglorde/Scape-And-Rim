@@ -54,7 +54,7 @@
       <li>
         <painOffset>1</painOffset>
         <statFactors>
-          <ComfyTemperatureMax>0.1</ComfyTemperatureMax>
+          <ComfyTemperatureMax>0.01</ComfyTemperatureMax>
         </statFactors>
       </li> 
     </stages>

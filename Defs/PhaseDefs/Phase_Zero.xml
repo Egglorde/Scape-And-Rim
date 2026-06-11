@@ -20,8 +20,6 @@
             </li>
         </incompleteGroupMakers>
         <phase>0</phase>
-        <mincount>5</mincount>
-        <maxcount>40</maxcount>
         <eventLetterName>Zero</eventLetterName>
     </AssemblyParasitesColonThree.Misc_Defs.PhaseDef>
 </Defs>

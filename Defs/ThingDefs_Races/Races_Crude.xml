@@ -4,10 +4,10 @@
         <defName>ScramSRP_IncompleteMedium</defName>
         <label>medium incomplete form</label>
         <statBases>
-            <MoveSpeed>4</MoveSpeed>
+            <MoveSpeed>3</MoveSpeed>
         </statBases>
         <race>
-            <baseHealthScale>1.4</baseHealthScale>
+            <baseHealthScale>0.8</baseHealthScale>
             <body>ScramSRP_IncompleteMediumBody</body>
             <lifeStageAges>
                 <li>
@@ -80,10 +80,10 @@
         <defName>ScramSRP_IncompleteSmall</defName>
         <label>small incomplete form</label>
         <statBases>
-            <MoveSpeed>4</MoveSpeed>
+            <MoveSpeed>3</MoveSpeed>
         </statBases>
         <race>
-            <baseHealthScale>0.9</baseHealthScale>
+            <baseHealthScale>0.2</baseHealthScale>
             <body>ScramSRP_IncompleteSmallBody</body>
             <lifeStageAges>
                 <li>

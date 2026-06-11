@@ -71,26 +71,154 @@
         <defName>ScramSRP_DirectConvertCapStab</defName>
         <label>infector</label>
     </ToolCapacityDef>
+    <ToolCapacityDef>
+        <defName>ScramSRP_DirectConvertCapScratch</defName>
+        <label>infector</label>
+    </ToolCapacityDef>
 
-    <DamageDef>
-        <defName>ScramSRP_DirectConvertDamageBite</defName>
+    <!-- Reeker damage capacities, because the reeker always applies its defbuffs on its targets -->
+    <ToolCapacityDef>
+        <defName>ScramSRP_StinkyCapBlunt</defName>
+        <label>infector</label>
+    </ToolCapacityDef>
+    <ToolCapacityDef>
+        <defName>ScramSRP_StinkyCapScratch</defName>
+        <label>infector</label>
+    </ToolCapacityDef>
+    <ToolCapacityDef>
+        <defName>ScramSRP_StinkyCapStab</defName>
+        <label>infector</label>
+    </ToolCapacityDef>
+    <ToolCapacityDef>
+        <defName>ScramSRP_StinkyCapBite</defName>
+        <label>infector</label>
+    </ToolCapacityDef>
+
+
+    <!-- Slam damage, for melee aoe -->
+    <ToolCapacityDef>
+        <defName>ScramSRP_SlamCap</defName>
+        <label>slam</label>
+    </ToolCapacityDef>
+
+    <!-- Direct conversion damage defs -->
+    <DamageDef Name="ScramSRP_DirectConvertDamageBase" Abstract="True">
+        <workerClass>DamageWorker_AddInjury</workerClass>
         <label>assimilate</label>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has been assimilated.</deathMessage>
+        <armorCategory>Sharp</armorCategory>
+        <hediffSolid>Crack</hediffSolid>
+    </DamageDef>
+
+    <DamageDef Name="ScramSRP_DirectConvertDamageBite" ParentName="ScramSRP_DirectConvertDamageBase">
+        <defName>ScramSRP_DirectConvertDamageBite</defName>
         <workerClass>DamageWorker_AddInjury</workerClass>
         <hediff>ScramSRP_InfectBite</hediff>
-        <hediffSolid>Crack</hediffSolid>
-        <deathMessage>{0} has been assimilated.</deathMessage>
     </DamageDef>
 
-    <DamageDef>
+    <DamageDef Name="ScramSRP_DirectConvertDamageStab" ParentName="ScramSRP_DirectConvertDamageBase">
         <defName>ScramSRP_DirectConvertDamageStab</defName>
-        <label>assimilate</label>
-        <workerClass>DamageWorker_AddInjury</workerClass>
         <hediff>ScramSRP_InfectInjectSim</hediff>
-        <hediffSolid>Crack</hediffSolid>
-        <deathMessage>{0} has been assimilated.</deathMessage>
     </DamageDef>
 
-    <DamageDef ParentName="Flame">
+    <DamageDef Name="ScramSRP_DirectConvertDamageScratch" ParentName="ScramSRP_DirectConvertDamageBase">
+      <defName>ScramSRP_DirectConvertDamageScratch</defName>
+      <workerClass>DamageWorker_Scratch</workerClass>
+      <hediff>ScramSRP_InfectScratch</hediff>
+      <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+      <impactSoundType>Slice</impactSoundType>
+      <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+      <scratchSplitPercentage>0.67</scratchSplitPercentage>
+    </DamageDef>
+
+    <DamageDef ParentName="ScramSRP_DirectConvertDamageBite">
+        <defName>ScramSRP_StinkyDirectConvertDamageBite</defName>
+        <additionalHediffs>
+          <li>
+            <hediff>ScramSRP_Nausea</hediff>
+            <severityPerDamageDealt>0.03</severityPerDamageDealt>
+          </li>
+        </additionalHediffs>
+        <impactSoundType>Toxic</impactSoundType>
+        <damageEffecter>Impact_Toxic</damageEffecter>
+    </DamageDef>
+
+    <DamageDef ParentName="ScramSRP_DirectConvertDamageStab">
+        <defName>ScramSRP_StinkyDirectConvertDamageStab</defName>
+        <additionalHediffs>
+          <li>
+            <hediff>ScramSRP_Nausea</hediff>
+            <severityPerDamageDealt>0.03</severityPerDamageDealt>
+          </li>
+        </additionalHediffs>
+        <impactSoundType>Toxic</impactSoundType>
+        <damageEffecter>Impact_Toxic</damageEffecter>
+    </DamageDef>
+
+    <DamageDef ParentName="ScramSRP_DirectConvertDamageScratch">
+        <defName>ScramSRP_StinkyDirectConvertDamageScratch</defName>
+        <additionalHediffs>
+          <li>
+            <hediff>ScramSRP_Nausea</hediff>
+            <severityPerDamageDealt>0.03</severityPerDamageDealt>
+          </li>
+        </additionalHediffs>
+        <impactSoundType>Toxic</impactSoundType>
+        <damageEffecter>Impact_Toxic</damageEffecter>
+    </DamageDef>
+
+    <DamageDef ParentName="BluntBase">
+        <defName>ScramSRP_StinkyDamageBlunt</defName>
+        <additionalHediffs>
+          <li>
+            <hediff>ScramSRP_Nausea</hediff>
+            <severityPerDamageDealt>0.03</severityPerDamageDealt>
+          </li>
+        </additionalHediffs>
+        <impactSoundType>Toxic</impactSoundType>
+        <damageEffecter>Impact_Toxic</damageEffecter>
+    </DamageDef>
+
+
+
+    <!-- Necrosis and Vomit damage -->
+
+    <DamageDef Name="ScramSRP_NecrosisDamage" ParentName="Flame">
+        <defName>ScramSRP_NecrosisDamage</defName>
+        <label>rotted</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <deathMessage>{0} has rotted away.</deathMessage>
+        <armorCategory>Sharp</armorCategory>
+        <hediff>ScramSRP_NecrosisWound</hediff>
+        <scaleDamageToBuildingsBasedOnFlammability>false</scaleDamageToBuildingsBasedOnFlammability>
+        <explosionColorCenter>(0.3,0.3,0.3)</explosionColorCenter>
+        <explosionColorEdge>(0,0,0)</explosionColorEdge>
+    </DamageDef>
+
+    <DamageDef ParentName="ScramSRP_NecrosisDamage">
+        <defName>ScramSRP_VomitDamage</defName>
+        <additionalHediffs>
+            <li>
+                <hediff>ScramSRP_Necrosis</hediff>
+                <severityPerDamageDealt>0.3</severityPerDamageDealt>
+            </li>
+            <li>
+                <hediff>ScramSRP_Corrosion</hediff>
+                <severityPerDamageDealt>0.15</severityPerDamageDealt>
+            </li>
+            <li>
+                <hediff>ScramSRP_Blindness</hediff>
+                <severityPerDamageDealt>0.2</severityPerDamageDealt>
+            </li>
+        </additionalHediffs>
+        <explosionColorCenter>(0.45,0.11,0.67)</explosionColorCenter>
+        <explosionColorEdge>(0,22,0.05,0.5)</explosionColorEdge>
+    </DamageDef>
+
+    <!-- Acidic Damages -->
+
+    <DamageDef Name="ScramSRP_NadeBurn" ParentName="Flame">
         <defName>ScramSRP_NadeBurn</defName>
         <label>acid burn</label>
         <additionalHediffs>
@@ -101,13 +229,25 @@
                 <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
             </li>
         </additionalHediffs>
-        <workerClass>DamageWorker_AddInjury</workerClass>
-        <armorCategory>Blunt</armorCategory>
+        <workerClass>AssemblyParasitesColonThree.DamageWorkers.DamageWorker_Corrode</workerClass>
+        <armorCategory>Sharp</armorCategory>
         <hediff>AcidBurn</hediff>
         <scaleDamageToBuildingsBasedOnFlammability>false</scaleDamageToBuildingsBasedOnFlammability>
         <explosionColorCenter>(0.5,1,0.5)</explosionColorCenter>
         <explosionColorEdge>(0.5,1,0.5)</explosionColorEdge>
     </DamageDef>
+
+    <DamageDef ParentName="ScramSRP_NadeBurn">
+        <defName>ScramSRP_SuperNadeBurn</defName>
+        <additionalHediffs>
+            <li>
+                <hediff>ScramSRP_Corrosion</hediff>
+                <severityPerDamageDealt>0.05</severityPerDamageDealt>
+            </li>
+        </additionalHediffs>
+    </DamageDef>
+
+    <!-- Explosive Damages -->
 
     <DamageDef ParentName="Bomb">
         <defName>ScramSRP_ExplosionBiological</defName>
@@ -118,7 +258,35 @@
         <soundExplosion>ScramSRP_Explosion_Sim</soundExplosion>
     </DamageDef>
 
-    <ManeuverDef>
+    <ManeuverDef Name="ScramSRP_DirectConvertManeuverScratch">
+        <defName>ScramSRP_DirectConvertManeuverScratch</defName>
+        <requiredCapacity>ScramSRP_DirectConvertCapScratch</requiredCapacity>
+        <verb>
+            <verbClass>Verb_MeleeAttackDamage</verbClass>
+            <meleeDamageDef>ScramSRP_DirectConvertDamageScratch</meleeDamageDef>
+        </verb>
+        <logEntryDef>MeleeAttack</logEntryDef>
+        <combatLogRulesHit>Maneuver_Scratch_MeleeHit</combatLogRulesHit>
+        <combatLogRulesDeflect>Maneuver_Scratch_MeleeDeflect</combatLogRulesDeflect>
+        <combatLogRulesMiss>Maneuver_Scratch_MeleeMiss</combatLogRulesMiss>
+        <combatLogRulesDodge>Maneuver_Scratch_MeleeDodge</combatLogRulesDodge>
+    </ManeuverDef>
+
+    <ManeuverDef ParentName="ScramSRP_DirectConvertManeuverScratch">
+        <defName>ScramSRP_StinkyDirectConvertManeuverScratch</defName>
+        <requiredCapacity>ScramSRP_StinkyCapScratch</requiredCapacity>
+        <verb>
+            <verbClass>Verb_MeleeAttackDamage</verbClass>
+            <meleeDamageDef>ScramSRP_DirectConvertDamageScratch</meleeDamageDef>
+        </verb>
+        <logEntryDef>MeleeAttack</logEntryDef>
+        <combatLogRulesHit>Maneuver_Scratch_MeleeHit</combatLogRulesHit>
+        <combatLogRulesDeflect>Maneuver_Scratch_MeleeDeflect</combatLogRulesDeflect>
+        <combatLogRulesMiss>Maneuver_Scratch_MeleeMiss</combatLogRulesMiss>
+        <combatLogRulesDodge>Maneuver_Scratch_MeleeDodge</combatLogRulesDodge>
+    </ManeuverDef>
+
+    <ManeuverDef Name="ScramSRP_DirectConvertManeuverStab">
         <defName>ScramSRP_DirectConvertManeuverStab</defName>
         <requiredCapacity>ScramSRP_DirectConvertCapStab</requiredCapacity>
         <verb>
@@ -132,7 +300,21 @@
         <combatLogRulesDodge>Maneuver_Stab_MeleeDodge</combatLogRulesDodge>
     </ManeuverDef>
 
-    <ManeuverDef>
+    <ManeuverDef ParentName="ScramSRP_DirectConvertManeuverStab">
+        <defName>ScramSRP_StinkyDirectConvertManeuverStab</defName>
+        <requiredCapacity>ScramSRP_StinkyCapStab</requiredCapacity>
+        <verb>
+            <verbClass>Verb_MeleeAttackDamage</verbClass>
+            <meleeDamageDef>ScramSRP_DirectConvertDamageStab</meleeDamageDef>
+        </verb>
+        <logEntryDef>MeleeAttack</logEntryDef>
+        <combatLogRulesHit>Maneuver_Stab_MeleeHit</combatLogRulesHit>
+        <combatLogRulesDeflect>Maneuver_Stab_MeleeDeflect</combatLogRulesDeflect>
+        <combatLogRulesMiss>Maneuver_Stab_MeleeMiss</combatLogRulesMiss>
+        <combatLogRulesDodge>Maneuver_Stab_MeleeDodge</combatLogRulesDodge>
+    </ManeuverDef>
+
+    <ManeuverDef Name="ScramSRP_DirectConvertManeuverBite">
       <defName>ScramSRP_DirectConvertManeuverBite</defName>
       <requiredCapacity>ScramSRP_DirectConvertCapBite</requiredCapacity>
       <verb>
@@ -145,5 +327,49 @@
       <combatLogRulesDeflect>Maneuver_Bite_MeleeDeflect</combatLogRulesDeflect>
       <combatLogRulesMiss>Maneuver_Bite_MeleeMiss</combatLogRulesMiss>
       <combatLogRulesDodge>Maneuver_Bite_MeleeDodge</combatLogRulesDodge>
+    </ManeuverDef>
+
+    <ManeuverDef ParentName="ScramSRP_DirectConvertManeuverBite">
+      <defName>ScramSRP_StinkyDirectConvertManeuverBite</defName>
+      <requiredCapacity>ScramSRP_StinkyCapBite</requiredCapacity>
+      <verb>
+        <verbClass>Verb_MeleeAttackDamage</verbClass>
+        <meleeDamageDef>ScramSRP_DirectConvertDamageBite</meleeDamageDef>
+        <commonalityVsEdificeFactor>0.01</commonalityVsEdificeFactor>
+      </verb>
+      <logEntryDef>MeleeAttack</logEntryDef>
+      <combatLogRulesHit>Maneuver_Bite_MeleeHit</combatLogRulesHit>
+      <combatLogRulesDeflect>Maneuver_Bite_MeleeDeflect</combatLogRulesDeflect>
+      <combatLogRulesMiss>Maneuver_Bite_MeleeMiss</combatLogRulesMiss>
+      <combatLogRulesDodge>Maneuver_Bite_MeleeDodge</combatLogRulesDodge>
+    </ManeuverDef>
+
+    <ManeuverDef>
+      <defName>ScramSRP_StinkyManeuverBlunt</defName>
+      <requiredCapacity>ScramSRP_StinkyCapBlunt</requiredCapacity>
+      <verb>
+        <verbClass>Verb_MeleeAttackDamage</verbClass>
+        <meleeDamageDef>ScramSRP_StinkyDamageBlunt</meleeDamageDef>
+      </verb>
+      <logEntryDef>MeleeAttack</logEntryDef>
+      <combatLogRulesHit>Maneuver_Smash_MeleeHit</combatLogRulesHit>
+      <combatLogRulesDeflect>Maneuver_Smash_MeleeDeflect</combatLogRulesDeflect>
+      <combatLogRulesMiss>Maneuver_Smash_MeleeMiss</combatLogRulesMiss>
+      <combatLogRulesDodge>Maneuver_Smash_MeleeDodge</combatLogRulesDodge>
+    </ManeuverDef>
+
+    <ManeuverDef>
+      <defName>ScramSRP_SlamManeuver</defName>
+      <requiredCapacity>ScramSRP_SlamCap</requiredCapacity>
+      <verb>
+        <verbClass>AssemblyParasitesColonThree.Verbs.Verb_MeleeAttackExplosive</verbClass>
+        <meleeDamageDef>ScramSRP_Seismic_Explosion</meleeDamageDef>
+        <commonalityVsEdificeFactor>0.01</commonalityVsEdificeFactor>
+      </verb>
+      <logEntryDef>MeleeAttack</logEntryDef>
+      <combatLogRulesHit>Maneuver_Smash_MeleeHit</combatLogRulesHit>
+      <combatLogRulesDeflect>Maneuver_Smash_MeleeDeflect</combatLogRulesDeflect>
+      <combatLogRulesMiss>Maneuver_Smash_MeleeMiss</combatLogRulesMiss>
+      <combatLogRulesDodge>Maneuver_Smash_MeleeDodge</combatLogRulesDodge>
     </ManeuverDef>
 </Defs>

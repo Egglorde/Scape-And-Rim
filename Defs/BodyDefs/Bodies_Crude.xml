@@ -128,7 +128,7 @@
             <depth>Inside</depth>
         </li>
         <li>
-            <def>ParasiteLiver</def>
+            <def>ScramSRP_ParasiteLiver</def>
             <coverage>0.03</coverage>
             <customLabel>viscera</customLabel>
             <depth>Inside</depth>
@@ -228,7 +228,7 @@
                   </parts>
                 </li>
                 <li>
-                  <def>Jaw</def>
+                  <def>AnimalJaw</def>
                   <coverage>0.15</coverage>
                   <groups>
                     <li>Teeth</li>
@@ -350,7 +350,7 @@
             <depth>Inside</depth>
         </li>
         <li>
-            <def>ParasiteLiver</def>
+            <def>ScramSRP_ParasiteLiver</def>
             <coverage>0.01</coverage>
             <customLabel>viscera</customLabel>
             <depth>Inside</depth>
@@ -373,7 +373,7 @@
               </groups>
               <parts>
                 <li>
-                  <def>Jaw</def>
+                  <def>AnimalJaw</def>
                   <coverage>0.08</coverage>
                   <groups>
                     <li>Mouth</li>
@@ -402,7 +402,7 @@
               </groups>
               <parts>
                 <li>
-                  <def>Jaw</def>
+                  <def>AnimalJaw</def>
                   <coverage>0.2</coverage>
                   <customLabel>second head jaw</customLabel>
                   <groups>
@@ -431,7 +431,7 @@
               </groups>
               <parts>
                 <li>
-                  <def>Jaw</def>
+                  <def>AnimalJaw</def>
                   <coverage>0.2</coverage>
                   <customLabel>second head jaw</customLabel>
                   <groups>
@@ -460,7 +460,7 @@
               </groups>
               <parts>
                 <li>
-                  <def>Jaw</def>
+                  <def>AnimalJaw</def>
                   <coverage>0.2</coverage>
                   <customLabel>third head jaw</customLabel>
                   <groups>
@@ -489,7 +489,7 @@
               </groups>
               <parts>
                 <li>
-                  <def>Jaw</def>
+                  <def>AnimalJaw</def>
                   <coverage>0.08</coverage>
                   <customLabel>fourth head jaw</customLabel>
                   <groups>
@@ -518,7 +518,7 @@
               </groups>
               <parts>
                 <li>
-                  <def>Jaw</def>
+                  <def>AnimalJaw</def>
                   <coverage>0.08</coverage>
                   <customLabel>fifth head jaw</customLabel>
                   <groups>

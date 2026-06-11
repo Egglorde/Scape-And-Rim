@@ -20,8 +20,6 @@
             </li>
         </incompleteGroupMakers>
         <phase>3</phase>
-        <mincount>40</mincount>
-        <maxcount>100</maxcount>
         <eventLetter>ScramSRP_Phase3Event</eventLetter>
         <eventLetterName>Three</eventLetterName>
         <allowSims>true</allowSims>

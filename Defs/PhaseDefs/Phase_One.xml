@@ -25,8 +25,6 @@
             </li>
         </incompleteGroupMakers>
         <phase>1</phase>
-        <mincount>10</mincount>
-        <maxcount>60</maxcount>
         <eventLetter>ScramSRP_Phase1Event</eventLetter>
         <eventLetterName>One</eventLetterName>
     </AssemblyParasitesColonThree.Misc_Defs.PhaseDef>

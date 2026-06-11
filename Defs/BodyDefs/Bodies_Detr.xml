@@ -113,7 +113,7 @@
                     </parts>
                 </li>
                 <li>
-                  <def>Jaw</def>
+                  <def>AnimalJaw</def>
                   <coverage>0.15</coverage>
                   <customLabel>Mouth</customLabel>
                   <groups>
@@ -128,7 +128,7 @@
                     <depth>Inside</depth>
                 </li>
                 <li>
-                    <def>ParasiteLiver</def>
+                    <def>ScramSRP_ParasiteLiver</def>
                     <coverage>0.007</coverage>
                     <customLabel>viscera</customLabel>
                     <depth>Inside</depth>

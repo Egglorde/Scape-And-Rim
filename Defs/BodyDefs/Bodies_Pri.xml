@@ -14,8 +14,8 @@
       </groups>
       <parts>
         <li>
-            <def>Ribcage</def>
-            <coverage>0.12</coverage>
+            <def>AnimalJaw</def>
+            <coverage>0.046</coverage>
             <customLabel>chest mouth</customLabel>
             <groups>
                 <li>Torso</li>
@@ -25,17 +25,17 @@
         </li>
         <li>
             <def>SensorTendril</def>
-            <coverage>0.015</coverage>
+            <coverage>0.04</coverage>
             <customLabel>left antenna</customLabel>
         </li>
         <li>
             <def>SensorTendril</def>
-            <coverage>0.015</coverage>
+            <coverage>0.04</coverage>
             <customLabel>right antenna</customLabel>
         </li>
         <li>
           <def>Pelvis</def>
-          <coverage>0.025</coverage>
+          <coverage>0.016</coverage>
           <height>Bottom</height>
           <depth>Inside</depth>
           <groups>
@@ -44,7 +44,7 @@
         </li>
         <li>
           <def>Spine</def>
-          <coverage>0.02</coverage>
+          <coverage>0.024</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
@@ -61,17 +61,18 @@
         <li>
           <def>Shoulder</def>
           <customLabel>left shoulder</customLabel>
-          <coverage>0.16</coverage>
+          <coverage>0.193</coverage>
           <woundAnchorTag>LeftShoulder</woundAnchorTag>
           <flipGraphic>true</flipGraphic>
           <groups>
             <li>Shoulders</li>
+            <li>ScramSRP_LeftArm</li>
           </groups>
           <parts>
             <li>
               <def>Arm</def>
               <customLabel>left arm</customLabel>
-              <coverage>0.77</coverage>
+              <coverage>0.6</coverage>
               <flipGraphic>true</flipGraphic>
               <groups>
                 <li>Arms</li>
@@ -86,6 +87,7 @@
                   <flipGraphic>true</flipGraphic>
                   <groups>
                     <li>Hands</li>
+                    <li>ScramSRP_LeftArm</li>
                   </groups>
                 </li>
               </parts>
@@ -95,16 +97,17 @@
         <li>
           <def>Shoulder</def>
           <customLabel>right shoulder</customLabel>
-          <coverage>0.16</coverage>
+          <coverage>0.193</coverage>
           <woundAnchorTag>RightShoulder</woundAnchorTag>
           <groups>
             <li>Shoulders</li>
+            <li>ScramSRP_RightArm</li>
           </groups>
           <parts>
             <li>
               <def>Arm</def>
               <customLabel>right arm</customLabel>
-              <coverage>0.77</coverage>
+              <coverage>0.6</coverage>
               <groups>
                 <li>Arms</li>
                 <li>ScramSRP_RightArm</li>
@@ -117,6 +120,7 @@
                   <height>Bottom</height>
                   <groups>
                     <li>Hands</li>
+                    <li>ScramSRP_RightArm</li>
                   </groups>
                 </li>
               </parts>
@@ -125,25 +129,25 @@
         </li>
         <li>
             <def>ParasiteBrain</def>
-            <coverage>0.02</coverage>
+            <coverage>0.01</coverage>
             <depth>Inside</depth>
         </li>
         <li>
-            <def>ParasiteLiver</def>
-            <coverage>0.02</coverage>
+            <def>ScramSRP_ParasiteLiver</def>
+            <coverage>0.01</coverage>
             <customLabel>viscera</customLabel>
             <depth>Inside</depth>
         </li>
         <li>
             <def>ParasiteHeart</def>
-            <coverage>0.02</coverage>
+            <coverage>0.005</coverage>
             <customLabel>hiveheart</customLabel>
             <depth>Inside</depth>
         </li>
         <li>
-          <def>Leg</def>
+          <def>ScramSRP_LegGreater</def>
           <customLabel>left leg</customLabel>
-          <coverage>0.1</coverage>
+          <coverage>0.12</coverage>
           <height>Bottom</height>
           <groups>
             <li>Legs</li>
@@ -152,14 +156,14 @@
             <li>
               <def>Hoof</def>
               <customLabel>left hoof</customLabel>
-              <coverage>0.3</coverage>
+              <coverage>0.12</coverage>
             </li>
           </parts>
         </li>
         <li>
-          <def>Leg</def>
+          <def>ScramSRP_LegGreater</def>
           <customLabel>right leg</customLabel>
-          <coverage>0.1</coverage>
+          <coverage>0.12</coverage>
           <height>Bottom</height>
           <groups>
             <li>Legs</li>
@@ -168,7 +172,7 @@
             <li>
               <def>Hoof</def>
               <customLabel>right hoof</customLabel>
-              <coverage>0.3</coverage>
+              <coverage>0.12</coverage>
             </li>
           </parts>
         </li>
@@ -191,7 +195,7 @@
       <parts>
         <li>
           <def>Ribcage</def>
-          <coverage>0.036</coverage>
+          <coverage>0.02</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
@@ -199,7 +203,7 @@
         </li>
         <li>
           <def>Sternum</def>
-          <coverage>0.015</coverage>
+          <coverage>0.014</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
@@ -207,7 +211,7 @@
         </li>
         <li>
           <def>Spine</def>
-          <coverage>0.025</coverage>
+          <coverage>0.012</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
@@ -215,7 +219,7 @@
         </li>
         <li>
           <def>Pelvis</def>
-          <coverage>0.025</coverage>
+          <coverage>0.008</coverage>
           <height>Bottom</height>
           <depth>Inside</depth>
           <groups>
@@ -224,7 +228,7 @@
         </li>
         <li>
             <def>SensorTendril</def>
-            <coverage>0.043</coverage>
+            <coverage>0.082</coverage>
             <customLabel>front left antenna</customLabel>
             <groups>
               <li>Arms</li>
@@ -233,7 +237,7 @@
         </li>
         <li>
             <def>SensorTendril</def>
-            <coverage>0.043</coverage>
+            <coverage>0.082</coverage>
             <customLabel>front right antenna</customLabel>
             <groups>
               <li>Arms</li>
@@ -243,7 +247,7 @@
         <li>
           <def>SensorTendril</def>
           <customLabel>back left tendril</customLabel>
-          <coverage>0.043</coverage>
+          <coverage>0.082</coverage>
           <flipGraphic>true</flipGraphic>
           <groups>
             <li>Arms</li>
@@ -253,7 +257,7 @@
         <li>
           <def>SensorTendril</def>
           <customLabel>back right tendril</customLabel>
-          <coverage>0.043</coverage>
+          <coverage>0.082</coverage>
           <groups>
             <li>Arms</li>
             <li>ScramSRP_TendrilD</li>
@@ -262,7 +266,7 @@
         <li>
           <def>Arm</def>
           <customLabel>left arm</customLabel>
-          <coverage>0.043</coverage>
+          <coverage>0.128</coverage>
           <groups>
             <li>Arms</li>
             <li>ScramSRP_LeftArm</li>
@@ -271,7 +275,7 @@
         <li>
           <def>Arm</def>
           <customLabel>right arm</customLabel>
-          <coverage>0.043</coverage>
+          <coverage>0.128</coverage>
           <groups>
             <li>Arms</li>
             <li>ScramSRP_RightArm</li>
@@ -279,23 +283,23 @@
         </li>
         <li>
             <def>ParasiteBrain</def>
-            <coverage>0.02</coverage>
+            <coverage>0.01</coverage>
             <depth>Inside</depth>
         </li>
         <li>
-            <def>ParasiteLiver</def>
-            <coverage>0.02</coverage>
+            <def>ScramSRP_ParasiteLiver</def>
+            <coverage>0.01</coverage>
             <customLabel>viscera</customLabel>
             <depth>Inside</depth>
         </li>
         <li>
             <def>ParasiteHeart</def>
-            <coverage>0.02</coverage>
+            <coverage>0.005</coverage>
             <customLabel>hiveheart</customLabel>
             <depth>Inside</depth>
         </li>
         <li>
-          <def>Leg</def>
+          <def>ScramSRP_LegLesser</def>
           <customLabel>front left leg</customLabel>
           <coverage>0.07</coverage>
           <height>Bottom</height>
@@ -312,7 +316,7 @@
           </parts>
         </li>
         <li>
-          <def>Leg</def>
+          <def>ScramSRP_LegLesser</def>
           <customLabel>front right leg</customLabel>
           <coverage>0.07</coverage>
           <height>Bottom</height>
@@ -329,7 +333,7 @@
           </parts>
         </li>
         <li>
-          <def>Leg</def>
+          <def>ScramSRP_LegLesser</def>
           <customLabel>back left leg</customLabel>
           <coverage>0.07</coverage>
           <height>Bottom</height>
@@ -345,7 +349,7 @@
           </parts>
         </li>
         <li>
-          <def>Leg</def>
+          <def>ScramSRP_LegLesser</def>
           <customLabel>back right leg</customLabel>
           <coverage>0.07</coverage>
           <height>Bottom</height>
@@ -378,8 +382,8 @@
       </groups>
       <parts>
         <li>
-          <def>Jaw</def>
-          <coverage>0.03</coverage>
+          <def>AnimalJaw</def>
+          <coverage>0.1</coverage>
           <customLabel>oriface</customLabel>
           <groups>
               <li>Torso</li>
@@ -389,7 +393,7 @@
         </li>
         <li>
           <def>Ribcage</def>
-          <coverage>0.016</coverage>
+          <coverage>0.02</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
@@ -397,7 +401,7 @@
         </li>
         <li>
           <def>Sternum</def>
-          <coverage>0.015</coverage>
+          <coverage>0.014</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
@@ -405,7 +409,7 @@
         </li>
         <li>
           <def>Spine</def>
-          <coverage>0.025</coverage>
+          <coverage>0.012</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
@@ -413,34 +417,34 @@
         </li>
         <li>
             <def>SensorTendril</def>
-            <coverage>0.01</coverage>
+            <coverage>0.075</coverage>
             <customLabel>left antenna</customLabel>
         </li>
         <li>
             <def>SensorTendril</def>
-            <coverage>0.01</coverage>
+            <coverage>0.075</coverage>
             <customLabel>right antenna</customLabel>
         </li>
         <li>
             <def>ParasiteBrain</def>
-            <coverage>0.02</coverage>
+            <coverage>0.005</coverage>
             <depth>Inside</depth>
         </li>
         <li>
-            <def>ParasiteLiver</def>
-            <coverage>0.02</coverage>
+            <def>ScramSRP_ParasiteLiver</def>
+            <coverage>0.01</coverage>
             <customLabel>viscera</customLabel>
             <depth>Inside</depth>
         </li>
         <li>
             <def>ParasiteHeart</def>
-            <coverage>0.02</coverage>
+            <coverage>0.01</coverage>
             <customLabel>hiveheart</customLabel>
             <depth>Inside</depth>
         </li>
         <li>
           <def>Pelvis</def>
-          <coverage>0.025</coverage>
+          <coverage>0.008</coverage>
           <height>Bottom</height>
           <depth>Inside</depth>
           <groups>
@@ -450,7 +454,7 @@
         <li>
           <def>ScramSRP_LegGreater</def>
           <customLabel>front right leg</customLabel>
-          <coverage>0.16</coverage>
+          <coverage>0.195</coverage>
           <groups>
             <li>Legs</li>
             <li>FrontRightLeg</li>
@@ -466,7 +470,7 @@
         <li>
           <def>Leg</def>
           <customLabel>back right leg</customLabel>
-          <coverage>0.1</coverage>
+          <coverage>0.096</coverage>
           <groups>
             <li>Legs</li>
           </groups>
@@ -481,7 +485,7 @@
         <li>
           <def>ScramSRP_LegGreater</def>
           <customLabel>front left leg</customLabel>
-          <coverage>0.16</coverage>
+          <coverage>0.195</coverage>
           <groups>
             <li>Legs</li>
             <li>FrontLeftLeg</li>
@@ -497,7 +501,7 @@
         <li>
           <def>Leg</def>
           <customLabel>back left leg</customLabel>
-          <coverage>0.1</coverage>
+          <coverage>0.096</coverage>
           <groups>
             <li>Legs</li>
           </groups>
@@ -506,6 +510,204 @@
               <def>Foot</def>
               <customLabel>back left foot</customLabel>
               <coverage>0.15</coverage>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+
+  <!-- Primitive Arachnida Body -->
+  <BodyDef>
+    <defName>ScramSRP_PrimitiveArachnidaBody</defName>
+    <label>Arachnida</label>
+    <corePart>
+      <def>Torso</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <groups>
+        <li>BodyAttackTool</li>
+        <li>Torso</li>
+      </groups>
+      <parts>
+        <li>
+          <def>Ribcage</def>
+          <coverage>0.02</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+            <def>ParasiteBrain</def>
+            <coverage>0.01</coverage>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>ScramSRP_ParasiteLiver</def>
+            <coverage>0.01</coverage>
+            <customLabel>viscera</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>ParasiteHeart</def>
+            <coverage>0.005</coverage>
+            <customLabel>hiveheart</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Sternum</def>
+          <coverage>0.014</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>Spine</def>
+          <coverage>0.012</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.03</coverage>
+            <customLabel>left antenna</customLabel>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.03</coverage>
+            <customLabel>right antenna</customLabel>
+        </li>
+        <li>
+          <def>Pelvis</def>
+          <coverage>0.008</coverage>
+          <height>Bottom</height>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>ScramSRP_LegLesser</def>
+          <customLabel>back right leg</customLabel>
+          <coverage>0.077</coverage>
+          <groups>
+            <li>Legs</li>
+          </groups>
+        </li>
+        <li>
+          <def>ScramSRP_LegLesser</def>
+          <customLabel>front right leg</customLabel>
+          <coverage>0.077</coverage>
+          <groups>
+            <li>Legs</li>
+            <li>FrontLeftLeg</li>
+          </groups>
+        </li>
+        <li>
+          <def>ScramSRP_LegLesser</def>
+          <customLabel>back right leg</customLabel>
+          <coverage>0.077</coverage>
+          <groups>
+            <li>Legs</li>
+          </groups>
+        </li>
+        <li>
+          <def>ScramSRP_LegLesser</def>
+          <customLabel>front right leg</customLabel>
+          <coverage>0.077</coverage>
+          <groups>
+            <li>FrontRightLeg</li>
+            <li>Legs</li>
+          </groups>
+        </li>
+        <li>
+          <def>Pronotum</def>
+          <coverage>0.42</coverage>
+          <parts>
+            <li>
+              <def>Arm</def>
+              <customLabel>right arm</customLabel>
+              <coverage>0.3</coverage>
+              <groups>
+                <li>Arms</li>
+                <li>ScramSRP_RightArm</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>FrontClaw</def>
+                  <customLabel>right claw</customLabel>
+                  <coverage>0.22</coverage>
+                  <groups>
+                    <li>FrontRightClaws</li>
+                    <li>Hands</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+            <li>
+              <def>Arm</def>
+              <customLabel>left arm</customLabel>
+              <coverage>0.3</coverage>
+              <groups>
+                <li>Arms</li>
+                <li>ScramSRP_LeftArm</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>FrontClaw</def>
+                  <customLabel>left claw</customLabel>
+                  <coverage>0.22</coverage>
+                  <groups>
+                    <li>FrontLeftClaws</li>
+                    <li>Hands</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+            <li>
+              <def>Head</def>
+              <coverage>0.2</coverage>
+              <groups>
+                <li>UpperHead</li>
+                <li>FullHead</li>
+                <li>HeadAttackTool</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>Skull</def>
+                  <coverage>0.18</coverage>
+                  <depth>Inside</depth>
+                  <groups>
+                    <li>UpperHead</li>
+                    <li>Eyes</li>
+                    <li>FullHead</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>AnimalJaw</def>
+                  <coverage>0.15</coverage>
+                  <groups>
+                    <li>Teeth</li>
+                    <li>FullHead</li>
+                    <li>Mouth</li>
+                  </groups>
+                  <parts>
+                    <li>
+                      <def>Tongue</def>
+                      <coverage>0.001</coverage>
+                      <depth>Inside</depth>
+                      <groups>
+                        <li>FullHead</li>
+                        <li>ScramSRP_Tongue</li>
+                      </groups>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
             </li>
           </parts>
         </li>
@@ -536,24 +738,24 @@
         </li>
         <li>
             <def>ParasiteBrain</def>
-            <coverage>0.003</coverage>
+            <coverage>0.01</coverage>
             <depth>Inside</depth>
         </li>
         <li>
-            <def>ParasiteLiver</def>
-            <coverage>0.005</coverage>
+            <def>ScramSRP_ParasiteLiver</def>
+            <coverage>0.01</coverage>
             <customLabel>viscera</customLabel>
             <depth>Inside</depth>
         </li>
         <li>
             <def>ParasiteHeart</def>
-            <coverage>0.003</coverage>
+            <coverage>0.005</coverage>
             <customLabel>hiveheart</customLabel>
             <depth>Inside</depth>
         </li>
         <li>
           <def>Sternum</def>
-          <coverage>0.003</coverage>
+          <coverage>0.014</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
@@ -579,7 +781,7 @@
         </li>
         <li>
           <def>Pelvis</def>
-          <coverage>0.012</coverage>
+          <coverage>0.008</coverage>
           <height>Bottom</height>
           <depth>Inside</depth>
           <groups>
@@ -589,7 +791,7 @@
         <li>
           <def>ScramSRP_LegGreater</def>
           <customLabel>back right leg</customLabel>
-          <coverage>0.13</coverage>
+          <coverage>0.125</coverage>
           <groups>
             <li>Legs</li>
           </groups>
@@ -604,7 +806,7 @@
         <li>
           <def>Leg</def>
           <customLabel>front right leg</customLabel>
-          <coverage>0.12</coverage>
+          <coverage>0.109</coverage>
           <groups>
             <li>Legs</li>
             <li>FrontLeftLeg</li>
@@ -620,7 +822,7 @@
         <li>
           <def>ScramSRP_LegGreater</def>
           <customLabel>back right leg</customLabel>
-          <coverage>0.13</coverage>
+          <coverage>0.125</coverage>
           <groups>
             <li>Legs</li>
           </groups>
@@ -635,7 +837,7 @@
         <li>
           <def>Leg</def>
           <customLabel>front right leg</customLabel>
-          <coverage>0.12</coverage>
+          <coverage>0.109</coverage>
           <groups>
             <li>FrontRightLeg</li>
             <li>Legs</li>
@@ -651,7 +853,7 @@
         <li>
           <def>Arm</def>
           <customLabel>right arm</customLabel>
-          <coverage>0.1</coverage>
+          <coverage>0.102</coverage>
           <groups>
             <li>Arms</li>
             <li>ScramSRP_RightArm</li>
@@ -671,7 +873,7 @@
         <li>
           <def>Arm</def>
           <customLabel>left arm</customLabel>
-          <coverage>0.1</coverage>
+          <coverage>0.102</coverage>
           <groups>
             <li>Arms</li>
             <li>ScramSRP_LeftArm</li>
@@ -690,7 +892,7 @@
         </li>
         <li>
           <def>Head</def>
-          <coverage>0.10</coverage>
+          <coverage>0.08</coverage>
           <groups>
             <li>UpperHead</li>
             <li>FullHead</li>
@@ -708,7 +910,7 @@
               </groups>
             </li>
             <li>
-              <def>Jaw</def>
+              <def>AnimalJaw</def>
               <coverage>0.15</coverage>
               <groups>
                 <li>Teeth</li>
@@ -808,7 +1010,7 @@
             <depth>Inside</depth>
         </li>
         <li>
-            <def>ParasiteLiver</def>
+            <def>ScramSRP_ParasiteLiver</def>
             <coverage>0.02</coverage>
             <customLabel>viscera</customLabel>
             <depth>Inside</depth>
@@ -837,28 +1039,33 @@
       </groups>
       <parts>
         <li>
+            <def>ScramSRP_ParasiteCore_Powers</def>
+            <coverage>0.005</coverage>
+            <depth>Inside</depth>
+        </li>
+        <li>
           <def>Ribcage</def>
-          <coverage>0.007</coverage>
+          <coverage>0.02</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
           </groups>
         </li>
         <li>
-            <def>ParasiteLiver</def>
-            <coverage>0.005</coverage>
+            <def>ScramSRP_ParasiteLiver_Large</def>
+            <coverage>0.14</coverage>
             <customLabel>viscera</customLabel>
             <depth>Inside</depth>
         </li>
         <li>
             <def>ParasiteHeart</def>
-            <coverage>0.003</coverage>
+            <coverage>0.005</coverage>
             <customLabel>hiveheart</customLabel>
             <depth>Inside</depth>
         </li>
         <li>
           <def>Sternum</def>
-          <coverage>0.003</coverage>
+          <coverage>0.014</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
@@ -884,7 +1091,7 @@
         </li>
         <li>
           <def>Pelvis</def>
-          <coverage>0.012</coverage>
+          <coverage>0.008</coverage>
           <height>Bottom</height>
           <depth>Inside</depth>
           <groups>
@@ -894,7 +1101,7 @@
         <li>
           <def>Leg</def>
           <customLabel>back right leg</customLabel>
-          <coverage>0.13</coverage>
+          <coverage>0.132</coverage>
           <groups>
             <li>Legs</li>
           </groups>
@@ -909,7 +1116,7 @@
         <li>
           <def>Leg</def>
           <customLabel>front right leg</customLabel>
-          <coverage>0.12</coverage>
+          <coverage>0.124</coverage>
           <groups>
             <li>Legs</li>
             <li>FrontLeftLeg</li>
@@ -925,7 +1132,7 @@
         <li>
           <def>Leg</def>
           <customLabel>back right leg</customLabel>
-          <coverage>0.13</coverage>
+          <coverage>0.132</coverage>
           <groups>
             <li>Legs</li>
           </groups>
@@ -940,7 +1147,7 @@
         <li>
           <def>Leg</def>
           <customLabel>front right leg</customLabel>
-          <coverage>0.12</coverage>
+          <coverage>0.124</coverage>
           <groups>
             <li>FrontRightLeg</li>
             <li>Legs</li>
@@ -955,7 +1162,7 @@
         </li>
         <li>
           <def>Head</def>
-          <coverage>0.10</coverage>
+          <coverage>0.14</coverage>
           <groups>
             <li>UpperHead</li>
             <li>FullHead</li>
@@ -964,7 +1171,7 @@
           <parts>
             <li>
               <def>Skull</def>
-              <coverage>0.18</coverage>
+              <coverage>0.175</coverage>
               <depth>Inside</depth>
               <groups>
                 <li>UpperHead</li>
@@ -974,12 +1181,12 @@
             </li>
             <li>
                 <def>ParasiteBrain</def>
-                <coverage>0.003</coverage>
+                <coverage>0.005</coverage>
                 <depth>Inside</depth>
             </li>
             <li>
-              <def>Jaw</def>
-              <coverage>0.15</coverage>
+              <def>AnimalJaw</def>
+              <coverage>0.42</coverage>
               <groups>
                 <li>Teeth</li>
                 <li>FullHead</li>

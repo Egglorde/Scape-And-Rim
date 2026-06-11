@@ -109,6 +109,24 @@
         </graphicData>
     </ThingDef>
     <ThingDef ParentName="MoteBase">
+        <defName>ScramSRP_MeatyTendrilMote</defName>
+        <thingClass>MoteDualAttached</thingClass>
+        <altitudeLayer>Projectile</altitudeLayer>
+        <mote>
+          <fadeInTime>0.3</fadeInTime>
+          <fadeOutTime>0.3</fadeOutTime>
+          <solidTime>999999</solidTime>
+          <needsMaintenance>True</needsMaintenance>
+          <rotateTowardsTarget>True</rotateTowardsTarget>
+          <scaleToConnectTargets>True</scaleToConnectTargets>
+          <fadeOutUnmaintained>True</fadeOutUnmaintained>
+        </mote>
+        <drawOffscreen>true</drawOffscreen>
+        <graphicData>
+          <texPath>Projectile/Umbilical</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="MoteBase">
         <defName>ScramSRP_Mote_Orb</defName>
         <thingClass>MoteAttached</thingClass>
         <altitudeLayer>MoteOverhead</altitudeLayer>

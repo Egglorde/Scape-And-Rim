@@ -22,7 +22,7 @@
             <subNodes>
               <li Class="AssemblyParasitesColonThree.JobGiver_Summon">
                 <radius>3</radius>
-                <targetAcquireRadius>10</targetAcquireRadius>
+                <targetAcquireRadius>20</targetAcquireRadius>
               </li>
             </subNodes>
           </li>
@@ -112,11 +112,10 @@
           <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_ConsumeCorpse">
             <range>9.9</range>
           </li>
-          
-          <li Class="JobGiver_AIAbilityFight">
+
+          <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_Strafe">
             <targetAcquireRadius>65</targetAcquireRadius>
             <targetKeepRadius>72</targetKeepRadius>
-            <skipIfCantTargetNow>false</skipIfCantTargetNow>
             <ability>ScramSRP_AcidProj</ability>
             <allowTurrets>true</allowTurrets>
             <needLOSToAcquireNonPawnTargets>true</needLOSToAcquireNonPawnTargets>

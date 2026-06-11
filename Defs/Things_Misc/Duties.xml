@@ -6,7 +6,8 @@
     <reportString>gestating parasite.</reportString>
     <alwaysShowReport>true</alwaysShowReport>
     <casualInterruptible>false</casualInterruptible>
-    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    <collideWithPawns>true</collideWithPawns>
+    <forceCompleteBeforeNextJob>true</forceCompleteBeforeNextJob>
   </JobDef>
 
   <JobDef>
@@ -30,6 +31,7 @@
     <casualInterruptible>false</casualInterruptible>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
+
   <JobDef>
     <defName>ScramSRP_Dissolve</defName>
     <driverClass>AssemblyParasitesColonThree.JobDrivers.JobDriver_Dissolve</driverClass>

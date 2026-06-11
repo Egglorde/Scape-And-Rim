@@ -14,6 +14,7 @@
             </deathAction>
             <trainability>None</trainability>
             <intelligence>ToolUser</intelligence>
+            <isImmuneToInfections>true</isImmuneToInfections>
             <needsRest>false</needsRest>
             <hasGenders>false</hasGenders>
             <foodType>None</foodType>
@@ -28,7 +29,7 @@
 
     <FleshTypeDef>
       <defName>ScramSRP_ParasiteFlesh</defName>
-      <corpseCategory>CorpsesAnimal</corpseCategory>
+      <corpseCategory>CorpsesParasite</corpseCategory>
       <damageEffecter>Damage_HitFlesh</damageEffecter>
       <isOrganic>true</isOrganic>
       <genericWounds>
@@ -43,6 +44,12 @@
         </li>
       </genericWounds>
     </FleshTypeDef>
+  
+    <ThingCategoryDef>
+      <defName>CorpsesParasite</defName>
+      <label>potentially infectious parasite corpses</label>
+      <parent>Corpses</parent>
+    </ThingCategoryDef>
 
     <!-- Basic pawnkind for parasites, prevents them from fleeing and such-->
     <PawnKindDef Name="BaseParasiteKind" Abstract="True">

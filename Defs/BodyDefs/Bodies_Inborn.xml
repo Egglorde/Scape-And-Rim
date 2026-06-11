@@ -62,7 +62,7 @@
             <depth>Inside</depth>
         </li>
         <li>
-            <def>ParasiteLiver</def>
+            <def>ScramSRP_ParasiteLiver</def>
             <coverage>0.03</coverage>
             <customLabel>viscera</customLabel>
             <depth>Inside</depth>
@@ -154,7 +154,7 @@
             <depth>Inside</depth>
         </li>
         <li>
-            <def>ParasiteLiver</def>
+            <def>ScramSRP_ParasiteLiver</def>
             <coverage>0.03</coverage>
             <customLabel>viscera</customLabel>
             <depth>Inside</depth>
@@ -215,7 +215,7 @@
             <height>Top</height>
         </li>
         <li>
-            <def>ParasiteLiver</def>
+            <def>ScramSRP_ParasiteLiver</def>
             <coverage>0.05</coverage>
             <customLabel>viscera</customLabel>
             <depth>Inside</depth>
