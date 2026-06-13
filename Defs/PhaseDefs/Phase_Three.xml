@@ -20,6 +20,7 @@
             </li>
         </incompleteGroupMakers>
         <phase>3</phase>
+        <dayCap>30</dayCap>
         <eventLetter>ScramSRP_Phase3Event</eventLetter>
         <eventLetterName>Three</eventLetterName>
         <allowSims>true</allowSims>

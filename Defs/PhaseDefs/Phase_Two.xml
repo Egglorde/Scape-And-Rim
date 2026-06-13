@@ -25,6 +25,7 @@
             </li>
         </incompleteGroupMakers>
         <phase>2</phase>
+        <dayCap>20</dayCap>
         <eventLetter>ScramSRP_Phase2Event</eventLetter>
         <eventLetterName>Two</eventLetterName>
         <allowSims>true</allowSims>

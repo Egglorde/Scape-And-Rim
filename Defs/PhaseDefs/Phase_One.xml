@@ -25,6 +25,7 @@
             </li>
         </incompleteGroupMakers>
         <phase>1</phase>
+        <dayCap>10</dayCap>
         <eventLetter>ScramSRP_Phase1Event</eventLetter>
         <eventLetterName>One</eventLetterName>
     </AssemblyParasitesColonThree.Misc_Defs.PhaseDef>

@@ -58,6 +58,7 @@
         <eventLetter>ScramSRP_Phase8Event</eventLetter>
         <eventLetterName>Eight</eventLetterName>
         <allowSims>true</allowSims>
+        <dayCap>80</dayCap>
     </AssemblyParasitesColonThree.Misc_Defs.PhaseDef>
     <SoundDef>
         <defName>ScramSRP_Phase8Sound</defName>  

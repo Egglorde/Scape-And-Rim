@@ -20,6 +20,7 @@
             </li>
         </incompleteGroupMakers>
         <phase>0</phase>
+        <dayCap>10</dayCap>
         <eventLetterName>Zero</eventLetterName>
     </AssemblyParasitesColonThree.Misc_Defs.PhaseDef>
 </Defs>

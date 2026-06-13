@@ -55,6 +55,7 @@
             </li>
         </incompleteGroupMakers>
         <phase>6</phase>
+        <dayCap>60</dayCap>
         <eventLetter>ScramSRP_Phase6Event</eventLetter>
         <eventLetterName>Six</eventLetterName>
         <allowSims>true</allowSims>
