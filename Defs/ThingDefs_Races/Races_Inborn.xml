@@ -90,6 +90,7 @@
         <race>
             <thinkTreeMain>Buglin</thinkTreeMain>
             <baseHealthScale>0.2</baseHealthScale>
+            <renderTree>ScramSRP_SizeOnKillRenderTree</renderTree>
             <body>BuglinBody</body>
             <lifeStageAges>
                 <li>

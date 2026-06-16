@@ -43,6 +43,52 @@
   </AbilityDef>  
   
   <AbilityDef>
+    <defName>ScramSRP_GrabAndThrow</defName>
+    <label>chucking junk</label>
+    <description>Chuck something nearby.</description>
+    <cooldownTicksRange>1250</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <displayOrder>300</displayOrder>
+    <jobDef>ScramSRP_Hurl</jobDef>
+    <verbProperties>
+      <range>14.9</range>
+      <verbClass>Verb_AbilityShoot</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <ai_IsWeapon>true</ai_IsWeapon>
+      <defaultProjectile>ScramSRP_Junk</defaultProjectile>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <soundCast>ThrowGrenade</soundCast>
+      <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+    </verbProperties>
+  </AbilityDef>
+
+  <ThingDef>
+    <defName>ScramSRP_Junk</defName>
+    <category>Projectile</category>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>AssemblyParasitesColonThree.Things.Projectiles.Projectile_Hurled</thingClass>
+    <label>projectile</label>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <texPath>Loot/AssimLoot_InfectedFlesh</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>ScramSRP_Impact</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <speed>80</speed>
+      <arcHeightFactor>1</arcHeightFactor>
+      <shadowSize>0.4</shadowSize>
+      <armorPenetrationBase>0</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+  
+  <AbilityDef>
     <defName>ScramSRP_VomitAbility</defName>
     <label>vomit spray</label>
     <description>Spray vomit.</description>
@@ -183,9 +229,12 @@
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <projectile>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>1</damageAmountBase>
       <speed>6</speed>
       <arcHeightFactor>1.4</arcHeightFactor>
       <shadowSize>0.4</shadowSize>
+      <armorPenetrationBase>0</armorPenetrationBase>
       <soundImpact>ScramSRP_MeatImpact</soundImpact>
     </projectile>
   </ThingDef>
@@ -365,9 +414,9 @@
     </graphicData>
     <thingClass>AssemblyParasitesColonThree.Things.Projectiles.Projectile_Charger</thingClass>
     <projectile>
-      <damageDef>AcidBurn</damageDef>
+      <damageDef>Blunt</damageDef>
+      <armorPenetrationBase>0</armorPenetrationBase>
       <damageAmountBase>22</damageAmountBase>
-      <armorPenetrationBase>0.2</armorPenetrationBase>
       <stoppingPower>0.7</stoppingPower>
       <speed>50</speed>
     </projectile>

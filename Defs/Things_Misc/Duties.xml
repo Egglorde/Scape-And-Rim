@@ -11,6 +11,17 @@
   </JobDef>
 
   <JobDef>
+    <defName>ScramSRP_Hurl</defName>
+    <driverClass>AssemblyParasitesColonThree.JobDrivers.JobDriver_Hurl</driverClass>
+    <reportString>hurling {1} at {0}.</reportString>
+    <alwaysShowReport>true</alwaysShowReport>
+    <casualInterruptible>false</casualInterruptible>
+    <collideWithPawns>true</collideWithPawns>
+    <forceCompleteBeforeNextJob>true</forceCompleteBeforeNextJob>
+    <checkOverrideOnDamage>Never</checkOverrideOnDamage>
+  </JobDef>
+
+  <JobDef>
     <defName>ScramSRP_ExtractSample</defName>
     <driverClass>AssemblyParasitesColonThree.JobDrivers.JobDriver_ExtractTestKit</driverClass>
     <reportString>taking sample from TargetA.</reportString>

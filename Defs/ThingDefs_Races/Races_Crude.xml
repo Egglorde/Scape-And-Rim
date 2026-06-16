@@ -181,7 +181,7 @@
     </lifeStages>
     </PawnKindDef>
 
-    <!-- Reekers -->
+    <!-- Heed -->
     <ThingDef ParentName="BaseParasite">
         <defName>ScramSRP_Heed</defName>
         <label>heed</label>
@@ -271,5 +271,201 @@
         <abilities>
             <li>ScramSRP_RageScreech</li>
         </abilities>
+    </PawnKindDef>
+
+    <!-- Crux-->
+    <ThingDef ParentName="BaseParasite">
+        <defName>ScramSRP_Crux</defName>
+        <label>crux</label>
+        <description>Framework of a brutish, selfless creature still knitting itself together. Its rage deepens with every corpse it leaves behind. It is capable of hurling items, buildings, or living creatures at enemies. Under immense strain, its body secretes a strange boiling orange substance, and when driven to great speed, steam rises from it as though the whole frame is on the verge of catching fire.</description>
+        <race>
+            <baseBodySize>7</baseBodySize>
+            <baseHealthScale>10</baseHealthScale>
+            <body>ScramSRP_CruxBody</body>
+            <renderTree>ScramSRP_SizeOnKillRenderTree</renderTree>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                    <soundWounded>ScramSRP_CruxHurt</soundWounded>
+                    <soundDeath>ScramSRP_CruxDeath</soundDeath>
+                    <soundCall>ScramSRP_CruxCall</soundCall>
+                </li>
+            </lifeStageAges>
+            <leatherDef>Leather_Patch</leatherDef>
+            <specificMeatDef>ScramSRP_InfectedFlesh</specificMeatDef>
+            <thinkTreeMain>ScramSRP_CruxThink</thinkTreeMain>
+            <soundMoving>ScramSRP_PriAdaMoving</soundMoving>
+        </race>
+        <statBases>
+            <CarryingCapacity>1000</CarryingCapacity>
+            <MoveSpeed>9</MoveSpeed>
+            <ArmorRating_Heat>1.5</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+            <ComfyTemperatureMin>-80</ComfyTemperatureMin>
+            <ComfyTemperatureMax>120</ComfyTemperatureMax>
+            <PsychicSensitivity>1.5</PsychicSensitivity>
+            <ToxicResistance>0.5</ToxicResistance>
+            <LeatherAmount>30</LeatherAmount>
+        </statBases>
+        <tools>
+            <li>
+                <label>maw</label>
+                <capacities>
+                    <li>ScramSRP_DirectConvertCapBite</li>
+                </capacities>
+                <power>40</power>
+                <cooldownTime>3</cooldownTime>
+                <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+                <chanceFactor>0.6</chanceFactor>
+                <armorPenetration>0.2</armorPenetration>
+            </li>
+            <li>
+                <label>right claw</label>
+                <capacities>
+                    <li>ScramSRP_SlamCap</li>
+                    <li>ScramSRP_DirectConvertCapScratch</li>
+                    <li>ScramSRP_DirectConvertCapStab</li>
+                </capacities>
+                <power>36</power>
+                <cooldownTime>3</cooldownTime>
+                <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+                <armorPenetration>0.1</armorPenetration>
+            </li>
+            <li>
+                <label>left claw</label>
+                <capacities>
+                    <li>ScramSRP_SlamCap</li>
+                    <li>ScramSRP_DirectConvertCapScratch</li>
+                    <li>ScramSRP_DirectConvertCapStab</li>
+                </capacities>
+                <power>36</power>
+                <cooldownTime>3</cooldownTime>
+                <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+                <armorPenetration>0.1</armorPenetration>
+            </li>
+            <li>
+                <label>body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>25</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>BodyAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_EvolverParasite_Kills">
+                <compClass>AssemblyParasitesColonThree.Comps.ThingComps.Comp_CruxRage</compClass>
+                <ReqKills>12</ReqKills>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <PawnKindDef ParentName="BaseParasiteKind">
+        <defName>ScramSRP_CruxKind</defName>
+        <label>crux</label>
+        <race>ScramSRP_Crux</race>
+        <combatPower>700</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/Crude/Crux/Crux</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>3.5</drawSize>
+                    <shadowData>
+                        <volume>(1.2, 2, 1)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <abilities>
+            <li>ScramSRP_GrabAndThrow</li>
+        </abilities>
+    </PawnKindDef>
+
+    <!-- Incomplete Crux -->
+    <ThingDef ParentName="BaseParasite">
+        <defName>ScramSRP_IncompleteCrux</defName>
+        <label>crux</label>
+        <description>An outline of awkwardly knitted teeth. What remains is little more than a charred, half-formed frame, buying time and flesh until the fuller body forces its way through. It will eventually grow into a larger, more dangerous form.</description>
+        <race>
+            <baseBodySize>2</baseBodySize>
+            <baseHealthScale>1.2</baseHealthScale>
+            <body>ScramSRP_CruxIncompleteBody</body>
+            <renderTree>ScramSRP_SizeOnKillRenderTree</renderTree>
+            <lifeStageAges>
+                <li>
+                    <def>InbornBaseAge</def>
+                    <minAge>0</minAge>
+                    <soundWounded>ScramSRP_CruxHurtIncomplete</soundWounded>
+                    <soundCall>ScramSRP_CruxCallIncomplete</soundCall>
+                </li>
+            </lifeStageAges>
+            <leatherDef>Leather_Patch</leatherDef>
+            <specificMeatDef>ScramSRP_InfectedFlesh</specificMeatDef>
+            <thinkTreeMain>ScramSRP_CruxIncompleteThink</thinkTreeMain>
+        </race>
+        <statBases>
+            <MoveSpeed>3</MoveSpeed>
+            <ArmorRating_Heat>1.5</ArmorRating_Heat>
+            <ComfyTemperatureMin>-80</ComfyTemperatureMin>
+            <ComfyTemperatureMax>120</ComfyTemperatureMax>
+            <PsychicSensitivity>1.5</PsychicSensitivity>
+            <ToxicResistance>0.5</ToxicResistance>
+            <LeatherAmount>10</LeatherAmount>
+        </statBases>
+        <tools>
+            <li>
+                <label>maw</label>
+                <capacities>
+                    <li>ScramSRP_DirectConvertCapBite</li>
+                </capacities>
+                <power>20</power>
+                <cooldownTime>3</cooldownTime>
+                <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+                <chanceFactor>0.6</chanceFactor>
+                <armorPenetration>0.2</armorPenetration>
+            </li>
+            <li>
+                <label>body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.5</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>BodyAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+        <comps>
+            <li Class="AssemblyParasitesColonThree.CompProperties_EvolverParasite_Timer">
+                <ReqTimeTicks>1200~3600</ReqTimeTicks>
+                <evolutionTarget>ScramSRP_CruxKind</evolutionTarget>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <PawnKindDef ParentName="BaseParasiteKind">
+        <defName>ScramSRP_IncompleteCruxKind</defName>
+        <label>incomplete crux</label>
+        <race>ScramSRP_IncompleteCrux</race>
+        <combatPower>100</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Parasite/Crude/Incomplete_Crux/Crux_Incomplete</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.5</drawSize>
+                    <shadowData>
+                        <volume>(1.2, 2, 1)</volume>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
     </PawnKindDef>
 </Defs>

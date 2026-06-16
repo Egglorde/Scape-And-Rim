@@ -609,4 +609,259 @@
     </corePart>
   </BodyDef>
   
+  <!-- Crux Body -->
+  <BodyDef>
+    <defName>ScramSRP_CruxBody</defName>
+    <label>crux</label>
+    <corePart>
+      <def>Torso</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <groups>
+        <li>BodyAttackTool</li>
+        <li>Torso</li>
+      </groups>
+      <parts>
+        <li>
+            <def>AnimalJaw</def>
+            <coverage>0.046</coverage>
+            <customLabel>chest mouth</customLabel>
+            <groups>
+                <li>Torso</li>
+                <li>Teeth</li>
+                <li>Mouth</li>
+            </groups>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.04</coverage>
+            <customLabel>left antenna</customLabel>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.04</coverage>
+            <customLabel>right antenna</customLabel>
+        </li>
+        <li>
+          <def>Pelvis</def>
+          <coverage>0.016</coverage>
+          <height>Bottom</height>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>Spine</def>
+          <coverage>0.024</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>Waist</def>
+          <coverage>0</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>Waist</li>
+          </groups>
+        </li>
+        <li>
+          <def>Shoulder</def>
+          <customLabel>left shoulder</customLabel>
+          <coverage>0.193</coverage>
+          <woundAnchorTag>LeftShoulder</woundAnchorTag>
+          <flipGraphic>true</flipGraphic>
+          <groups>
+            <li>Shoulders</li>
+            <li>ScramSRP_LeftArm</li>
+          </groups>
+          <parts>
+            <li>
+              <def>Arm</def>
+              <customLabel>left arm</customLabel>
+              <coverage>0.6</coverage>
+              <flipGraphic>true</flipGraphic>
+              <groups>
+                <li>Arms</li>
+                <li>ScramSRP_LeftArm</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>FrontClaw</def>
+                  <customLabel>left claw</customLabel>
+                  <coverage>0.14</coverage>
+                  <groups>
+                    <li>FrontLeftClaws</li>
+                    <li>Hands</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>Shoulder</def>
+          <customLabel>right shoulder</customLabel>
+          <coverage>0.193</coverage>
+          <woundAnchorTag>RightShoulder</woundAnchorTag>
+          <groups>
+            <li>Shoulders</li>
+            <li>ScramSRP_RightArm</li>
+          </groups>
+          <parts>
+            <li>
+              <def>Arm</def>
+              <customLabel>right arm</customLabel>
+              <coverage>0.6</coverage>
+              <groups>
+                <li>Arms</li>
+                <li>ScramSRP_RightArm</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>FrontClaw</def>
+                  <customLabel>right claw</customLabel>
+                  <coverage>0.14</coverage>
+                  <groups>
+                    <li>FrontRightClaws</li>
+                    <li>Hands</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+            <def>ParasiteBrain</def>
+            <coverage>0.01</coverage>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>ScramSRP_ParasiteLiver</def>
+            <coverage>0.01</coverage>
+            <customLabel>viscera</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>ParasiteHeart</def>
+            <coverage>0.005</coverage>
+            <customLabel>hiveheart</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Leg</def>
+          <customLabel>left leg</customLabel>
+          <coverage>0.12</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>Legs</li>
+          </groups>
+          <parts>
+            <li>
+              <def>Hoof</def>
+              <customLabel>left hoof</customLabel>
+              <coverage>0.12</coverage>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>Leg</def>
+          <customLabel>right leg</customLabel>
+          <coverage>0.12</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>Legs</li>
+          </groups>
+          <parts>
+            <li>
+              <def>Hoof</def>
+              <customLabel>right hoof</customLabel>
+              <coverage>0.12</coverage>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  
+  <!-- Incomplete Crux Body -->
+  <BodyDef>
+    <defName>ScramSRP_CruxIncompleteBody</defName>
+    <label>incomplete crux</label>
+    <corePart>
+      <def>Body</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <groups>
+        <li>BodyAttackTool</li>
+        <li>Torso</li>
+      </groups>
+      <parts>
+        <li>
+            <def>AnimalJaw</def>
+            <coverage>0.12</coverage>
+            <customLabel>malformed jaw</customLabel>
+            <groups>
+                <li>Torso</li>
+                <li>Teeth</li>
+                <li>Mouth</li>
+            </groups>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.077</coverage>
+            <customLabel>deformed right arm</customLabel>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.077</coverage>
+            <customLabel>deformed left arm</customLabel>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.077</coverage>
+            <customLabel>deformed right leg</customLabel>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.077</coverage>
+            <customLabel>deformed left leg</customLabel>
+        </li>
+        <li>
+            <def>SensorTendril</def>
+            <coverage>0.077</coverage>
+            <customLabel>head tendril</customLabel>
+        </li>
+        <li>
+            <def>ParasiteBrain</def>
+            <coverage>0.01</coverage>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>ScramSRP_ParasiteLiver_Large</def>
+            <coverage>0.3</coverage>
+            <customLabel>unformed organs</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+            <def>ParasiteHeart</def>
+            <coverage>0.01</coverage>
+            <customLabel>hiveheart</customLabel>
+            <depth>Inside</depth>
+        </li>
+        <li>
+          <def>ScramSRP_Foot</def>
+          <customLabel>foot</customLabel>
+          <coverage>0.08</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>Legs</li>
+          </groups>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  
 </Defs>

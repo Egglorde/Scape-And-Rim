@@ -26,6 +26,7 @@
             </li>
             <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_DeathExplosionRemain">
                 <remaintier>Primitive</remaintier>
+                <canMakeCrux>true</canMakeCrux>
             </li>
             <li Class="AssemblyParasitesColonThree.CompProps.CompProperties_Adaptation">
                 <learnChance>0.7</learnChance>

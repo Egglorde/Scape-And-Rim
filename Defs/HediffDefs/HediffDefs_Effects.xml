@@ -483,11 +483,58 @@
       </comps>
     </HediffDef>
 
+    <MentalStateDef ParentName="BaseMentalState">
+      <defName>ScramSRP_Frenzy</defName>
+      <stateClass>AssemblyParasitesColonThree.Misc.MentalState_FrenzyParasite</stateClass>
+      <label>enraged</label>
+      <category>Aggro</category>
+      <blockInteractionInitiationExcept>
+        <li>Insult</li>
+      </blockInteractionInitiationExcept>
+      <blockInteractionRecipientExcept>
+        <li>Insult</li>
+      </blockInteractionRecipientExcept>
+      <blockRandomInteraction>true</blockRandomInteraction>
+      <blockNormalThoughts>true</blockNormalThoughts>
+      <nameColor>(0.9,0.2,0.5)</nameColor>
+      <minTicksBeforeRecovery>40000</minTicksBeforeRecovery>
+      <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
+      <recoveryMtbDays>1</recoveryMtbDays>
+      <baseInspectLine>Enraged</baseInspectLine>
+      <stateEffecter>Berserk</stateEffecter>
+      <recoverFromSleep>false</recoverFromSleep>
+    </MentalStateDef>
+
+    <HediffDef>
+    <defName>ScramSRP_CruxRage</defName>
+    <label>rage</label>
+    <description>Cruxes are constantly enraged, with their damage increasing with each body they leave in their wake.</description>
+    <hediffClass>Hediff</hediffClass>
+    <everCurableByItem>false</everCurableByItem>
+    <duplicationAllowed>false</duplicationAllowed>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <stages>
+      <li>
+        <statOffsetsBySeverity>
+          <li>
+            <stat>MeleeDamageFactor</stat>
+            <valueBySeverity>
+              <points>
+                <li>(1, 1)</li>
+                <li>(12, 2.4)</li>
+              </points>
+            </valueBySeverity>
+          </li>
+        </statOffsetsBySeverity>
+      </li>
+    </stages>
+  </HediffDef>
+
     <HediffDef>
     <defName>ScramSRP_Hivemind</defName>
     <label>hivemind</label>
     <description>This creature is part of the parasite hivemind, it will not experience pain.</description>
-    <hediffClass>AssemblyParasitesColonThree.Hediffs.Hediff_Hivemind</hediffClass>
+    <hediffClass>Hediff</hediffClass>
     <everCurableByItem>false</everCurableByItem>
     <duplicationAllowed>false</duplicationAllowed>
     <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>

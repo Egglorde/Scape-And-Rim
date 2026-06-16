@@ -256,6 +256,11 @@
         <defaultStoppingPower>2.0</defaultStoppingPower>
         <defaultArmorPenetration>1.30</defaultArmorPenetration>
         <soundExplosion>ScramSRP_Explosion_Sim</soundExplosion>
+    </DamageDef>  
+    <DamageDef ParentName="BluntBase">
+        <defName>ScramSRP_Impact</defName>
+        <workerClass>AssemblyParasitesColonThree.DamageWorkers.DamageWorker_GibOnKill</workerClass>
+        <deathMessage>{0} was turned into shrapnel.</deathMessage>
     </DamageDef>
 
     <ManeuverDef Name="ScramSRP_DirectConvertManeuverScratch">

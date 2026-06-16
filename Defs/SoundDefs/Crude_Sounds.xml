@@ -86,5 +86,86 @@
         </subSounds>
     </SoundDef>
 
+    <!-- Crux -->
+    <SoundDef>
+        <defName>ScramSRP_CruxCall</defName>
+        <context>MapOnly</context>   
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Parasite/Cru/Crux/Crux_Call</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>45~60</volumeRange>      
+                <pitchRange>0.7~1.2</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ScramSRP_CruxCallIncomplete</defName>
+        <context>MapOnly</context>   
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Parasite/Cru/Crux/Crux_Incomplete_Call</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>30~45</volumeRange>      
+                <pitchRange>0.7~1.2</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ScramSRP_CruxHurt</defName>  
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Parasite/Cru/Crux/Crux_Hurt</clipPath> 
+                    </li>
+                </grains>
+                <volumeRange>40~45</volumeRange>
+                <pitchRange>0.8940217~1.084783</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ScramSRP_CruxHurtIncomplete</defName>  
+        <context>MapOnly</context>   
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Parasite/Cru/Crux/Crux_Incomplete_Hurt</clipPath> 
+                    </li>
+                </grains>
+                <volumeRange>40~45</volumeRange>
+                <pitchRange>0.8940217~1.084783</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ScramSRP_CruxDeath</defName>  
+        <context>MapOnly</context>   
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Parasite/Cru/Crux/Crux_Death</clipPath> 
+                    </li>
+                </grains>
+                <volumeRange>40~60</volumeRange>
+                <pitchRange>0.8940217~1.084783</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
 
 </Defs>
