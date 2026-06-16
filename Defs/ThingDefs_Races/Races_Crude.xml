@@ -9,6 +9,7 @@
         <race>
             <baseHealthScale>0.8</baseHealthScale>
             <body>ScramSRP_IncompleteMediumBody</body>
+            <thinkTreeMain>ScramSRP_ParasiteSim</thinkTreeMain>
             <lifeStageAges>
                 <li>
                     <def>InbornBaseAge</def>
@@ -85,6 +86,7 @@
         <race>
             <baseHealthScale>0.2</baseHealthScale>
             <body>ScramSRP_IncompleteSmallBody</body>
+            <thinkTreeMain>ScramSRP_ParasiteSim</thinkTreeMain>
             <lifeStageAges>
                 <li>
                     <def>InbornBaseAge</def>

@@ -13,7 +13,7 @@
     <label>assimilated</label>
     <description>This creature has been assimilated into the hive mind.</description>
     <hediff>ScramSrp_Sim</hediff>
-    <thinkTree>ParasiteSim</thinkTree>
+    <thinkTree>ScramSRP_ParasiteSim</thinkTree>
     <thinkTreeConstant>ParasiteConstant</thinkTreeConstant>
     <hideLabel>true</hideLabel>
     <namePrefix>assimilated </namePrefix>

@@ -27,7 +27,7 @@
         <defName>ScramSRP_Ada_LongArms</defName>
         <label>adapted longarms</label>
         <race>
-            <baseHealthScale>4.75</baseHealthScale>
+            <baseHealthScale>9.5</baseHealthScale>
             <body>ScramSRP_PrimitiveLongarmsBody</body>
             <lifeStageAges>
                 <li>
@@ -43,9 +43,9 @@
             <li>
                 <label>left club</label>
                 <capacities>
-                    <li>Blunt</li>
+                    <li>ScramSRP_SlamCap</li>
                 </capacities>
-                <power>22.5</power>
+                <power>45</power>
                 <cooldownTime>2</cooldownTime>
                 <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
                 <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
@@ -53,9 +53,9 @@
             <li>
                 <label>right club</label>
                 <capacities>
-                    <li>Blunt</li>
+                    <li>ScramSRP_SlamCap</li>
                 </capacities>
-                <power>22.5</power>
+                <power>45</power>
                 <cooldownTime>2</cooldownTime>
                 <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
                 <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
@@ -65,7 +65,7 @@
                 <capacities>
                     <li>ScramSRP_DirectConvertCapBite</li>
                 </capacities>
-                <power>36.67</power>
+                <power>73</power>
                 <cooldownTime>3</cooldownTime>
                 <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -83,12 +83,6 @@
                 <chanceFactor>0.2</chanceFactor>
             </li>
         </tools>
-        <comps>
-            <li Class="AssemblyParasitesColonThree.CompProperties_ExplodeOnMeleeAttack">
-                <damage>ScramSRP_Seismic_Explosion</damage>
-                <radius>3.2</radius>
-            </li>
-        </comps>
     </ThingDef>
     <PawnKindDef ParentName="BaseParasiteKind">
         <defName>ScramSRP_Ada_LongArmsKind</defName>

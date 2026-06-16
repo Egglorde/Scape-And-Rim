@@ -492,7 +492,6 @@
             <baseHealthScale>3</baseHealthScale>
             <body>ScramSRP_PrimitiveYelloweyeBody</body>
             <thinkTreeMain>ScramSRP_YelloweyeParasite</thinkTreeMain>
-            <thinkTreeConstant>ParasiteConstant</thinkTreeConstant>
             <lifeStageAges>
                 <li>
                     <def>InbornBaseAge</def>

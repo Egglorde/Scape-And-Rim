@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <ThinkTreeDef>
-      <defName>ParasiteSim</defName>
+      <defName>ScramSRP_ParasiteSim</defName>
       <thinkRoot Class="ThinkNode_Priority">
         <subNodes>
           <!-- Despawned -->
@@ -48,10 +48,10 @@
           <li Class="ThinkNode_Tagger">
             <tagToGive>Idle</tagToGive>
             <subNodes>
-              <li Class="JobGiver_WanderAnywhere">
+              <li Class="AssemblyParasitesColonThree.JobGivers.JobGiver_WanderParasite">
                 <maxDanger>Deadly</maxDanger>
                 <ticksBetweenWandersRange>180~720</ticksBetweenWandersRange>
-                <wanderRadius>6</wanderRadius>
+                <wanderRadius>5</wanderRadius>
                 <canBashDoors>true</canBashDoors>
                 <expireOnNearbyEnemy>true</expireOnNearbyEnemy>
               </li>
