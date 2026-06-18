@@ -66,6 +66,7 @@
         </incompleteGroupMakers>
         <phase>5</phase>
         <dayCap>50</dayCap>
+        <minPoints>200000</minPoints>
         <eventLetter>ScramSRP_Phase5Event</eventLetter>
         <eventLetterName>Five</eventLetterName>
         <allowSims>true</allowSims>

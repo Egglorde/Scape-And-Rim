@@ -26,6 +26,7 @@
         </incompleteGroupMakers>
         <phase>2</phase>
         <dayCap>20</dayCap>
+        <minPoints>1600</minPoints>
         <eventLetter>ScramSRP_Phase2Event</eventLetter>
         <eventLetterName>Two</eventLetterName>
         <allowSims>true</allowSims>

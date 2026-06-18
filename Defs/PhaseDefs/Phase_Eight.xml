@@ -65,6 +65,7 @@
             </li>
         </incompleteGroupMakers>
         <phase>8</phase>
+        <minPoints>500000000</minPoints>
         <eventLetter>ScramSRP_Phase8Event</eventLetter>
         <eventLetterName>Eight</eventLetterName>
         <allowSims>true</allowSims>
