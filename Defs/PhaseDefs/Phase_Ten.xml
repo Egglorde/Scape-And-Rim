@@ -5,8 +5,18 @@
         <groupMakers>
             <li>
                 <weight>5</weight>
+                <kind>ScramSRP_CruxKind</kind>
+                <pawnRange>1~2</pawnRange>
+            </li>
+            <li>
+                <weight>30</weight>
+                <kind>ScramSRP_Mangler</kind>
+                <pawnRange>3~6</pawnRange>
+            </li>
+            <li>
+                <weight>5</weight>
                 <kind>ScramSRP_HeedKind</kind>
-                <pawnRange>1</pawnRange>
+                <pawnRange>1~2</pawnRange>
             </li>
             <li>
                 <weight>15</weight>
