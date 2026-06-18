@@ -59,6 +59,7 @@
         <eventLetter>ScramSRP_Phase9Event</eventLetter>
         <eventLetterName>Nine</eventLetterName>
         <allowSims>true</allowSims>
+        <passivePointGain>0.45</passivePointGain>
     </AssemblyParasitesColonThree.Misc_Defs.PhaseDef>
     <SoundDef>
         <defName>ScramSRP_Phase9Sound</defName>  

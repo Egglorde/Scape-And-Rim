@@ -64,6 +64,7 @@
         <eventLetter>ScramSRP_Phase5Event</eventLetter>
         <eventLetterName>Five</eventLetterName>
         <allowSims>true</allowSims>
+        <passivePointGain>0.1</passivePointGain>
     </AssemblyParasitesColonThree.Misc_Defs.PhaseDef>
     <SoundDef>
         <defName>ScramSRP_Phase5Sound</defName>  

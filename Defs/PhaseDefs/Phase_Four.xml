@@ -64,6 +64,7 @@
         <eventLetter>ScramSRP_Phase4Event</eventLetter>
         <eventLetterName>Four</eventLetterName>
         <allowSims>true</allowSims>
+        <passivePointGain>0.075</passivePointGain>
     </AssemblyParasitesColonThree.Misc_Defs.PhaseDef>
     <SoundDef>
         <defName>ScramSRP_Phase4Sound</defName>  

@@ -9,7 +9,6 @@
         <race>
             <baseHealthScale>0.8</baseHealthScale>
             <body>ScramSRP_IncompleteMediumBody</body>
-            
             <lifeStageAges>
                 <li>
                     <def>InbornBaseAge</def>

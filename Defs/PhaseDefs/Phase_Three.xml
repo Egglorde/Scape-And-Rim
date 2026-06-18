@@ -24,6 +24,7 @@
         <eventLetter>ScramSRP_Phase3Event</eventLetter>
         <eventLetterName>Three</eventLetterName>
         <allowSims>true</allowSims>
+        <passivePointGain>0.05</passivePointGain>
     </AssemblyParasitesColonThree.Misc_Defs.PhaseDef>
     <SoundDef>
         <defName>ScramSRP_Phase3Sound</defName>  
