@@ -29,3 +29,7 @@ The current method of distribution of this mod (github exclusively) is incondusi
 2. Find the "Mods" folder in your Rimworld installation (If you're using steam, right click on rimworld and go to Manage>Browse Local Files, the "Mods" folder should be in the one opened by steam)
 3. Unpack the Source.zip folder into the Mods folder
 4. That's it (Enjoy!)
+
+=== Disclaimer ===
+
+Portions of the materials used to create this content/mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This content/mod is not official and is not endorsed by Ludeon.
